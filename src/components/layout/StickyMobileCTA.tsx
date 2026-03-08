@@ -17,7 +17,7 @@ export function StickyMobileCTA() {
   if (!visible) return null;
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 z-40 md:hidden bg-[var(--color-accent)] shadow-[0_-4px_20px_rgba(0,0,0,0.15)] safe-area-pb">
+    <div className="fixed bottom-0 left-0 right-0 z-40 md:hidden bg-[var(--color-accent)] shadow-[0_-4px_20px_rgba(0,0,0,0.15)]" style={{ paddingBottom: 'env(safe-area-inset-bottom, 0px)' }}>
       <div className="flex items-center gap-3 px-4 py-3">
         <Link
           href="/contact"
