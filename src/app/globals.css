@@ -31,3 +31,12 @@ body {
   background-color: #C17B5D33;
   color: var(--color-foreground);
 }
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
