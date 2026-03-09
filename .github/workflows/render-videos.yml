@@ -31,22 +31,22 @@ jobs:
         run: mkdir -p public/videos
 
       - name: Render BrandHero (16:9)
-        run: npx remotion render src/remotion/index.ts BrandHero --output public/videos/brand-hero.mp4 --codec h264
+        run: npx remotion render src/remotion/index.tsx BrandHero --output public/videos/brand-hero.mp4 --codec h264
 
       - name: Render BrandHero Portrait (9:16)
-        run: npx remotion render src/remotion/index.ts BrandHeroPortrait --output public/videos/brand-hero-portrait.mp4 --codec h264
+        run: npx remotion render src/remotion/index.tsx BrandHeroPortrait --output public/videos/brand-hero-portrait.mp4 --codec h264
 
       - name: Render BrandHero Square (1:1)
-        run: npx remotion render src/remotion/index.ts BrandHeroSquare --output public/videos/brand-hero-square.mp4 --codec h264
+        run: npx remotion render src/remotion/index.tsx BrandHeroSquare --output public/videos/brand-hero-square.mp4 --codec h264
 
       - name: Render TestimonialReel (16:9)
-        run: npx remotion render src/remotion/index.ts TestimonialReel --output public/videos/testimonial-reel.mp4 --codec h264
+        run: npx remotion render src/remotion/index.tsx TestimonialReel --output public/videos/testimonial-reel.mp4 --codec h264
 
       - name: Render TestimonialReel Portrait (9:16)
-        run: npx remotion render src/remotion/index.ts TestimonialReelPortrait --output public/videos/testimonial-reel-portrait.mp4 --codec h264
+        run: npx remotion render src/remotion/index.tsx TestimonialReelPortrait --output public/videos/testimonial-reel-portrait.mp4 --codec h264
 
       - name: Render StatHighlight (16:9)
-        run: npx remotion render src/remotion/index.ts StatHighlight --output public/videos/stat-highlight.mp4 --codec h264
+        run: npx remotion render src/remotion/index.tsx StatHighlight --output public/videos/stat-highlight.mp4 --codec h264
 
       - name: Commit rendered videos
         run: |
