@@ -3,10 +3,10 @@ import { InnerHero } from "@/components/hero/InnerHero";
 import { ServiceDetail } from "@/components/services/ServiceDetail";
 import { FAQAccordion } from "@/components/faq/FAQAccordion";
 import { CTABanner } from "@/components/cta/CTABanner";
-import { AnimatedBarChart } from "@/components/charts/AnimatedBarChart";
 import { Section, Overline, SectionHeading } from "@/components/ui/Section";
 import { Hammer, Building2, ArrowRightLeft } from "lucide-react";
 import { RemotionStatSection } from "@/components/remotion/RemotionStatSection";
+import { RemotionChartSection } from "@/components/remotion/RemotionChartSection";
 
 export const metadata: Metadata = {
   title: "Portland Real Estate Investing | Fix & Flip, 1031, Rentals",
@@ -68,23 +68,8 @@ export default function InvestingPage() {
       {/* Animated stat highlight */}
       <RemotionStatSection />
 
-      {/* Animated bar chart */}
-      <Section className="bg-[var(--color-surface-alt)] py-20 px-6 md:px-12 lg:px-20">
-        <div className="max-w-4xl mx-auto">
-          <Overline>Market Data</Overline>
-          <SectionHeading className="mb-3">
-            Portland Home Value Trends
-          </SectionHeading>
-          <p className="text-sm text-[var(--color-muted)] mb-8 max-w-xl">
-            Portland Metro Median Home Value 2020–2026
-          </p>
-          <AnimatedBarChart />
-          <p className="mt-4 text-xs text-[var(--color-primary)] opacity-40 leading-relaxed">
-            Source: Zillow Home Value Index. Data represents median home values for
-            Portland, OR metro area.
-          </p>
-        </div>
-      </Section>
+      {/* Animated bar chart — Remotion Player */}
+      <RemotionChartSection />
 
       <FAQAccordion headline="Investor Questions — Portland, Oregon" items={investorFaqs} background="white" />
       <CTABanner headline="Let's Build Your Portfolio" body="Whether it's your first investment property or your fifteenth — I'll help you find the right opportunity." primaryCta="Schedule an Investment Strategy Call" secondaryCta="Call 503-382-7798" />

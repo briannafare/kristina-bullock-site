@@ -1,161 +1,117 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import React, { Component, useState, useEffect, useRef } from "react";
+import { Player } from "@remotion/player";
+import { StatHighlight } from "@/remotion/StatHighlight";
+import type { StatHighlightProps } from "@/remotion/types";
 
-const STATS = [
-  { value: 200, suffix: "+", label: "Families Helped" },
-  { value: 17, suffix: "+", label: "Years Experience" },
-  { value: 5, suffix: ".0", label: "Google Rating" },
-];
+const statProps: StatHighlightProps = {
+  primaryColor: "#2D4A3E",
+  accentColor: "#C17B5D",
+  secondaryColor: "#FAF7F2",
+  headingFont: "Cormorant Garamond, serif",
+  bodyFont: "DM Sans, sans-serif",
+  businessName: "Kristina Bullock Real Estate",
+  stats: [
+    { value: 200, suffix: "+", label: "Families Helped" },
+    { value: 17, suffix: "+", label: "Years Experience" },
+    { value: 5, suffix: ".0", label: "Google Rating" },
+  ],
+};
 
-const DURATION = 1200;
-const INTERVAL = 30;
-const STEPS = Math.ceil(DURATION / INTERVAL);
-
-function easeOut(t: number) {
-  return 1 - Math.pow(1 - t, 3);
+/* ── Error boundary catches Remotion rendering failures ── */
+class PlayerErrorBoundary extends Component<
+  { children: React.ReactNode; fallback: React.ReactNode },
+  { hasError: boolean }
+> {
+  constructor(props: { children: React.ReactNode; fallback: React.ReactNode }) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  static getDerivedStateFromError() {
+    return { hasError: true };
+  }
+  render() {
+    if (this.state.hasError) return this.props.fallback;
+    return this.props.children;
+  }
 }
 
-function StatCard({ stat, started }: { stat: typeof STATS[number]; started: boolean }) {
-  const [count, setCount] = useState(stat.value);
-
-  useEffect(() => {
-    if (!started) {
-      setCount(0);
-      return;
-    }
-    let step = 0;
-    const timer = setInterval(() => {
-      step++;
-      const progress = Math.min(step / STEPS, 1);
-      setCount(Math.round(easeOut(progress) * stat.value));
-      if (step >= STEPS) {
-        clearInterval(timer);
-        setCount(stat.value);
-      }
-    }, INTERVAL);
-    return () => clearInterval(timer);
-  }, [started, stat.value]);
-
+/* ── Static fallback shown if Player fails ── */
+function StaticFallback() {
   return (
-    <div style={{ display: "flex", flexDirection: "column", alignItems: "center", flex: 1 }}>
-      <div
-        style={{
-          fontFamily: "Cormorant Garamond, serif",
-          fontSize: "clamp(36px, 5vw, 56px)",
-          fontWeight: 700,
-          color: "#C17B5D",
-          lineHeight: 1,
-          letterSpacing: "-0.02em",
-        }}
-      >
-        {count}{stat.suffix}
+    <div
+      style={{
+        backgroundColor: "#FAF7F2",
+        borderRadius: 12,
+        padding: "48px 32px",
+        textAlign: "center",
+      }}
+    >
+      <div style={{ fontFamily: "Cormorant Garamond, serif", fontSize: 24, fontWeight: 600, color: "#2D4A3E", marginBottom: 32 }}>
+        Trusted Results, Year After Year
       </div>
-      <div
-        style={{
-          width: started ? 60 : 0,
-          height: 3,
-          backgroundColor: "#C17B5D",
-          borderRadius: 2,
-          marginTop: 12,
-          marginBottom: 12,
-          transition: "width 0.6s ease 0.3s",
-        }}
-      />
-      <div
-        style={{
-          fontFamily: "DM Sans, sans-serif",
-          fontSize: "clamp(10px, 1.2vw, 14px)",
-          color: "#2D4A3E",
-          opacity: 0.8,
-          textAlign: "center",
-          textTransform: "uppercase",
-          letterSpacing: "0.08em",
-          fontWeight: 500,
-        }}
-      >
-        {stat.label}
+      <div style={{ display: "flex", justifyContent: "center", gap: 48 }}>
+        {statProps.stats.map((s) => (
+          <div key={s.label}>
+            <div style={{ fontFamily: "Cormorant Garamond, serif", fontSize: 48, fontWeight: 700, color: "#C17B5D", lineHeight: 1 }}>
+              {s.value}{s.suffix}
+            </div>
+            <div style={{ width: 60, height: 3, backgroundColor: "#C17B5D", borderRadius: 2, margin: "12px auto" }} />
+            <div style={{ fontFamily: "DM Sans, sans-serif", fontSize: 12, color: "#2D4A3E", opacity: 0.8, textTransform: "uppercase", letterSpacing: "0.08em", fontWeight: 500 }}>
+              {s.label}
+            </div>
+          </div>
+        ))}
+      </div>
+      <div style={{ marginTop: 24, fontFamily: "DM Sans, sans-serif", fontSize: 10, color: "#2D4A3E", opacity: 0.4, letterSpacing: "0.08em", textTransform: "uppercase" }}>
+        Kristina Bullock Real Estate
       </div>
     </div>
   );
 }
 
+/* ── Main export: Remotion Player with real composition ── */
 export function RemotionStatPlayer() {
-  const [started, setStarted] = useState(false);
-  const ref = useRef<HTMLDivElement>(null);
+  const [ready, setReady] = useState(false);
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const playerRef = useRef<any>(null);
 
   useEffect(() => {
-    const el = ref.current;
-    if (!el) return;
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setStarted(true);
-          observer.disconnect();
-        }
-      },
-      { threshold: 0.2 }
-    );
-    observer.observe(el);
-
-    // Fallback
-    const t = setTimeout(() => setStarted(true), 600);
-    return () => { observer.disconnect(); clearTimeout(t); };
+    setReady(true);
   }, []);
 
+  // Force-start playback after mount
+  useEffect(() => {
+    if (!ready) return;
+    const timer = setTimeout(() => {
+      try {
+        playerRef.current?.play();
+      } catch {
+        // autoPlay should handle it
+      }
+    }, 100);
+    return () => clearTimeout(timer);
+  }, [ready]);
+
+  if (!ready) return <StaticFallback />;
+
   return (
-    <div
-      ref={ref}
-      style={{
-        backgroundColor: "#FAF7F2",
-        padding: "clamp(32px, 5vw, 64px) clamp(16px, 4vw, 48px)",
-        borderRadius: 12,
-        position: "relative",
-        overflow: "hidden",
-      }}
-    >
-      {/* Decorative corners */}
-      <div style={{ position: "absolute", top: 16, left: 16, width: 40, height: 40, borderTop: "3px solid #C17B5D", borderLeft: "3px solid #C17B5D", opacity: 0.15 }} />
-      <div style={{ position: "absolute", bottom: 16, right: 16, width: 40, height: 40, borderBottom: "3px solid #C17B5D", borderRight: "3px solid #C17B5D", opacity: 0.15 }} />
-
-      <div
-        style={{
-          fontFamily: "Cormorant Garamond, serif",
-          fontSize: "clamp(18px, 2.5vw, 28px)",
-          fontWeight: 600,
-          color: "#2D4A3E",
-          textAlign: "center",
-          marginBottom: "clamp(24px, 3vw, 40px)",
-          opacity: started ? 1 : 0,
-          transform: started ? "translateY(0)" : "translateY(15px)",
-          transition: "opacity 0.6s ease, transform 0.6s ease",
-        }}
-      >
-        Trusted Results, Year After Year
+    <PlayerErrorBoundary fallback={<StaticFallback />}>
+      <div style={{ width: "100%", borderRadius: 12, overflow: "hidden", aspectRatio: "16/9" }}>
+        <Player
+          ref={playerRef}
+          component={StatHighlight as unknown as React.FC<Record<string, unknown>>}
+          inputProps={statProps}
+          durationInFrames={120}
+          fps={30}
+          compositionWidth={1920}
+          compositionHeight={1080}
+          style={{ width: "100%", height: "100%" }}
+          autoPlay
+          loop
+        />
       </div>
-
-      <div style={{ display: "flex", justifyContent: "center", alignItems: "flex-start", gap: "clamp(16px, 3vw, 40px)", width: "100%" }}>
-        {STATS.map((stat) => (
-          <StatCard key={stat.label} stat={stat} started={started} />
-        ))}
-      </div>
-
-      <div
-        style={{
-          textAlign: "center",
-          marginTop: "clamp(24px, 3vw, 36px)",
-          fontFamily: "DM Sans, sans-serif",
-          fontSize: 10,
-          color: "#2D4A3E",
-          opacity: started ? 0.4 : 0,
-          transition: "opacity 0.6s ease 1s",
-          letterSpacing: "0.08em",
-          textTransform: "uppercase",
-        }}
-      >
-        Kristina Bullock Real Estate
-      </div>
-    </div>
+    </PlayerErrorBoundary>
   );
 }
