@@ -14,13 +14,28 @@ const DATA = [
   { year: 2026, value: 520 },
 ];
 
+// Color progression: muted warm for 2020-2022, neutral for 2023, accent ramp for 2024-2026
+function barColor(year: number): string {
+  if (year <= 2022) return "#D4A88C"; // muted warm tan
+  if (year === 2023) return "#A89E94"; // neutral warm gray
+  if (year === 2024) return "#CDA078"; // warming
+  if (year === 2025) return "#C58B66"; // near accent
+  return "var(--color-accent)"; // 2026 - full brand accent
+}
+
+function labelColor(year: number): string {
+  if (year <= 2022) return "#C49A7E";
+  if (year === 2023) return "#9A9189";
+  return "var(--color-accent)";
+}
+
 const Y_TICKS = [400, 450, 500, 550];
 const Y_MIN = 380;
 const Y_MAX = 570;
 
-const CHART_PADDING = { top: 32, right: 20, bottom: 40, left: 52 };
-const VIEWBOX_W = 600;
-const VIEWBOX_H = 340;
+const CHART_PADDING = { top: 48, right: 24, bottom: 48, left: 56 };
+const VIEWBOX_W = 620;
+const VIEWBOX_H = 380;
 
 const plotW = VIEWBOX_W - CHART_PADDING.left - CHART_PADDING.right;
 const plotH = VIEWBOX_H - CHART_PADDING.top - CHART_PADDING.bottom;
@@ -40,16 +55,19 @@ export function MarketChart() {
     <Section className="bg-[var(--color-surface-alt)] py-20 px-6 md:px-12 lg:px-20">
       <div className="max-w-4xl mx-auto">
         <Overline>Market Data</Overline>
-        <SectionHeading className="mb-10">
+        <SectionHeading className="mb-3">
           Portland Home Value Trends
         </SectionHeading>
+        <p className="text-sm text-[var(--color-muted)] mb-8 max-w-xl">
+          Portland Metro Median Home Value 2020–2026
+        </p>
 
         <div ref={chartRef} className="w-full">
           <svg
             viewBox={`0 0 ${VIEWBOX_W} ${VIEWBOX_H}`}
             className="w-full h-auto"
             role="img"
-            aria-label="Bar chart showing Portland median home values from 2020 to 2026"
+            aria-label="Bar chart showing Portland median home values from 2020 to 2026, rising from $420K to $520K"
           >
             {/* Background */}
             <rect
@@ -64,6 +82,18 @@ export function MarketChart() {
             <g
               transform={`translate(${CHART_PADDING.left}, ${CHART_PADDING.top})`}
             >
+              {/* Y-axis label */}
+              <text
+                x={-CHART_PADDING.left + 4}
+                y={-20}
+                fontSize={10}
+                fill="var(--color-primary)"
+                fillOpacity={0.4}
+                fontWeight={500}
+              >
+                Value (thousands)
+              </text>
+
               {/* Gridlines & Y-axis labels */}
               {Y_TICKS.map((tick) => {
                 const y = yScale(tick);
@@ -75,17 +105,18 @@ export function MarketChart() {
                       y1={y}
                       y2={y}
                       stroke="var(--color-primary)"
-                      strokeOpacity={0.1}
+                      strokeOpacity={0.08}
                       strokeDasharray="4 3"
                     />
                     <text
-                      x={-8}
+                      x={-10}
                       y={y}
                       textAnchor="end"
                       dominantBaseline="middle"
                       fontSize={11}
                       fill="var(--color-primary)"
-                      fillOpacity={0.55}
+                      fillOpacity={0.5}
+                      fontWeight={500}
                     >
                       ${tick}K
                     </text>
@@ -93,12 +124,36 @@ export function MarketChart() {
                 );
               })}
 
+              {/* X-axis line */}
+              <line
+                x1={0}
+                x2={plotW}
+                y1={plotH}
+                y2={plotH}
+                stroke="var(--color-primary)"
+                strokeOpacity={0.1}
+              />
+
+              {/* X-axis label */}
+              <text
+                x={plotW / 2}
+                y={plotH + 42}
+                textAnchor="middle"
+                fontSize={10}
+                fill="var(--color-primary)"
+                fillOpacity={0.4}
+                fontWeight={500}
+              >
+                Year
+              </text>
+
               {/* Bars */}
               {DATA.map((d, i) => {
                 const x = i * barWidth + (barWidth - barInnerWidth) / 2;
                 const barH = plotH - yScale(d.value);
                 const y = yScale(d.value);
-                const isHighlighted = d.year === 2026;
+                const color = barColor(d.year);
+                const lColor = labelColor(d.year);
 
                 return (
                   <g key={d.year}>
@@ -107,12 +162,8 @@ export function MarketChart() {
                       x={x}
                       y={plotH}
                       width={barInnerWidth}
-                      rx={3}
-                      fill={
-                        isHighlighted
-                          ? "var(--color-primary)"
-                          : "var(--color-accent)"
-                      }
+                      rx={4}
+                      fill={color}
                       initial={{ height: 0, y: plotH }}
                       animate={
                         inView
@@ -122,7 +173,7 @@ export function MarketChart() {
                       transition={{
                         duration: 0.6,
                         delay: i * 0.08,
-                        ease: [0.4, 0, 0.2, 1],
+                        ease: [0.22, 1, 0.36, 1],
                       }}
                     />
 
@@ -132,21 +183,17 @@ export function MarketChart() {
                       textAnchor="middle"
                       fontSize={11}
                       fontWeight={600}
-                      fill={
-                        isHighlighted
-                          ? "var(--color-primary)"
-                          : "var(--color-accent)"
-                      }
+                      fill={lColor}
                       initial={{ y: plotH - 4, opacity: 0 }}
                       animate={
                         inView
-                          ? { y: y - 6, opacity: 1 }
+                          ? { y: y - 8, opacity: 1 }
                           : { y: plotH - 4, opacity: 0 }
                       }
                       transition={{
                         duration: 0.6,
                         delay: i * 0.08 + 0.15,
-                        ease: [0.4, 0, 0.2, 1],
+                        ease: [0.22, 1, 0.36, 1],
                       }}
                     >
                       ${d.value}K
@@ -155,11 +202,12 @@ export function MarketChart() {
                     {/* X-axis year label */}
                     <text
                       x={x + barInnerWidth / 2}
-                      y={plotH + 20}
+                      y={plotH + 22}
                       textAnchor="middle"
                       fontSize={12}
                       fill="var(--color-primary)"
-                      fillOpacity={0.7}
+                      fillOpacity={0.65}
+                      fontWeight={500}
                     >
                       {d.year}
                     </text>
@@ -170,7 +218,7 @@ export function MarketChart() {
           </svg>
         </div>
 
-        <p className="mt-4 text-xs text-[var(--color-primary)] opacity-50 leading-relaxed">
+        <p className="mt-4 text-xs text-[var(--color-primary)] opacity-40 leading-relaxed">
           Source: Zillow Home Value Index. Data represents median home values for
           Portland, OR metro area.
         </p>

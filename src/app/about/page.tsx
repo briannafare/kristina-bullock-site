@@ -27,14 +27,15 @@ export default function AboutPage() {
         <div className="mx-auto max-w-[1200px] px-5 md:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-[0.8fr_1fr] gap-12 items-center">
             <div className="flex justify-center lg:justify-start order-first">
-              <div className="relative w-[280px] md:w-[350px] aspect-[3/4] rounded-2xl overflow-hidden shadow-xl ring-1 ring-white/20">
+              {/* Tightly cropped face/shoulders circular — different from home page 3:4 */}
+              <div className="relative w-[240px] md:w-[300px] aspect-square rounded-full overflow-hidden shadow-xl ring-4 ring-[var(--color-accent)]/30">
                 <Image
                   src="/headshot.jpg"
                   alt="Kristina Bullock — Portland Oregon Real Estate Broker"
                   fill
-                  className="object-cover object-top"
+                  className="object-cover object-top scale-[1.3]"
                   priority
-                  sizes="350px"
+                  sizes="300px"
                 />
               </div>
             </div>

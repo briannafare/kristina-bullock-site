@@ -46,7 +46,7 @@ function StatCard({ stat }: { stat: Stat }) {
       ref={ref}
       className="group rounded-xl border border-[var(--color-primary)]/10 bg-white px-6 py-8 text-center transition-shadow duration-300 hover:shadow-lg"
     >
-      <p className="font-[family-name:var(--font-heading)] text-4xl md:text-5xl font-semibold text-[var(--color-primary)]">
+      <p className="font-[family-name:var(--font-heading)] text-4xl md:text-5xl font-semibold text-[var(--color-accent)]">
         <motion.span>{display}</motion.span>
         <span>{stat.suffix}</span>
       </p>
