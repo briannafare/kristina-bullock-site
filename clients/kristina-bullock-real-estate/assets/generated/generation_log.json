@@ -1,0 +1,42 @@
+[
+  {
+    "asset_id": "hero-bg",
+    "status": "openai_failed",
+    "error": "{\"error\": {\"message\": \"Incorrect API key provided: sk-proj-****************************************************************************************t3AA. You can find your API key at https://platform.openai.com/account/api-keys.\", \"type\": \"invalid_request_error\", \"code\": \"invalid_api_key\", \"param\": n"
+  },
+  {
+    "asset_id": "buying-hero",
+    "status": "openai_failed",
+    "error": "{\"error\": {\"message\": \"Incorrect API key provided: sk-proj-****************************************************************************************t3AA. You can find your API key at https://platform.openai.com/account/api-keys.\", \"type\": \"invalid_request_error\", \"code\": \"invalid_api_key\", \"param\": n"
+  },
+  {
+    "asset_id": "selling-hero",
+    "status": "openai_failed",
+    "error": "{\"error\": {\"message\": \"Incorrect API key provided: sk-proj-****************************************************************************************t3AA. You can find your API key at https://platform.openai.com/account/api-keys.\", \"type\": \"invalid_request_error\", \"code\": \"invalid_api_key\", \"param\": n"
+  },
+  {
+    "asset_id": "investing-hero",
+    "status": "openai_failed",
+    "error": "{\"error\": {\"message\": \"Incorrect API key provided: sk-proj-****************************************************************************************t3AA. You can find your API key at https://platform.openai.com/account/api-keys.\", \"type\": \"invalid_request_error\", \"code\": \"invalid_api_key\", \"param\": n"
+  },
+  {
+    "asset_id": "neighborhoods-cityscape",
+    "status": "openai_failed",
+    "error": "{\"error\": {\"message\": \"Incorrect API key provided: sk-proj-****************************************************************************************t3AA. You can find your API key at https://platform.openai.com/account/api-keys.\", \"type\": \"invalid_request_error\", \"code\": \"invalid_api_key\", \"param\": n"
+  },
+  {
+    "asset_id": "neighborhood-beaverton",
+    "status": "openai_failed",
+    "error": "{\"error\": {\"message\": \"Incorrect API key provided: sk-proj-****************************************************************************************t3AA. You can find your API key at https://platform.openai.com/account/api-keys.\", \"type\": \"invalid_request_error\", \"code\": \"invalid_api_key\", \"param\": n"
+  },
+  {
+    "asset_id": "neighborhood-lake-oswego",
+    "status": "openai_failed",
+    "error": "{\"error\": {\"message\": \"Incorrect API key provided: sk-proj-****************************************************************************************t3AA. You can find your API key at https://platform.openai.com/account/api-keys.\", \"type\": \"invalid_request_error\", \"code\": \"invalid_api_key\", \"param\": n"
+  },
+  {
+    "asset_id": "about-consultation",
+    "status": "openai_failed",
+    "error": "{\"error\": {\"message\": \"Incorrect API key provided: sk-proj-****************************************************************************************t3AA. You can find your API key at https://platform.openai.com/account/api-keys.\", \"type\": \"invalid_request_error\", \"code\": \"invalid_api_key\", \"param\": n"
+  }
+]
