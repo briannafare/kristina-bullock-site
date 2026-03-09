@@ -4,6 +4,7 @@ import { Section, Overline, SectionHeading } from "@/components/ui/Section";
 import { TrustStrip } from "@/components/social-proof/TrustStrip";
 import { TestimonialSection } from "@/components/testimonials/TestimonialSection";
 import { CTABanner } from "@/components/cta/CTABanner";
+import { AnimatedStats } from "@/components/stats/AnimatedStats";
 
 export const metadata: Metadata = {
   title: "About Kristina Bullock | Portland OR Real Estate Broker",
@@ -88,6 +89,7 @@ export default function AboutPage() {
         </div>
       </Section>
 
+      <AnimatedStats />
       <TrustStrip />
       <TestimonialSection />
       <CTABanner

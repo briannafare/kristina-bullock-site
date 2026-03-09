@@ -4,6 +4,8 @@ import { InnerHero } from "@/components/hero/InnerHero";
 import { FAQAccordion } from "@/components/faq/FAQAccordion";
 import { CTABanner } from "@/components/cta/CTABanner";
 import { Section, Overline, SectionHeading } from "@/components/ui/Section";
+import { PortlandMetroMap } from "@/components/map/PortlandMetroMap";
+import { ComparisonTable } from "@/components/neighborhoods/ComparisonTable";
 import { MapPin } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -15,9 +17,9 @@ const areas = [
   { name: "Portland", vibe: "Urban, eclectic, walkable", image: "/images/neighborhoods-cityscape.jpg", body: "Portland is a city of neighborhoods \u2014 from the walkable streets of NE Alberta to the leafy boulevards of Southwest Portland. With over 90 distinct neighborhoods, there\u2019s a fit for every lifestyle. The city offers food, culture, parks, and transit that suburban areas can\u2019t match. Portland\u2019s median home value sits around $520,000 as of early 2026 (Zillow), with significant variation by neighborhood." },
   { name: "Beaverton", vibe: "Family-friendly, diverse", image: "/images/neighborhood-beaverton.jpg", body: "Beaverton is one of Portland\u2019s most popular suburbs, known for excellent schools, diverse dining, and proximity to tech employers like Nike and Intel. Families love the access to parks and trails. Prices tend to be at or above Portland\u2019s median, but strong school districts make it a solid long-term investment." },
   { name: "Lake Oswego", vibe: "Upscale, scenic, established", image: "/images/neighborhood-lake-oswego.jpg", body: "Lake Oswego is Portland\u2019s premier lakeside community, known for tree-lined streets, top-rated schools, and an upscale feel. Homes here tend to be priced above the metro average, attracting buyers who want a quieter, more polished suburban experience." },
-  { name: "Tigard", vibe: "Suburban comfort, commuter-friendly", body: "Tigard offers a balanced suburban lifestyle with easy highway access to downtown Portland. It\u2019s a favorite for commuters who want more space without a long drive. Home prices tend to be moderate, making Tigard a practical choice for families and first-time buyers." },
-  { name: "Gresham", vibe: "Affordable, growing", body: "Gresham is the most affordable entry point into the Portland metro area. Located east of Portland, it offers larger lots, newer construction in some areas, and a growing downtown district. For investors, Gresham\u2019s lower price points and strong rental demand make it one of the most interesting markets in the metro." },
-  { name: "Hillsboro", vibe: "Tech hub, modern, fast-growing", body: "Hillsboro is booming thanks to its position as Oregon\u2019s tech hub. Intel\u2019s major presence drives employment and attracts a skilled workforce. The city has invested in downtown revitalization, parks, and transit. Newer construction and modern amenities appeal to families and young professionals." },
+  { name: "Tigard", vibe: "Suburban comfort, commuter-friendly", image: "/images/neighborhood-tigard.jpg", body: "Tigard offers a balanced suburban lifestyle with easy highway access to downtown Portland. It\u2019s a favorite for commuters who want more space without a long drive. Home prices tend to be moderate, making Tigard a practical choice for families and first-time buyers." },
+  { name: "Gresham", vibe: "Affordable, growing", image: "/images/neighborhood-gresham.jpg", body: "Gresham is the most affordable entry point into the Portland metro area. Located east of Portland, it offers larger lots, newer construction in some areas, and a growing downtown district. For investors, Gresham\u2019s lower price points and strong rental demand make it one of the most interesting markets in the metro." },
+  { name: "Hillsboro", vibe: "Tech hub, modern, fast-growing", image: "/images/neighborhood-hillsboro.jpg", body: "Hillsboro is booming thanks to its position as Oregon\u2019s tech hub. Intel\u2019s major presence drives employment and attracts a skilled workforce. The city has invested in downtown revitalization, parks, and transit. Newer construction and modern amenities appeal to families and young professionals." },
 ];
 
 const neighborhoodFaqs = [
@@ -38,6 +40,14 @@ export default function NeighborhoodsPage() {
         primaryCta="Schedule a Free Consultation"
         backgroundImage="/images/neighborhoods-cityscape.jpg"
       />
+
+      <Section className="bg-[var(--color-surface-alt)] py-16 md:py-20">
+        <div className="mx-auto max-w-[1200px] px-5 md:px-8 text-center">
+          <Overline>Service Area</Overline>
+          <SectionHeading className="mb-10">Where I Work</SectionHeading>
+          <PortlandMetroMap />
+        </div>
+      </Section>
 
       <Section className="bg-white py-20 md:py-28">
         <div className="mx-auto max-w-[1200px] px-5 md:px-8">
@@ -67,6 +77,12 @@ export default function NeighborhoodsPage() {
               </div>
             ))}
           </div>
+        </div>
+      </Section>
+
+      <Section className="bg-[var(--color-surface-alt)] py-20 md:py-28">
+        <div className="mx-auto max-w-[1200px] px-5 md:px-8">
+          <ComparisonTable />
         </div>
       </Section>
 

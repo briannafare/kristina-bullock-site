@@ -22,31 +22,30 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: npm
 
       - name: Install dependencies
-        run: npm ci
+        run: npm install --legacy-peer-deps
 
       - name: Create output directory
         run: mkdir -p public/videos
 
       - name: Render BrandHero (16:9)
-        run: npx remotion render src/remotion/index.tsx BrandHero --output public/videos/brand-hero.mp4 --codec h264
+        run: npx remotion render src/remotion/index.tsx BrandHero --output public/videos/brand-hero.mp4 --codec h264 --gl=angle --log=verbose
 
       - name: Render BrandHero Portrait (9:16)
-        run: npx remotion render src/remotion/index.tsx BrandHeroPortrait --output public/videos/brand-hero-portrait.mp4 --codec h264
+        run: npx remotion render src/remotion/index.tsx BrandHeroPortrait --output public/videos/brand-hero-portrait.mp4 --codec h264 --gl=angle --log=verbose
 
       - name: Render BrandHero Square (1:1)
-        run: npx remotion render src/remotion/index.tsx BrandHeroSquare --output public/videos/brand-hero-square.mp4 --codec h264
+        run: npx remotion render src/remotion/index.tsx BrandHeroSquare --output public/videos/brand-hero-square.mp4 --codec h264 --gl=angle --log=verbose
 
       - name: Render TestimonialReel (16:9)
-        run: npx remotion render src/remotion/index.tsx TestimonialReel --output public/videos/testimonial-reel.mp4 --codec h264
+        run: npx remotion render src/remotion/index.tsx TestimonialReel --output public/videos/testimonial-reel.mp4 --codec h264 --gl=angle --log=verbose
 
       - name: Render TestimonialReel Portrait (9:16)
-        run: npx remotion render src/remotion/index.tsx TestimonialReelPortrait --output public/videos/testimonial-reel-portrait.mp4 --codec h264
+        run: npx remotion render src/remotion/index.tsx TestimonialReelPortrait --output public/videos/testimonial-reel-portrait.mp4 --codec h264 --gl=angle --log=verbose
 
       - name: Render StatHighlight (16:9)
-        run: npx remotion render src/remotion/index.tsx StatHighlight --output public/videos/stat-highlight.mp4 --codec h264
+        run: npx remotion render src/remotion/index.tsx StatHighlight --output public/videos/stat-highlight.mp4 --codec h264 --gl=angle --log=verbose
 
       - name: Commit rendered videos
         run: |
