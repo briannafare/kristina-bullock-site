@@ -1,0 +1,322 @@
+{
+  "_meta": {
+    "template_version": "1.0",
+    "generated_by": "skills/01-client-intake/SKILL.md",
+    "created_date": "2026-03-07",
+    "status": "ready",
+    "notes": "Brief updated with confirmed email, Google reviews (5.0, 2 reviews), 2 verbatim testimonials, and service areas (Portland + 5 suburbs). No blocking items remain. Remaining high-impact items (differentiator in own words, photos, brand colors) can be swapped in later. Proceeding to Skills 2-5."
+  },
+
+  "client": {
+    "slug": "kristina-bullock-real-estate",
+    "business_name": "Kristina Bullock Real Estate",
+    "business_type": "real estate agent / broker",
+    "industry_vertical": "residential real estate",
+    "website_url_existing": "https://prosperinrealestate.com/",
+    "phone": "503-382-7798",
+    "email": "kristina@prosperinrealestate.com",
+    "address": {
+      "street": "[CLIENT TO PROVIDE: Office address or confirm if home-based]",
+      "city": "Portland",
+      "state": "Oregon",
+      "zip": "[CLIENT TO PROVIDE]"
+    },
+    "founded_year": null,
+    "team_size": "[CLIENT TO PROVIDE: Is this still a team operation or solo agent at eXp?]",
+    "brokerage": "eXp Realty, LLC",
+    "license_number": "200812019",
+    "license_state": "Oregon",
+    "additional_licenses": "Washington (per LinkedIn — CLIENT TO CONFIRM if actively serving WA)"
+  },
+
+  "brand": {
+    "logo_provided": false,
+    "logo_file": null,
+    "primary_color": "[CLIENT TO PROVIDE: Any existing brand colors? Previous branding used navy blue tones]",
+    "secondary_color": null,
+    "accent_color": null,
+    "fonts_provided": false,
+    "font_names": [],
+    "brand_voice": "Warm, approachable, knowledgeable, family-oriented. Not corporate or salesy. Speaks to both first-time buyers and seasoned investors. Confident but never pushy.",
+    "tagline_existing": null,
+    "tagline_ideas": [
+      "Your Portland Real Estate Partner",
+      "Buy. Sell. Invest. Prosper."
+    ]
+  },
+
+  "business_goals": {
+    "primary_conversion_action": "Schedule a consultation call",
+    "secondary_conversion_action": "Submit a home valuation request",
+    "monthly_lead_goal": null,
+    "price_positioning": "mid-market + investment properties",
+    "biggest_competitor_urls": []
+  },
+
+  "target_audience": {
+    "icp_description": "Portland metro homeowners and aspiring homeowners — first-time buyers, move-up buyers, and real estate investors. Also serves sellers looking to maximize value. Broad mid-market with a specialty lane in investment properties (fix & flip, rentals, 1031 exchanges).",
+    "age_range": "28-60",
+    "income_level": "$60,000 - $200,000+",
+    "pain_points": [
+      "Overwhelmed by Portland's competitive market and don't know where to start",
+      "Want to invest in real estate but don't have a trusted advisor who understands investment strategy",
+      "Worried about overpaying or leaving money on the table when selling",
+      "Had a bad experience with a previous agent who didn't communicate or fight for them",
+      "Trying to navigate fix & flip or 1031 exchange and need someone who actually knows the process"
+    ],
+    "trigger_event": "Life change (growing family, job relocation, divorce, retirement), seeing Portland market movement and wanting to act, investor ready to deploy capital, inheriting property and unsure what to do"
+  },
+
+  "services": [
+    {
+      "name": "Home Buying",
+      "description": "Full-service buyer representation for first-time buyers, move-up buyers, and relocations in the Portland metro area",
+      "is_primary": true,
+      "price_range": null,
+      "key_selling_points": [
+        "Over a decade of Portland market experience",
+        "Knows neighborhoods inside and out",
+        "Guides first-time buyers through every step"
+      ]
+    },
+    {
+      "name": "Home Selling",
+      "description": "Strategic listing services including pricing strategy, staging guidance, marketing, and negotiation to maximize sale price",
+      "is_primary": true,
+      "price_range": null,
+      "key_selling_points": [
+        "Proven marketing and advertising approach",
+        "Negotiation expertise to get top dollar",
+        "Property valuation and staging consultation"
+      ]
+    },
+    {
+      "name": "Real Estate Investment",
+      "description": "Advisory services for investors including rental property acquisition, fix & flip strategy, and portfolio building",
+      "is_primary": true,
+      "price_range": null,
+      "key_selling_points": [
+        "Repeat investor clients (noted on social media)",
+        "Understands ROI analysis and rehab cost estimation",
+        "Experienced with investment property transactions"
+      ]
+    },
+    {
+      "name": "Fix & Flip",
+      "description": "Finding and evaluating fixer properties with flip potential in the Portland metro",
+      "is_primary": false,
+      "price_range": null,
+      "key_selling_points": [
+        "Eye for properties with hidden value",
+        "Network of contractors and rehab resources",
+        "Understands Portland renovation permits and costs"
+      ]
+    },
+    {
+      "name": "1031 Exchanges",
+      "description": "Guidance on tax-deferred property exchanges for investors looking to grow their portfolio",
+      "is_primary": false,
+      "price_range": null,
+      "key_selling_points": [
+        "Understands 1031 exchange timelines and requirements",
+        "Helps identify replacement properties within deadline",
+        "Works with qualified intermediaries"
+      ]
+    },
+    {
+      "name": "New Construction",
+      "description": "Buyer representation for new construction purchases in the Portland metro area",
+      "is_primary": false,
+      "price_range": null,
+      "key_selling_points": [
+        "Experience with builder contracts and negotiations",
+        "Guides buyers through the new construction timeline"
+      ]
+    }
+  ],
+
+  "service_areas": {
+    "primary_city": "Portland",
+    "additional_cities": [
+      "Beaverton",
+      "Lake Oswego",
+      "Tigard",
+      "Gresham",
+      "Hillsboro"
+    ],
+    "radius_miles": 30,
+    "state": "Oregon"
+  },
+
+  "social_proof": {
+    "google_rating": "5.0",
+    "google_review_count": 2,
+    "google_profile_url": "[CLIENT TO PROVIDE: Google Business Profile URL]",
+    "zillow_rating": "[CLIENT TO PROVIDE: Zillow reviews/rating if any]",
+    "yelp_rating": null,
+    "yelp_review_count": null,
+    "testimonials_verbatim": [
+      {
+        "text": "Kristina was an absolute pleasure to work with from the lender side. She's proactive, responsive, and incredibly organized—always staying ahead of deadlines, communicating clearly, and advocating for the client every step of the way. She kept the transaction moving smoothly and made coordination between all parties easy. I'd happily partner with Kristina again and highly recommend her to any buyer or seller looking for a true professional.",
+        "reviewer_name": "Tyler B.",
+        "context": "Lender-side partner review",
+        "source": "Google"
+      },
+      {
+        "text": "Finding the right person is half the battle. Being a first time home buyer has enough stress in itself, yet alone finding the right person to be by your side along the way. My family and I were grateful for the opportunity to be recommended to Kristina. After a few short conversations with others, Kristina hit a little different. Polite, yet strong, realistic and dependable. I really can't put into words the happiness she brings. Kristina was willing to meet us within 24 hours of initial communication at the cutest coffee shop. She laid out all expectations, needs and we brought our desires. Kristina was quick to get us showings of the 6 homes we wanted to view, 3 being the first day we met. She read us, what we were after, asked questions, and gave some recommendations. The first weekend we were exhausted and emotions ran high being in our situation we had to move fast. We thought about a few things, talked it through with Kristina and had to give a home we viewed a second look. Knowing the market and knowing what was out there, time was not on our side. Kristina was willing to re meet us 45 minutes out of the way, at night for us to check a few last small things. She didn't hesitate, took our questions and got us answers quickly. At this point Kristina was quickly becoming part of the family. We were pretty firm that this was going to be it but us being as thorough as possible needed to check one last thing before we moved forward. Kristina again didn't hesitate. She met us the next day, during lunch hour 45 minutes out of the way to be there for us. I can't count the times that we were beyond grateful for how much Kristina went above and beyond for us. We secured a plan, and she made sure it was submitted that next morning. Between the calls, texts, meetings, Kristina always made sure we were informed, happy, and excited. Kristina had the best attitude through it all. We had our deal in and within days she personally called to let us know the deal was accepted. Now the fun began. Organizing all the next steps, again being super informative, we had our documents signed, inspection set up. With our schedule getting to everything wasn't always doable. She made sure to take all our questions and get us our answers. She let us vent and she negotiated her heart out. She knew health and safety were our biggest worries coming from our situation so she knew there was no give in some areas. Kristina was able to secure us many things that we honestly were holding our breath on, and Christmas Day received the acceptance to move forward on some needed repairs. We then were hit with a unexpected low appraisal. Something that isn't heard of too often. Again though, she communicated with us, she explained the expectation and we expressed our concerns. Kristina was on the block again with negotiations, and without fail, conquered the task. We secured our home, our first family home, 2 kids in tow, with the many negotiations, many meet ups, many phone calls and text messages back and fourth to the finish line. To top it off, she was even willing to meet us at signing! Kristina went from stranger to family friend and I couldn't be more happy to of met her. If you are looking for someone truthful and honest, friendly but strong, and pull out all the stops, she is the one.",
+        "reviewer_name": "K.",
+        "context": "First-time home buyer with family",
+        "source": "Google"
+      }
+    ],
+    "certifications": [],
+    "awards": [
+      "Five Star Real Estate Agent Award — 2016, 2017, 2018 (Nine-Year Winner designation)"
+    ],
+    "years_in_business": "10+ years (confirmed via Facebook — exact start year CLIENT TO CONFIRM)",
+    "notable_clients_or_projects": []
+  },
+
+  "assets": {
+    "photos_provided": false,
+    "photo_types": [
+      "Solo headshot available on current site (usable but may want updated professional photo)",
+      "[CLIENT TO PROVIDE: Team photos if team branding is kept]",
+      "[CLIENT TO PROVIDE: Property photos, before/after of flips, lifestyle/Portland photos]"
+    ],
+    "video_provided": false,
+    "before_after_photos": false
+  },
+
+  "differentiators": [
+    "[CLIENT TO PROVIDE: In Kristina's own words — what makes her different from other Portland agents?]",
+    "Investment property expertise — fix & flips, rentals, 1031 exchanges (not just residential resale)",
+    "Five Star Real Estate Agent award winner (multi-year, Nine-Year Winner designation)",
+    "Goes above and beyond on accessibility — meets clients on their schedule, drives 45+ minutes for showings, available nights and weekends (per Google review from first-time buyer)",
+    "Strong negotiator — secured repairs and overcame low appraisal through persistent negotiation (per Google review)",
+    "Proactive communicator — lender partner specifically praised her for staying ahead of deadlines and coordinating all parties smoothly",
+    "Repeat investor clients — builds long-term relationships, not one-and-done transactions"
+  ],
+
+  "pages_requested": [
+    "home",
+    "buying",
+    "selling",
+    "investing",
+    "about",
+    "contact",
+    "neighborhoods (Portland area guide)",
+    "faq"
+  ],
+
+  "ghl": {
+    "chat_widget_code_provided": false,
+    "chat_widget_snippet": null
+  },
+
+  "seo": {
+    "primary_keyword": "Portland Oregon real estate agent",
+    "secondary_keywords": [
+      "Portland real estate broker",
+      "buy a home Portland OR",
+      "sell my house Portland Oregon",
+      "real estate investor Portland",
+      "fix and flip Portland Oregon",
+      "1031 exchange Portland",
+      "first-time home buyer Portland OR",
+      "Portland real estate market",
+      "homes for sale Portland Oregon",
+      "best real estate agent Portland"
+    ],
+    "google_business_profile_verified": "[CLIENT TO PROVIDE: yes/no]"
+  },
+
+  "design_preferences": {
+    "style_notes": "Current GoDaddy site is generic and template-heavy with stock photos. Needs a complete visual overhaul. Should feel professional, warm, and trustworthy — not cold corporate real estate. Should stand out from the sea of generic agent sites. Investment expertise should be visible but not dominate over residential buyer/seller messaging.",
+    "sites_they_like": [],
+    "sites_they_dislike": ["Her current site (prosperinrealestate.com) — too generic, stock photos, no personality"],
+    "headshot_usage_notes": "Solo headshot available. Must be used in split-section or contained portrait card layout — NEVER full-bleed banner crop. Specify object-position: top center."
+  },
+
+  "suggested_style_profile": "clean-minimal",
+  "secondary_style_profile": "warm-community",
+
+  "idx_note": "[NOTE: IDX/listings integration requires client MLS credentials — not included in site build. Site will focus on agent expertise, market knowledge, and buyer/seller/investor outcomes. Link to Zillow/Homes.com profile for active listings.]",
+
+  "clarifying_questions": [
+    {
+      "priority": "high",
+      "question": "In your own words: what makes you different from other Portland agents? Why do your past clients keep coming back?",
+      "why_it_matters": "This becomes the core differentiator copy — must come from you, not be invented"
+    },
+    {
+      "priority": "high",
+      "question": "Is the 'family team with 80 years combined experience' still your active team structure at eXp? Or are you operating as a solo agent now?",
+      "why_it_matters": "Determines whether we build a team brand or personal brand site"
+    },
+    {
+      "priority": "high",
+      "question": "Do you have an updated professional headshot, team photos, or any real property/lifestyle photos we can use?",
+      "why_it_matters": "Real photos vs. stock photos is the difference between a site that converts and one that doesn't"
+    },
+    {
+      "priority": "high",
+      "question": "Any brand colors or logo you want to keep? Or are we designing from scratch?",
+      "why_it_matters": "Sets the visual direction for the entire site"
+    },
+    {
+      "priority": "nice-to-have",
+      "question": "What is your Google Business Profile URL?",
+      "why_it_matters": "Link to it from the site for additional trust signals"
+    },
+    {
+      "priority": "nice-to-have",
+      "question": "Are you actively licensed in Washington too, or Oregon only right now?",
+      "why_it_matters": "Affects service area copy and any WA-specific pages"
+    },
+    {
+      "priority": "nice-to-have",
+      "question": "Do you have a GHL chat widget embed code ready, or do we need to set that up?",
+      "why_it_matters": "Chat widget is included on every eighty5labs site — need the code for integration"
+    }
+  ],
+
+  "data_confidence": {
+    "overall": "medium-high",
+    "confirmed_facts": [
+      "Business name: Kristina Bullock Real Estate",
+      "Brokerage: eXp Realty, LLC",
+      "Oregon License: 200812019",
+      "Phone: 503-382-7798",
+      "Email: kristina@prosperinrealestate.com",
+      "Location: Portland, OR",
+      "Service areas: Portland, Beaverton, Lake Oswego, Tigard, Gresham, Hillsboro",
+      "Services: buying, selling, investing, fix & flip, 1031 exchanges, new construction",
+      "Experience: 10+ years",
+      "Awards: Five Star Real Estate Agent 2016-2018 (Nine-Year Winner)",
+      "Google rating: 5.0 stars, 2 reviews",
+      "2 verbatim Google testimonials provided (Tyler B. — lender partner; K. — first-time buyer)",
+      "Primary CTA: Schedule a consultation call",
+      "Positioning: Mid-market + investment properties",
+      "Current site: GoDaddy builder at prosperinrealestate.com — needs complete rebuild",
+      "Has at least one solo headshot on current site"
+    ],
+    "inferred_facts": [
+      "Target audience includes both first-time buyers and investors (based on social media + testimonials)",
+      "Solo agent operation (testimonials reference only Kristina, no team members)",
+      "Brand voice is warm, tenacious, and client-first based on review language",
+      "Investment/flip expertise is a genuine differentiator (multiple social posts about investor clients)",
+      "Strong negotiation skills (confirmed by first-time buyer testimonial — low appraisal negotiation, repair negotiations)"
+    ],
+    "missing_facts": [
+      "Differentiator in own words (high impact but not blocking)",
+      "Team vs. solo confirmation (inferred solo from testimonials)",
+      "Professional photos beyond current headshot",
+      "Brand colors / logo",
+      "Office address / zip",
+      "Google Business Profile URL",
+      "Washington license status (active or inactive)",
+      "GHL chat widget embed code"
+    ]
+  }
+}
