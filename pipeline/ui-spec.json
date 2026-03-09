@@ -1,0 +1,641 @@
+{
+  "meta": {
+    "client_slug": "kristina-bullock-real-estate",
+    "ui_spec_version": "1.0",
+    "design_profile_used": "clean-minimal + warm-community hybrid",
+    "stack": {
+      "framework": "Next.js 15 App Router",
+      "styling": "Tailwind CSS with CSS custom properties",
+      "components": "shadcn/ui (customized to match design profile)",
+      "animations": "Framer Motion",
+      "language": "TypeScript",
+      "fonts": "Cormorant Garamond + DM Sans via next/font/google"
+    }
+  },
+
+  "global": {
+    "fonts": {
+      "heading": "Cormorant Garamond (weight 400, 500, 600)",
+      "body": "DM Sans (weight 400, 500, 600, 700)"
+    },
+    "colors": {
+      "primary": "#2D4A3E",
+      "secondary": "#FAF7F2",
+      "accent": "#C17B5D",
+      "accent_alt": "#A66545",
+      "background": "#FFFFFF",
+      "surface_alt": "#FAF7F2",
+      "muted": "#6B7280",
+      "foreground": "#1C1C1C",
+      "border": "#E5E2DC"
+    },
+    "max_width": "1200px",
+    "section_padding": "py-20 md:py-28",
+    "container_padding": "px-5 md:px-8 lg:px-16",
+    "border_radius": "rounded-xl (12px)",
+    "shadow_style": "0 2px 12px rgba(0,0,0,0.04)",
+    "ghl_widget": "{/* GHL_CHAT_WIDGET */} — inject in app/layout.tsx before closing </body>"
+  },
+
+  "global_components": {
+    "nav_header": {
+      "component": "components/layout/NavHeader.tsx",
+      "layout": "sticky top-0 z-50, max-w-full",
+      "design": {
+        "bg": "bg-white/92 backdrop-blur-md",
+        "border": "border-b border-[#E5E2DC]",
+        "height": "h-[72px]",
+        "transition": "Add shadow-sm on scroll via scroll listener"
+      },
+      "elements": {
+        "logo": "Left — 'Kristina Bullock Real Estate' in DM Sans font-semibold text-[#1C1C1C], or logo image if provided",
+        "nav_links": "Center — Home, Buying, Selling, Investing, About, Neighborhoods | DM Sans weight-500 text-sm tracking-wide",
+        "phone": "Right — 503-382-7798 as click-to-call, hidden on mobile",
+        "cta": "Right — 'Schedule a Call' button in accent #C17B5D, rounded-lg, px-6 py-2.5",
+        "mobile": "Hamburger → full-screen overlay drawer. Phone number prominent at top of drawer. All nav links. CTA button at bottom."
+      },
+      "framer_motion": {
+        "entrance": "none (always visible)",
+        "scroll": "useMotionValueEvent to add shadow on scroll > 50px"
+      }
+    },
+
+    "footer": {
+      "component": "components/layout/Footer.tsx",
+      "layout": "full-width, bg-[#2D4A3E] text-white",
+      "design": {
+        "padding": "py-16 md:py-20",
+        "grid": "4-column on desktop, stacked on mobile"
+      },
+      "elements": {
+        "col_1": "Brand name + tagline + license info + Equal Housing logo",
+        "col_2": "Quick links: Home, Buying, Selling, Investing, About, Neighborhoods, Contact, FAQ",
+        "col_3": "Service areas: Portland, Beaverton, Lake Oswego, Tigard, Gresham, Hillsboro",
+        "col_4": "Contact: Phone, Email, Hours, Google review badge",
+        "bottom_bar": "© 2026 Kristina Bullock Real Estate | eXp Realty, LLC | Privacy Policy | Terms"
+      }
+    },
+
+    "sticky_mobile_cta": {
+      "component": "components/layout/StickyMobileCTA.tsx",
+      "layout": "fixed bottom-0 w-full z-40, md:hidden",
+      "design": {
+        "bg": "bg-[#C17B5D]",
+        "text": "text-white font-semibold",
+        "padding": "py-4 px-6",
+        "shadow": "shadow-2xl"
+      },
+      "behavior": "Hidden initially, appears after scrolling past hero (IntersectionObserver). Two buttons: 'Schedule a Call' + phone icon link to tel:5033827798",
+      "framer_motion": {
+        "entrance": "slide-up from bottom, duration 0.3s"
+      }
+    }
+  },
+
+  "pages": [
+    {
+      "slug": "/",
+      "name": "Home",
+      "page_wrapper": {
+        "background": "bg-white",
+        "section_gap": "space-y-0 (sections handle their own backgrounds)"
+      },
+      "sections": [
+        {
+          "section_id": "hero",
+          "section_type": "hero_primary",
+          "component": "components/hero/HeroSplit.tsx",
+          "layout_pattern": "two-col-55-45",
+          "shadcn_components": ["Button"],
+          "tailwind_notes": "min-h-[85vh] bg-[#FAF7F2]. Left col: flex-col justify-center. Right col: flex items-center justify-center. Gap-12 on desktop.",
+          "structure": {
+            "left": {
+              "overline": "DM Sans uppercase text-xs tracking-[0.12em] text-[#C17B5D] font-semibold mb-4",
+              "headline": "Cormorant Garamond text-[clamp(48px,6.5vw,88px)] leading-[1.1] text-[#1C1C1C] font-semibold",
+              "subheadline": "DM Sans text-lg text-[#6B7280] leading-relaxed mt-6 max-w-[540px]",
+              "cta_group": "flex gap-4 mt-8. Primary: Button accent bg. Secondary: Button outline variant.",
+              "trust_line": "DM Sans text-sm text-[#6B7280] mt-6 — license info"
+            },
+            "right": {
+              "headshot": "Rounded-xl overflow-hidden shadow-lg max-w-[380px]. Image: object-cover object-top aspect-[3/4]. NEVER full-bleed banner.",
+              "fallback": "If no headshot: decorative gradient card with trust badges instead"
+            }
+          },
+          "framer_motion": {
+            "entrance": "staggerChildren: 0.12s. Left content: fade-up (y:30→0, opacity 0→1). Right image: fade-in + scale(0.95→1). Duration: 0.7s each.",
+            "hover": null,
+            "scroll_trigger": false
+          },
+          "responsive_behavior": {
+            "mobile": "Stack vertically. Headshot above copy (order-first). Min-h-auto. Padding py-16.",
+            "tablet": "Stack vertically with larger headshot.",
+            "desktop": "Side by side 55/45 split. Min-h-[85vh]."
+          },
+          "copy_ref": "copy.json > pages[/] > sections[hero]"
+        },
+        {
+          "section_id": "trust_strip",
+          "section_type": "social_proof_strip",
+          "component": "components/social-proof/TrustStrip.tsx",
+          "layout_pattern": "full-bleed-centered",
+          "shadcn_components": [],
+          "tailwind_notes": "bg-[#2D4A3E] text-white py-6. Grid grid-cols-2 md:grid-cols-4 gap-6 max-w-[1200px] mx-auto. Each item: flex flex-col items-center text-center.",
+          "framer_motion": {
+            "entrance": "fade-in on scroll, duration 0.5s",
+            "counter": "Number counter animation on stat numbers using useInView + useSpring"
+          },
+          "responsive_behavior": {
+            "mobile": "2x2 grid",
+            "desktop": "4 columns"
+          },
+          "copy_ref": "copy.json > pages[/] > sections[trust_strip]"
+        },
+        {
+          "section_id": "services_overview",
+          "section_type": "services_grid",
+          "component": "components/services/ServicesGrid.tsx",
+          "layout_pattern": "three-col-grid",
+          "shadcn_components": ["Card", "CardHeader", "CardContent"],
+          "tailwind_notes": "bg-white py-20 md:py-28. Grid grid-cols-1 md:grid-cols-3 gap-8. Cards: bg-white border border-[#E5E2DC] rounded-xl p-8 hover:shadow-lg hover:-translate-y-1 transition-all duration-300.",
+          "structure": {
+            "card": {
+              "icon": "Lucide icon (Home, DollarSign, TrendingUp) in text-[#C17B5D] w-10 h-10 stroke-[1.5px]",
+              "title": "Cormorant Garamond text-2xl font-semibold text-[#1C1C1C]",
+              "body": "DM Sans text-base text-[#6B7280] leading-relaxed",
+              "link": "DM Sans text-sm font-semibold text-[#C17B5D] hover:text-[#A66545] inline-flex items-center gap-1 (with arrow icon)"
+            }
+          },
+          "framer_motion": {
+            "entrance": "staggerChildren: 0.15s. Each card: fade-up (y:20→0, opacity 0→1). Duration: 0.5s.",
+            "hover": "translateY(-4px) + shadow-lg",
+            "scroll_trigger": true
+          },
+          "responsive_behavior": {
+            "mobile": "Single column stacked",
+            "desktop": "3 equal columns"
+          },
+          "copy_ref": "copy.json > pages[/] > sections[services_overview]"
+        },
+        {
+          "section_id": "about_snippet",
+          "section_type": "about_story",
+          "component": "components/about/AboutSnippet.tsx",
+          "layout_pattern": "two-col-60-40",
+          "shadcn_components": [],
+          "tailwind_notes": "bg-[#FAF7F2] py-20 md:py-28. Left: text content. Right: headshot in rounded-xl container with shadow.",
+          "framer_motion": {
+            "entrance": "Left: slide-in from left (x:-30→0). Right: fade-in + scale. stagger 0.2s. Duration 0.6s.",
+            "scroll_trigger": true
+          },
+          "responsive_behavior": {
+            "mobile": "Stack, image above text (order-first)",
+            "desktop": "Side by side 60/40"
+          },
+          "copy_ref": "copy.json > pages[/] > sections[about_snippet]"
+        },
+        {
+          "section_id": "testimonials",
+          "section_type": "testimonials_carousel",
+          "component": "components/testimonials/TestimonialSection.tsx",
+          "layout_pattern": "single-col-centered",
+          "shadcn_components": ["Carousel", "CarouselContent", "CarouselItem", "CarouselPrevious", "CarouselNext"],
+          "tailwind_notes": "bg-white py-20 md:py-28. Max-w-[800px] mx-auto. Quote in Cormorant Garamond italic text-2xl md:text-3xl text-[#1C1C1C] leading-relaxed. Attribution in DM Sans text-sm text-[#6B7280].",
+          "structure": {
+            "quote_mark": "Large decorative quote mark in text-[#C17B5D] opacity-30, absolute positioned",
+            "quote_text": "Cormorant Garamond italic",
+            "reviewer": "DM Sans font-semibold text-[#1C1C1C]",
+            "context": "DM Sans text-sm text-[#6B7280]",
+            "google_badge": "Small Google star icon + '5.0' badge"
+          },
+          "framer_motion": {
+            "entrance": "fade-in, duration 0.6s",
+            "carousel": "AnimatePresence for slide transitions",
+            "scroll_trigger": true
+          },
+          "responsive_behavior": {
+            "mobile": "Single quote, swipe navigation. Shorter excerpt for K.'s review.",
+            "desktop": "Full quotes with prev/next arrows"
+          },
+          "copy_ref": "copy.json > pages[/] > sections[testimonials]"
+        },
+        {
+          "section_id": "neighborhoods",
+          "section_type": "location_map",
+          "component": "components/neighborhoods/NeighborhoodGrid.tsx",
+          "layout_pattern": "three-col-grid",
+          "shadcn_components": ["Card"],
+          "tailwind_notes": "bg-[#FAF7F2] py-20 md:py-28. Grid grid-cols-2 md:grid-cols-3 gap-6. Cards: bg-white rounded-xl p-6 border border-[#E5E2DC] hover:shadow-md hover:-translate-y-1 transition-all. Photo placeholder at top of each card (aspect-video rounded-lg bg-[#E5E2DC] with area name overlay).",
+          "framer_motion": {
+            "entrance": "staggerChildren: 0.1s. fade-up.",
+            "scroll_trigger": true
+          },
+          "responsive_behavior": {
+            "mobile": "2 columns",
+            "desktop": "3 columns"
+          },
+          "copy_ref": "copy.json > pages[/] > sections[neighborhoods]"
+        },
+        {
+          "section_id": "process",
+          "section_type": "process_steps",
+          "component": "components/process/ProcessSteps.tsx",
+          "layout_pattern": "three-col-grid",
+          "shadcn_components": [],
+          "tailwind_notes": "bg-white py-20 md:py-28. 3 steps in grid-cols-1 md:grid-cols-3 gap-8. Step number in w-12 h-12 rounded-full bg-[#C17B5D] text-white flex items-center justify-center DM Sans font-bold. Connecting line between steps on desktop (hidden on mobile).",
+          "framer_motion": {
+            "entrance": "staggerChildren: 0.2s. fade-up per step.",
+            "scroll_trigger": true
+          },
+          "responsive_behavior": {
+            "mobile": "Vertical stacked with left-aligned number circles",
+            "desktop": "Horizontal 3 columns with connecting line"
+          },
+          "copy_ref": "copy.json > pages[/] > sections[process]"
+        },
+        {
+          "section_id": "faq",
+          "section_type": "faq_accordion",
+          "component": "components/faq/FAQAccordion.tsx",
+          "layout_pattern": "single-col-centered",
+          "shadcn_components": ["Accordion", "AccordionItem", "AccordionTrigger", "AccordionContent"],
+          "tailwind_notes": "bg-[#FAF7F2] py-20 md:py-28. Max-w-[800px] mx-auto. Trigger: DM Sans font-medium text-[#1C1C1C]. Content: DM Sans text-[#6B7280] leading-relaxed. Divider between items: border-b border-[#E5E2DC].",
+          "framer_motion": {
+            "entrance": "fade-in section header. Accordion expand: AnimatePresence height animation.",
+            "scroll_trigger": true
+          },
+          "responsive_behavior": {
+            "mobile": "Full width with px-5 padding",
+            "desktop": "Max-w-[800px] centered"
+          },
+          "copy_ref": "copy.json > pages[/] > sections[faq]"
+        },
+        {
+          "section_id": "final_cta",
+          "section_type": "cta_banner",
+          "component": "components/cta/CTABanner.tsx",
+          "layout_pattern": "full-bleed-centered",
+          "shadcn_components": ["Button"],
+          "tailwind_notes": "bg-[#2D4A3E] text-white py-20 md:py-24. Text-center. Headline: Cormorant Garamond text-3xl md:text-5xl font-semibold. Body: DM Sans text-lg opacity-90. Buttons: flex gap-4 justify-center mt-8. Primary button: bg-[#C17B5D] text-white. Secondary: border border-white text-white.",
+          "framer_motion": {
+            "entrance": "fade-up headline, fade-up body (stagger 0.15s)",
+            "scroll_trigger": true
+          },
+          "responsive_behavior": {
+            "mobile": "Buttons stacked vertically",
+            "desktop": "Buttons side by side"
+          },
+          "copy_ref": "copy.json > pages[/] > sections[final_cta]"
+        }
+      ]
+    },
+
+    {
+      "slug": "/buying",
+      "name": "Buying a Home",
+      "page_wrapper": { "background": "bg-white" },
+      "sections": [
+        {
+          "section_id": "hero",
+          "section_type": "hero_secondary",
+          "component": "components/hero/HeroInnerPage.tsx",
+          "layout_pattern": "full-bleed-centered",
+          "tailwind_notes": "bg-[#FAF7F2] py-20 md:py-28. Left-aligned text, max-w-[700px].",
+          "framer_motion": { "entrance": "fade-up stagger", "scroll_trigger": false },
+          "copy_ref": "copy.json > pages[/buying] > sections[hero]"
+        },
+        {
+          "section_id": "buyer_value",
+          "section_type": "service_detail",
+          "component": "components/services/ServiceDetail.tsx",
+          "layout_pattern": "single-col-centered + benefit-cards",
+          "shadcn_components": ["Card"],
+          "tailwind_notes": "bg-white py-20 md:py-28. Body text max-w-[720px] mx-auto. 3 benefit cards in grid below. Testimonial pull-quote in bordered left-border block.",
+          "framer_motion": { "entrance": "fade-up stagger, cards stagger 0.15s", "scroll_trigger": true },
+          "copy_ref": "copy.json > pages[/buying] > sections[buyer_value]"
+        },
+        {
+          "section_id": "buying_process",
+          "section_type": "process_steps",
+          "component": "components/process/ProcessTimeline.tsx",
+          "layout_pattern": "timeline-vertical",
+          "tailwind_notes": "bg-[#FAF7F2] py-20 md:py-28. Vertical timeline with left border-l-2 border-[#C17B5D]. Step numbers in accent circles.",
+          "framer_motion": { "entrance": "stagger fade-up per step 0.15s", "scroll_trigger": true },
+          "copy_ref": "copy.json > pages[/buying] > sections[buying_process]"
+        },
+        {
+          "section_id": "faq_buyers",
+          "section_type": "faq_accordion",
+          "component": "components/faq/FAQAccordion.tsx",
+          "layout_pattern": "single-col-centered",
+          "shadcn_components": ["Accordion", "AccordionItem", "AccordionTrigger", "AccordionContent"],
+          "tailwind_notes": "bg-white py-20 md:py-28. Max-w-[800px] mx-auto.",
+          "framer_motion": { "entrance": "fade-in", "scroll_trigger": true },
+          "copy_ref": "copy.json > pages[/buying] > sections[faq_buyers]"
+        },
+        {
+          "section_id": "cta_buying",
+          "section_type": "cta_banner",
+          "component": "components/cta/CTABanner.tsx",
+          "layout_pattern": "full-bleed-centered",
+          "copy_ref": "copy.json > pages[/buying] > sections[cta_buying]"
+        }
+      ]
+    },
+
+    {
+      "slug": "/selling",
+      "name": "Selling Your Home",
+      "page_wrapper": { "background": "bg-white" },
+      "sections": [
+        {
+          "section_id": "hero",
+          "section_type": "hero_secondary",
+          "component": "components/hero/HeroInnerPage.tsx",
+          "layout_pattern": "full-bleed-centered",
+          "tailwind_notes": "bg-[#FAF7F2] py-20 md:py-28. Left-aligned, max-w-[700px]. Two CTAs side by side.",
+          "copy_ref": "copy.json > pages[/selling] > sections[hero]"
+        },
+        {
+          "section_id": "seller_value",
+          "section_type": "service_detail",
+          "component": "components/services/ServiceDetail.tsx",
+          "layout_pattern": "single-col-centered + benefit-cards",
+          "copy_ref": "copy.json > pages[/selling] > sections[seller_value]"
+        },
+        {
+          "section_id": "selling_process",
+          "section_type": "process_steps",
+          "component": "components/process/ProcessSteps.tsx",
+          "layout_pattern": "three-col-grid",
+          "tailwind_notes": "5 steps — use grid-cols-2 md:grid-cols-3 on first row, grid-cols-2 on second row centered.",
+          "copy_ref": "copy.json > pages[/selling] > sections[selling_process]"
+        },
+        {
+          "section_id": "faq_sellers",
+          "section_type": "faq_accordion",
+          "component": "components/faq/FAQAccordion.tsx",
+          "copy_ref": "copy.json > pages[/selling] > sections[faq_sellers]"
+        },
+        {
+          "section_id": "cta_selling",
+          "section_type": "cta_banner",
+          "component": "components/cta/CTABanner.tsx",
+          "copy_ref": "copy.json > pages[/selling] > sections[cta_selling]"
+        }
+      ]
+    },
+
+    {
+      "slug": "/investing",
+      "name": "Real Estate Investing",
+      "page_wrapper": { "background": "bg-white" },
+      "sections": [
+        {
+          "section_id": "hero",
+          "section_type": "hero_secondary",
+          "component": "components/hero/HeroInnerPage.tsx",
+          "copy_ref": "copy.json > pages[/investing] > sections[hero]"
+        },
+        {
+          "section_id": "investment_services",
+          "section_type": "services_grid",
+          "component": "components/services/ServicesGrid.tsx",
+          "layout_pattern": "three-col-grid",
+          "tailwind_notes": "Icons: Hammer (fix&flip), Building2 (rental), ArrowRightLeft (1031) from Lucide",
+          "copy_ref": "copy.json > pages[/investing] > sections[investment_services]"
+        },
+        {
+          "section_id": "why_portland",
+          "section_type": "service_detail",
+          "component": "components/services/MarketInsight.tsx",
+          "layout_pattern": "single-col-centered",
+          "tailwind_notes": "bg-[#FAF7F2] py-20 md:py-28. Key stats in 2x2 grid cards with number counter animation. Source citation in text-xs below each stat.",
+          "copy_ref": "copy.json > pages[/investing] > sections[why_portland]"
+        },
+        {
+          "section_id": "faq_investors",
+          "section_type": "faq_accordion",
+          "component": "components/faq/FAQAccordion.tsx",
+          "copy_ref": "copy.json > pages[/investing] > sections[faq_investors]"
+        },
+        {
+          "section_id": "cta_investing",
+          "section_type": "cta_banner",
+          "component": "components/cta/CTABanner.tsx",
+          "copy_ref": "copy.json > pages[/investing] > sections[cta_investing]"
+        }
+      ]
+    },
+
+    {
+      "slug": "/about",
+      "name": "About Kristina",
+      "page_wrapper": { "background": "bg-white" },
+      "sections": [
+        {
+          "section_id": "hero",
+          "section_type": "hero_secondary",
+          "component": "components/hero/HeroAbout.tsx",
+          "layout_pattern": "two-col-40-60",
+          "tailwind_notes": "bg-[#FAF7F2]. Left: large headshot in rounded-xl card, aspect-[3/4], object-cover object-top, max-w-[400px]. NEVER full-bleed. Right: text content.",
+          "copy_ref": "copy.json > pages[/about] > sections[hero]"
+        },
+        {
+          "section_id": "story",
+          "section_type": "about_story",
+          "component": "components/about/AboutStory.tsx",
+          "layout_pattern": "single-col-centered",
+          "tailwind_notes": "bg-white py-20 md:py-28. Max-w-[720px] mx-auto. Generous line-height (leading-[1.8]). Credential block in bordered card at bottom with license, brokerage, awards.",
+          "copy_ref": "copy.json > pages[/about] > sections[story]"
+        },
+        {
+          "section_id": "credentials",
+          "section_type": "stats_bar",
+          "component": "components/social-proof/TrustStrip.tsx",
+          "copy_ref": "copy.json > pages[/about] > sections[credentials]"
+        },
+        {
+          "section_id": "testimonials_about",
+          "section_type": "testimonials_carousel",
+          "component": "components/testimonials/TestimonialSection.tsx",
+          "copy_ref": "copy.json > pages[/about] > sections[testimonials_about]"
+        },
+        {
+          "section_id": "cta_about",
+          "section_type": "cta_banner",
+          "component": "components/cta/CTABanner.tsx",
+          "copy_ref": "copy.json > pages[/about] > sections[cta_about]"
+        }
+      ]
+    },
+
+    {
+      "slug": "/neighborhoods",
+      "name": "Portland Neighborhoods",
+      "page_wrapper": { "background": "bg-white" },
+      "sections": [
+        {
+          "section_id": "hero",
+          "section_type": "hero_secondary",
+          "component": "components/hero/HeroInnerPage.tsx",
+          "copy_ref": "copy.json > pages[/neighborhoods] > sections[hero]"
+        },
+        {
+          "section_id": "area_grid",
+          "section_type": "services_grid",
+          "component": "components/neighborhoods/NeighborhoodDetailGrid.tsx",
+          "layout_pattern": "two-col-grid",
+          "shadcn_components": ["Card", "CardHeader", "CardContent"],
+          "tailwind_notes": "grid-cols-1 md:grid-cols-2 gap-8. Each card: photo placeholder (aspect-video bg-[#E5E2DC] rounded-t-xl with MapPin icon overlay) + text content below. Vibe tag in small DM Sans italic text-[#C17B5D].",
+          "framer_motion": { "entrance": "stagger fade-up 0.12s", "scroll_trigger": true },
+          "copy_ref": "copy.json > pages[/neighborhoods] > sections[area_grid]"
+        },
+        {
+          "section_id": "faq_neighborhoods",
+          "section_type": "faq_accordion",
+          "component": "components/faq/FAQAccordion.tsx",
+          "copy_ref": "copy.json > pages[/neighborhoods] > sections[faq_neighborhoods]"
+        },
+        {
+          "section_id": "cta_neighborhoods",
+          "section_type": "cta_banner",
+          "component": "components/cta/CTABanner.tsx",
+          "copy_ref": "copy.json > pages[/neighborhoods] > sections[cta_neighborhoods]"
+        }
+      ]
+    },
+
+    {
+      "slug": "/contact",
+      "name": "Contact",
+      "page_wrapper": { "background": "bg-white" },
+      "sections": [
+        {
+          "section_id": "hero",
+          "section_type": "hero_secondary",
+          "component": "components/hero/HeroInnerPage.tsx",
+          "copy_ref": "copy.json > pages[/contact] > sections[hero]"
+        },
+        {
+          "section_id": "contact_split",
+          "section_type": "contact_form",
+          "component": "components/contact/ContactSplit.tsx",
+          "layout_pattern": "two-col-60-40",
+          "shadcn_components": ["Form", "Input", "Textarea", "Button", "Label", "Select", "SelectTrigger", "SelectValue", "SelectContent", "SelectItem"],
+          "tailwind_notes": "bg-white py-20 md:py-28. Left: form on white bg with rounded-xl shadow-md p-8 md:p-10. Right: contact info block. Floating label inputs. All fields use GHL-compatible names: first_name, last_name, email, phone, message. Hidden field: source=website-contact. Submit button: bg-[#C17B5D] text-white w-full py-4 rounded-lg font-semibold.",
+          "form_fields": {
+            "first_name": "Input, required",
+            "last_name": "Input, required",
+            "email": "Input type=email, required",
+            "phone": "Input type=tel, required",
+            "service_type": "Select: Buying / Selling / Investing / Other",
+            "message": "Textarea, optional, 4 rows",
+            "source": "hidden, value='website-contact'"
+          },
+          "framer_motion": { "entrance": "fade-up form left, fade-in info right, stagger 0.2s", "scroll_trigger": true },
+          "responsive_behavior": {
+            "mobile": "Stack: form first, contact info below",
+            "desktop": "Side by side 60/40"
+          },
+          "copy_ref": "copy.json > pages[/contact] > sections[contact_split]"
+        },
+        {
+          "section_id": "trust_footer",
+          "section_type": "social_proof_strip",
+          "component": "components/social-proof/TrustStrip.tsx",
+          "tailwind_notes": "bg-[#FAF7F2] py-4. Slim strip with 4 items centered. Text-sm.",
+          "copy_ref": "copy.json > pages[/contact] > sections[trust_footer]"
+        }
+      ]
+    },
+
+    {
+      "slug": "/faq",
+      "name": "FAQ",
+      "page_wrapper": { "background": "bg-white" },
+      "sections": [
+        {
+          "section_id": "hero",
+          "section_type": "hero_secondary",
+          "component": "components/hero/HeroInnerPage.tsx",
+          "copy_ref": "copy.json > pages[/faq] > sections[hero]"
+        },
+        {
+          "section_id": "faq_buying",
+          "section_type": "faq_accordion",
+          "component": "components/faq/FAQAccordion.tsx",
+          "tailwind_notes": "Category H2 in Cormorant Garamond text-2xl before each accordion group.",
+          "copy_ref": "copy.json > pages[/faq] > sections[faq_buying]"
+        },
+        {
+          "section_id": "faq_selling",
+          "section_type": "faq_accordion",
+          "component": "components/faq/FAQAccordion.tsx",
+          "copy_ref": "copy.json > pages[/faq] > sections[faq_selling]"
+        },
+        {
+          "section_id": "faq_investing",
+          "section_type": "faq_accordion",
+          "component": "components/faq/FAQAccordion.tsx",
+          "copy_ref": "copy.json > pages[/faq] > sections[faq_investing]"
+        },
+        {
+          "section_id": "cta_faq",
+          "section_type": "cta_banner",
+          "component": "components/cta/CTABanner.tsx",
+          "copy_ref": "copy.json > pages[/faq] > sections[cta_faq]"
+        }
+      ]
+    }
+  ],
+
+  "component_file_tree": [
+    "components/layout/NavHeader.tsx",
+    "components/layout/Footer.tsx",
+    "components/layout/StickyMobileCTA.tsx",
+    "components/hero/HeroSplit.tsx",
+    "components/hero/HeroInnerPage.tsx",
+    "components/hero/HeroAbout.tsx",
+    "components/social-proof/TrustStrip.tsx",
+    "components/services/ServicesGrid.tsx",
+    "components/services/ServiceDetail.tsx",
+    "components/services/MarketInsight.tsx",
+    "components/about/AboutSnippet.tsx",
+    "components/about/AboutStory.tsx",
+    "components/testimonials/TestimonialSection.tsx",
+    "components/neighborhoods/NeighborhoodGrid.tsx",
+    "components/neighborhoods/NeighborhoodDetailGrid.tsx",
+    "components/process/ProcessSteps.tsx",
+    "components/process/ProcessTimeline.tsx",
+    "components/faq/FAQAccordion.tsx",
+    "components/cta/CTABanner.tsx",
+    "components/contact/ContactSplit.tsx"
+  ],
+
+  "assets_needed": [
+    {
+      "type": "photo",
+      "description": "Kristina Bullock professional headshot — high-res, 3:4 portrait aspect ratio",
+      "status": "One headshot available on current site. May want updated version.",
+      "usage": "Hero split, About page, and footer"
+    },
+    {
+      "type": "photo",
+      "description": "Portland neighborhood/lifestyle photos — 6 needed (one per service area)",
+      "status": "[CLIENT TO PROVIDE: Real local photography preferred. Stock Portland photos as fallback.]",
+      "usage": "Neighborhood grid cards"
+    },
+    {
+      "type": "icon",
+      "description": "Lucide React icons throughout",
+      "status": "Available via lucide-react package",
+      "usage": "Service cards, process steps, navigation, contact info"
+    },
+    {
+      "type": "logo",
+      "description": "Kristina Bullock Real Estate wordmark or logo",
+      "status": "[CLIENT TO PROVIDE: If no logo, use text wordmark in DM Sans font-semibold]",
+      "usage": "Nav header, footer, favicon"
+    }
+  ]
+}
