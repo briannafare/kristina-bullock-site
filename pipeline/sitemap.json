@@ -1,0 +1,548 @@
+{
+  "meta": {
+    "client_slug": "kristina-bullock-real-estate",
+    "sitemap_version": "1.0",
+    "total_pages": 8,
+    "budget_tier": "standard"
+  },
+
+  "global_components": {
+    "nav_header": {
+      "type": "sticky",
+      "elements": [
+        "Kristina Bullock Real Estate wordmark/logo",
+        "Home",
+        "Buying",
+        "Selling",
+        "Investing",
+        "About",
+        "Neighborhoods",
+        "Phone: 503-382-7798 (click-to-call)",
+        "Schedule a Call CTA button (primary)"
+      ],
+      "mobile_nav": "Full-screen overlay drawer with phone number prominent at top"
+    },
+    "footer_full": {
+      "elements": [
+        "Kristina Bullock Real Estate wordmark",
+        "eXp Realty, LLC — Oregon License #200812019",
+        "Phone: 503-382-7798",
+        "Email: kristina@prosperinrealestate.com",
+        "Service areas: Portland, Beaverton, Lake Oswego, Tigard, Gresham, Hillsboro",
+        "Nav links: Home, Buying, Selling, Investing, About, Neighborhoods, Contact, FAQ",
+        "Google review badge (5.0 stars, 2 reviews)",
+        "Privacy Policy | Terms of Service",
+        "Equal Housing Opportunity logo"
+      ]
+    },
+    "sticky_mobile_cta": {
+      "text": "Schedule a Call",
+      "phone_fallback": "503-382-7798",
+      "visible_on": "mobile only, appears after scrolling past hero"
+    },
+    "ghl_chat_widget": {
+      "placement": "root layout",
+      "code": "{/* GHL_CHAT_WIDGET */}"
+    }
+  },
+
+  "pages": [
+    {
+      "slug": "/",
+      "name": "Home",
+      "seo": {
+        "primary_keyword": "Portland Oregon real estate agent",
+        "secondary_keywords": ["Portland real estate broker", "buy sell home Portland OR", "real estate investor Portland"],
+        "schema_types": ["LocalBusiness", "RealEstateAgent", "FAQPage"],
+        "internal_links_to": ["/buying", "/selling", "/investing", "/about", "/neighborhoods", "/contact"]
+      },
+      "conversion_goal": "Get visitor to schedule a consultation call or click-to-call",
+      "sections": [
+        {
+          "id": "hero",
+          "type": "hero_primary",
+          "order": 1,
+          "conversion_goal": "Immediately communicate who Kristina is, what she does, and where — capture high-intent visitors",
+          "content_elements": [
+            "H1 headline (geo-targeted, identity-specific)",
+            "Supporting subheadline addressing buyer/seller/investor pain",
+            "Primary CTA: Schedule a Consultation",
+            "Secondary CTA: Call 503-382-7798",
+            "Headshot photo in contained portrait card (3:4, NOT full-bleed)",
+            "Overline: 'Portland, Oregon Real Estate'"
+          ],
+          "design_notes": "Split layout: copy left 55%, headshot right 45%. Warm cream background. Headshot in rounded card with subtle shadow. Staggered fade-up entrance. Overline in small caps terracotta accent color above headline."
+        },
+        {
+          "id": "trust_strip",
+          "type": "social_proof_strip",
+          "order": 2,
+          "conversion_goal": "Establish credibility immediately after hero",
+          "content_elements": [
+            "Google 5.0 star rating with review count",
+            "10+ Years Experience",
+            "Five Star Agent Award Winner",
+            "eXp Realty, LLC"
+          ],
+          "design_notes": "Slim full-width band in forest green (#2D4A3E) with white text. 4 items evenly spaced. Subtle counter animation on numbers."
+        },
+        {
+          "id": "services_overview",
+          "type": "services_grid",
+          "order": 3,
+          "conversion_goal": "Show range of services, drive clicks to service pages",
+          "content_elements": [
+            "Section overline: 'How I Help'",
+            "Section H2",
+            "3 service cards: Buying, Selling, Investing",
+            "Each card: icon, title, 2-line description, learn more link"
+          ],
+          "design_notes": "3-column grid on desktop, stacked on mobile. Cards on white with subtle border. Hover: lift + shadow. Each card links to respective service page."
+        },
+        {
+          "id": "about_snippet",
+          "type": "about_story",
+          "order": 4,
+          "conversion_goal": "Build personal connection and trust",
+          "content_elements": [
+            "Section overline: 'Meet Kristina'",
+            "Section H2",
+            "2-3 paragraphs: who she is, Portland expertise, why she does this",
+            "Headshot or lifestyle photo",
+            "Link to full About page"
+          ],
+          "design_notes": "Split layout: text left 60%, photo right 40%. Photo in rounded container. Warm cream background section."
+        },
+        {
+          "id": "testimonials",
+          "type": "testimonials_carousel",
+          "order": 5,
+          "conversion_goal": "Build trust with real social proof",
+          "content_elements": [
+            "Section overline: 'What Clients Say'",
+            "Section H2",
+            "Tyler B. testimonial (full quote)",
+            "K. testimonial (key excerpt — full quote is very long, use strongest 3-4 sentences)",
+            "Google review badge with each"
+          ],
+          "design_notes": "Large quote typography. Reviewer name + context below. Google star icon. Auto-advancing carousel or stacked on mobile. ONLY verbatim quotes from brief — never fabricated."
+        },
+        {
+          "id": "neighborhoods",
+          "type": "location_map",
+          "order": 6,
+          "conversion_goal": "Establish local expertise and drive to neighborhood page",
+          "content_elements": [
+            "Section overline: 'Areas I Serve'",
+            "Section H2",
+            "6 area cards: Portland, Beaverton, Lake Oswego, Tigard, Gresham, Hillsboro",
+            "Each card: area name + 1-line description",
+            "Link to full neighborhoods page"
+          ],
+          "design_notes": "Grid of 3x2 on desktop. Cards with subtle hover effect. Placeholder for area photography."
+        },
+        {
+          "id": "process",
+          "type": "process_steps",
+          "order": 7,
+          "conversion_goal": "Reduce friction by making working with Kristina feel simple",
+          "content_elements": [
+            "Section overline: 'How It Works'",
+            "Section H2",
+            "3 steps: Schedule a Call → Create Your Plan → Achieve Your Goal",
+            "Step number, icon, title, 1-2 line description each"
+          ],
+          "design_notes": "Horizontal 3-step on desktop with connecting line. Vertical on mobile. Number in terracotta accent circle."
+        },
+        {
+          "id": "faq",
+          "type": "faq_accordion",
+          "order": 8,
+          "conversion_goal": "Handle objections, capture FAQ/AEO search traffic",
+          "content_elements": [
+            "Section overline: 'Common Questions'",
+            "Section H2",
+            "5-7 FAQ items covering buying, selling, and investing in Portland"
+          ],
+          "design_notes": "Accordion expand/collapse. Clean minimal styling. Each answer leads with direct sentence for AEO snippets."
+        },
+        {
+          "id": "final_cta",
+          "type": "cta_banner",
+          "order": 9,
+          "conversion_goal": "Final conversion opportunity before footer",
+          "content_elements": [
+            "Bold CTA headline",
+            "Subtext with value proposition",
+            "Primary CTA button: Schedule a Consultation",
+            "Phone number: 503-382-7798"
+          ],
+          "design_notes": "Forest green background (#2D4A3E) with cream text. Centered layout. High contrast."
+        }
+      ]
+    },
+
+    {
+      "slug": "/buying",
+      "name": "Buying a Home",
+      "seo": {
+        "primary_keyword": "buy a home Portland Oregon",
+        "secondary_keywords": ["first-time home buyer Portland OR", "Portland home buying guide", "homes for sale Portland Oregon"],
+        "schema_types": ["FAQPage", "Service"],
+        "internal_links_to": ["/", "/investing", "/neighborhoods", "/contact"]
+      },
+      "conversion_goal": "Get buyers to schedule a consultation",
+      "sections": [
+        {
+          "id": "hero",
+          "type": "hero_secondary",
+          "order": 1,
+          "conversion_goal": "Speak directly to buyer pain points",
+          "content_elements": ["H1", "Subheadline addressing buyer anxiety", "Primary CTA", "Overline: 'Home Buying'"],
+          "design_notes": "Warm cream background. Left-aligned text. No photo in hero — cleaner for inner pages."
+        },
+        {
+          "id": "buyer_value",
+          "type": "service_detail",
+          "order": 2,
+          "conversion_goal": "Explain the value of working with Kristina as a buyer's agent",
+          "content_elements": ["H2", "Body copy addressing first-time and experienced buyer needs", "3 key benefits with icons", "Testimonial excerpt from K. (first-time buyer)"],
+          "design_notes": "Split layout or single column with benefit cards."
+        },
+        {
+          "id": "buying_process",
+          "type": "process_steps",
+          "order": 3,
+          "conversion_goal": "Make the buying process feel manageable",
+          "content_elements": ["H2", "6-step buying process: Consultation → Pre-Approval → Search → Offer → Inspection/Negotiation → Closing", "Step descriptions"],
+          "design_notes": "Vertical timeline layout with step numbers."
+        },
+        {
+          "id": "faq_buyers",
+          "type": "faq_accordion",
+          "order": 4,
+          "conversion_goal": "Handle buyer objections and capture AEO traffic",
+          "content_elements": ["5-7 buyer-specific FAQs geo-targeted to Portland"],
+          "design_notes": "Accordion. Direct answer-first format."
+        },
+        {
+          "id": "cta_buying",
+          "type": "cta_banner",
+          "order": 5,
+          "conversion_goal": "Convert interested buyers",
+          "content_elements": ["CTA headline", "Schedule a Buyer Consultation button", "Phone number"],
+          "design_notes": "Forest green background."
+        }
+      ]
+    },
+
+    {
+      "slug": "/selling",
+      "name": "Selling Your Home",
+      "seo": {
+        "primary_keyword": "sell my house Portland Oregon",
+        "secondary_keywords": ["Portland home selling guide", "home valuation Portland OR", "best listing agent Portland"],
+        "schema_types": ["FAQPage", "Service"],
+        "internal_links_to": ["/", "/buying", "/neighborhoods", "/contact"]
+      },
+      "conversion_goal": "Get sellers to request a home valuation or schedule a listing consultation",
+      "sections": [
+        {
+          "id": "hero",
+          "type": "hero_secondary",
+          "order": 1,
+          "conversion_goal": "Speak to sellers who want top dollar",
+          "content_elements": ["H1", "Subheadline about maximizing sale price", "Primary CTA: Get Your Home Valuation", "Secondary CTA: Schedule a Call", "Overline: 'Home Selling'"],
+          "design_notes": "Warm cream background. Left-aligned."
+        },
+        {
+          "id": "seller_value",
+          "type": "service_detail",
+          "order": 2,
+          "conversion_goal": "Show the strategic selling approach",
+          "content_elements": ["H2", "Body copy on marketing, pricing strategy, negotiation", "Tyler B. testimonial (lender praising her organization)", "3 key selling advantages"],
+          "design_notes": "Split layout with testimonial pull-quote."
+        },
+        {
+          "id": "selling_process",
+          "type": "process_steps",
+          "order": 3,
+          "conversion_goal": "Demystify the selling process",
+          "content_elements": ["H2", "5-step selling process: Valuation → Prep & Stage → List & Market → Negotiate → Close", "Step descriptions"],
+          "design_notes": "Horizontal steps on desktop."
+        },
+        {
+          "id": "faq_sellers",
+          "type": "faq_accordion",
+          "order": 4,
+          "conversion_goal": "Handle seller objections",
+          "content_elements": ["5-7 seller-specific FAQs geo-targeted to Portland"],
+          "design_notes": "Accordion. Answer-first."
+        },
+        {
+          "id": "cta_selling",
+          "type": "cta_banner",
+          "order": 5,
+          "conversion_goal": "Convert sellers",
+          "content_elements": ["CTA headline focused on getting a valuation", "Two CTAs: Get Your Home Valuation + Schedule a Call"],
+          "design_notes": "Forest green background."
+        }
+      ]
+    },
+
+    {
+      "slug": "/investing",
+      "name": "Real Estate Investing",
+      "seo": {
+        "primary_keyword": "real estate investor Portland Oregon",
+        "secondary_keywords": ["fix and flip Portland OR", "1031 exchange Portland", "investment property Portland Oregon", "rental property Portland"],
+        "schema_types": ["FAQPage", "Service"],
+        "internal_links_to": ["/", "/buying", "/selling", "/contact"]
+      },
+      "conversion_goal": "Position Kristina as the go-to investment advisor and get investors to schedule a strategy call",
+      "sections": [
+        {
+          "id": "hero",
+          "type": "hero_secondary",
+          "order": 1,
+          "conversion_goal": "Signal expertise in investment real estate — differentiate from generic agents",
+          "content_elements": ["H1", "Subheadline speaking to investors wanting Portland ROI", "Primary CTA: Schedule an Investment Strategy Call", "Overline: 'Real Estate Investing'"],
+          "design_notes": "Warm cream background. This page is a key differentiator — make it feel authoritative."
+        },
+        {
+          "id": "investment_services",
+          "type": "services_grid",
+          "order": 2,
+          "conversion_goal": "Show the range of investment services",
+          "content_elements": ["H2", "3 cards: Fix & Flip, Rental Properties, 1031 Exchanges", "Each card: icon, title, description, key benefit"],
+          "design_notes": "3-column grid. Cards with icons."
+        },
+        {
+          "id": "why_portland",
+          "type": "service_detail",
+          "order": 3,
+          "conversion_goal": "Validate Portland as an investment market",
+          "content_elements": ["H2: Why Invest in Portland Real Estate", "Body copy on Portland market fundamentals", "Real industry stat with source", "Key market indicators"],
+          "design_notes": "Single column centered. Include a real stat about Portland housing market — source required."
+        },
+        {
+          "id": "faq_investors",
+          "type": "faq_accordion",
+          "order": 4,
+          "conversion_goal": "Handle investor-specific questions",
+          "content_elements": ["5-7 investor-specific FAQs including 1031 exchange, fix & flip, rental income"],
+          "design_notes": "Accordion. Technical but accessible language."
+        },
+        {
+          "id": "cta_investing",
+          "type": "cta_banner",
+          "order": 5,
+          "conversion_goal": "Convert investors",
+          "content_elements": ["CTA headline about building wealth through real estate", "Schedule an Investment Strategy Call button"],
+          "design_notes": "Forest green background."
+        }
+      ]
+    },
+
+    {
+      "slug": "/about",
+      "name": "About Kristina",
+      "seo": {
+        "primary_keyword": "Kristina Bullock real estate agent Portland",
+        "secondary_keywords": ["Portland real estate broker", "eXp Realty Portland Oregon"],
+        "schema_types": ["Person", "RealEstateAgent"],
+        "internal_links_to": ["/", "/buying", "/selling", "/investing", "/contact"]
+      },
+      "conversion_goal": "Build personal connection and trust — move from stranger to trusted advisor",
+      "sections": [
+        {
+          "id": "hero",
+          "type": "hero_secondary",
+          "order": 1,
+          "conversion_goal": "Personal introduction",
+          "content_elements": ["H1", "Overline: 'About'", "Headshot in portrait card"],
+          "design_notes": "Split layout: large headshot left, intro text right. Warm cream background. Headshot in 3:4 contained card — NOT full-bleed."
+        },
+        {
+          "id": "story",
+          "type": "about_story",
+          "order": 2,
+          "conversion_goal": "Tell Kristina's story — the customer is the hero, she's the guide",
+          "content_elements": ["H2", "Story arc: why real estate, Portland roots, what drives her", "E-E-A-T signals: license #, brokerage, years, awards", "Emphasis on investment expertise as differentiator"],
+          "design_notes": "Single column, generous line height, editorial feel."
+        },
+        {
+          "id": "credentials",
+          "type": "stats_bar",
+          "order": 3,
+          "conversion_goal": "Quick credibility snapshot",
+          "content_elements": ["10+ Years Experience", "5.0 Google Rating", "Five Star Agent Award", "Oregon License #200812019"],
+          "design_notes": "Horizontal stat bar, forest green background, counter animation."
+        },
+        {
+          "id": "testimonials_about",
+          "type": "testimonials_carousel",
+          "order": 4,
+          "conversion_goal": "Reinforce trust with real client words",
+          "content_elements": ["Both verbatim testimonials", "Google badge"],
+          "design_notes": "Large quote, clean layout."
+        },
+        {
+          "id": "cta_about",
+          "type": "cta_banner",
+          "order": 5,
+          "conversion_goal": "Convert after building trust",
+          "content_elements": ["CTA: Ready to Work Together?", "Schedule a Call button"],
+          "design_notes": "Forest green background."
+        }
+      ]
+    },
+
+    {
+      "slug": "/neighborhoods",
+      "name": "Portland Neighborhoods",
+      "seo": {
+        "primary_keyword": "Portland Oregon neighborhoods real estate",
+        "secondary_keywords": ["best neighborhoods Portland OR", "Beaverton homes", "Lake Oswego real estate", "Tigard homes for sale", "Gresham real estate", "Hillsboro homes"],
+        "schema_types": ["FAQPage"],
+        "internal_links_to": ["/", "/buying", "/selling", "/contact"]
+      },
+      "conversion_goal": "Establish local expertise and capture geo-targeted SEO traffic",
+      "sections": [
+        {
+          "id": "hero",
+          "type": "hero_secondary",
+          "order": 1,
+          "conversion_goal": "Signal deep Portland area knowledge",
+          "content_elements": ["H1", "Subheadline about knowing the Portland metro inside and out", "Overline: 'Neighborhoods'"],
+          "design_notes": "Warm cream background."
+        },
+        {
+          "id": "area_grid",
+          "type": "services_grid",
+          "order": 2,
+          "conversion_goal": "Highlight each service area for local SEO",
+          "content_elements": [
+            "6 area cards: Portland, Beaverton, Lake Oswego, Tigard, Gresham, Hillsboro",
+            "Each card: area name, 3-4 sentence overview, vibe/personality, avg home price range (real stat with source), why people love it",
+            "Placeholder for area photo"
+          ],
+          "design_notes": "2-column grid on desktop. Cards with photo placeholder at top."
+        },
+        {
+          "id": "faq_neighborhoods",
+          "type": "faq_accordion",
+          "order": 3,
+          "conversion_goal": "Capture local FAQ search traffic",
+          "content_elements": ["5-7 neighborhood/relocation FAQs about Portland metro"],
+          "design_notes": "Accordion."
+        },
+        {
+          "id": "cta_neighborhoods",
+          "type": "cta_banner",
+          "order": 4,
+          "conversion_goal": "Convert visitors exploring areas",
+          "content_elements": ["CTA: Find Your Perfect Portland Neighborhood", "Schedule a Call button"],
+          "design_notes": "Forest green background."
+        }
+      ]
+    },
+
+    {
+      "slug": "/contact",
+      "name": "Contact",
+      "seo": {
+        "primary_keyword": "contact Portland real estate agent",
+        "secondary_keywords": ["Kristina Bullock contact", "Portland real estate consultation"],
+        "schema_types": ["LocalBusiness", "ContactPage"],
+        "internal_links_to": ["/", "/about"]
+      },
+      "conversion_goal": "Get visitors to schedule a call, submit a form, or call directly",
+      "sections": [
+        {
+          "id": "hero",
+          "type": "hero_secondary",
+          "order": 1,
+          "conversion_goal": "Make it dead simple to get in touch",
+          "content_elements": ["H1", "Subheadline: low-pressure, conversational invitation", "Overline: 'Get In Touch'"],
+          "design_notes": "Warm cream background."
+        },
+        {
+          "id": "contact_split",
+          "type": "contact_form",
+          "order": 2,
+          "conversion_goal": "Capture lead information",
+          "content_elements": [
+            "Left side: Contact form (first_name, last_name, email, phone, message, service_type dropdown: Buying/Selling/Investing/Other)",
+            "Hidden field: source=website-contact",
+            "Submit CTA: Schedule My Consultation",
+            "Right side: Phone (503-382-7798), Email (kristina@prosperinrealestate.com), Business hours, Google review badge"
+          ],
+          "design_notes": "Two-column: form left, contact info right. Floating label inputs. Form on white card with subtle shadow. GHL-compatible field names."
+        },
+        {
+          "id": "trust_footer",
+          "type": "social_proof_strip",
+          "order": 3,
+          "conversion_goal": "Final trust signal",
+          "content_elements": ["eXp Realty LLC", "Oregon License #200812019", "Equal Housing Opportunity", "Five Star Agent Award Winner"],
+          "design_notes": "Slim strip above footer."
+        }
+      ]
+    },
+
+    {
+      "slug": "/faq",
+      "name": "FAQ",
+      "seo": {
+        "primary_keyword": "Portland real estate FAQ",
+        "secondary_keywords": ["Portland home buying questions", "selling a home in Portland Oregon FAQ", "real estate investing Portland FAQ"],
+        "schema_types": ["FAQPage"],
+        "internal_links_to": ["/buying", "/selling", "/investing", "/contact"]
+      },
+      "conversion_goal": "Answer all common questions, capture long-tail search traffic, reduce friction to conversion",
+      "sections": [
+        {
+          "id": "hero",
+          "type": "hero_secondary",
+          "order": 1,
+          "conversion_goal": "Set up the FAQ page",
+          "content_elements": ["H1", "Subheadline", "Overline: 'FAQ'"],
+          "design_notes": "Warm cream background. Simple."
+        },
+        {
+          "id": "faq_buying",
+          "type": "faq_accordion",
+          "order": 2,
+          "conversion_goal": "Answer buyer questions",
+          "content_elements": ["H2: Buying a Home in Portland", "5-7 buyer FAQs"],
+          "design_notes": "Accordion. Categorized."
+        },
+        {
+          "id": "faq_selling",
+          "type": "faq_accordion",
+          "order": 3,
+          "conversion_goal": "Answer seller questions",
+          "content_elements": ["H2: Selling Your Portland Home", "5-7 seller FAQs"],
+          "design_notes": "Accordion."
+        },
+        {
+          "id": "faq_investing",
+          "type": "faq_accordion",
+          "order": 4,
+          "conversion_goal": "Answer investor questions",
+          "content_elements": ["H2: Real Estate Investing in Portland", "5-7 investor FAQs"],
+          "design_notes": "Accordion."
+        },
+        {
+          "id": "cta_faq",
+          "type": "cta_banner",
+          "order": 5,
+          "conversion_goal": "Still have questions? Let's talk.",
+          "content_elements": ["CTA headline", "Schedule a Call button", "Phone number"],
+          "design_notes": "Forest green background."
+        }
+      ]
+    }
+  ]
+}
