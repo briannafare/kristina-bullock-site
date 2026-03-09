@@ -35,6 +35,7 @@ export default function BuyingPage() {
         headline="Find Your Home in Portland — Without the Stress"
         subheadline="Buying a home is one of the biggest decisions you\u2019ll make. You deserve an agent who listens, knows the market, and fights for the best deal."
         primaryCta="Schedule a Buyer Consultation"
+        backgroundImage="/images/buying-hero.jpg"
       />
       <ServiceDetail
         headline="What You Get When You Work With Me"

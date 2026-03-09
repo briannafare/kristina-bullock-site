@@ -23,8 +23,28 @@ import { siteData } from "@/lib/data";
 /* ─── HERO ─── */
 function HeroSection() {
   return (
-    <section className="bg-[var(--color-surface-alt)] min-h-[85vh] flex items-center">
-      <div className="mx-auto max-w-[1200px] px-5 md:px-8 w-full py-16 md:py-0">
+    <section className="bg-[var(--color-surface-alt)] min-h-[85vh] flex items-center relative overflow-hidden">
+      {/* Hero background — static image + optional video overlay */}
+      <Image
+        src="/images/hero-bg.jpg"
+        alt=""
+        fill
+        className="object-cover"
+        priority
+        sizes="100vw"
+      />
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover"
+        poster="/images/hero-bg.jpg"
+      >
+        <source src="/videos/brand-hero.mp4" type="video/mp4" />
+      </video>
+      <div className="absolute inset-0 bg-[var(--color-primary)]/55" />
+      <div className="mx-auto max-w-[1200px] px-5 md:px-8 w-full py-16 md:py-0 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_0.8fr] gap-10 lg:gap-16 items-center">
           {/* Left — Copy */}
           <motion.div
@@ -35,13 +55,13 @@ function HeroSection() {
             <span className="inline-block text-xs font-semibold uppercase tracking-[0.12em] text-[var(--color-accent)] mb-4">
               Portland, Oregon Real Estate
             </span>
-            <h1 className="font-[family-name:var(--font-heading)] text-[clamp(40px,6vw,80px)] font-semibold text-[var(--color-foreground)] leading-[1.08] tracking-tight">
+            <h1 className="font-[family-name:var(--font-heading)] text-[clamp(40px,6vw,80px)] font-semibold text-white leading-[1.08] tracking-tight">
               Buy, Sell, or Invest in Portland
               <span className="text-[var(--color-accent)]"> —</span>
               <br className="hidden md:block" />
               <span className="italic"> With Someone Who Shows Up</span>
             </h1>
-            <p className="text-lg text-[var(--color-muted)] leading-relaxed mt-6 max-w-[540px]">
+            <p className="text-lg text-white/85 leading-relaxed mt-6 max-w-[540px]">
               Licensed since 2008. From first-time buyers to seasoned investors, I bring
               proactive communication, sharp negotiation, and genuine care to every
               transaction. No fluff, no pressure.
@@ -55,13 +75,13 @@ function HeroSection() {
               </Link>
               <a
                 href={siteData.business.phoneTel}
-                className="inline-flex items-center justify-center gap-2 px-7 py-3.5 border-[1.5px] border-[var(--color-primary)] text-[var(--color-primary)] font-semibold rounded-lg hover:bg-[var(--color-primary)] hover:text-white transition-all duration-300"
+                className="inline-flex items-center justify-center gap-2 px-7 py-3.5 border-[1.5px] border-white text-white font-semibold rounded-lg hover:bg-white hover:text-[var(--color-primary)] transition-all duration-300"
               >
                 <Phone className="w-4 h-4" />
                 Call {siteData.business.phone}
               </a>
             </div>
-            <div className="flex items-center gap-4 mt-6 text-sm text-[var(--color-muted)]">
+            <div className="flex items-center gap-4 mt-6 text-sm text-white/70">
               <div className="flex items-center gap-1">
                 {[...Array(5)].map((_, i) => (
                   <Star key={i} className="w-3.5 h-3.5 fill-[var(--color-accent)] text-[var(--color-accent)]" />

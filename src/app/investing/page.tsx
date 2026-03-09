@@ -33,6 +33,7 @@ export default function InvestingPage() {
         headline="Build Wealth Through Portland Real Estate"
         subheadline="Fix & flips, rental properties, 1031 exchanges \u2014 I work with investors who want a real strategy, not just another agent. Licensed since 2008 with deep investment experience."
         primaryCta="Schedule an Investment Strategy Call"
+        backgroundImage="/images/investing-hero.jpg"
       />
 
       <Section className="bg-white py-20 md:py-28">
