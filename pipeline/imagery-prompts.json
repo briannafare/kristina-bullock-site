@@ -1,0 +1,278 @@
+{
+  "meta": {
+    "client_slug": "kristina-bullock-real-estate",
+    "mode": "prompt-only",
+    "total_prompts": 18,
+    "client_assets": 2,
+    "prompts_generated": 12,
+    "data_viz_specs": 3,
+    "icon_sets": 1,
+    "tool_used": "none",
+    "notes": "No image generation tools available in this Claude environment. All prompts are ready for Midjourney v6, DALL-E 3, Flux Pro, or Ideogram v2. Data-viz assets are specified as component blueprints (build in Recharts or as SVG). Client headshot is confirmed and available."
+  },
+
+  "prompts": [
+    {
+      "asset_id": "home-hero-headshot",
+      "section_id": "hero",
+      "page": "/",
+      "source_strategy": "use-client-asset",
+      "status": "client-asset-no-prompt-needed",
+      "source_file": "public/headshot.jpg",
+      "dimensions": "2047x2048 native, display at 380px wide in 3:4 card",
+      "alt_text": "Kristina Bullock, Portland Oregon real estate broker",
+      "approval_notes": "Headshot is confirmed and high-res. Verify it renders well in the 3:4 rounded card with object-position: top center. Face should be centered and fully visible. No cropping of chin or forehead."
+    },
+
+    {
+      "asset_id": "home-hero-bg-texture",
+      "section_id": "hero",
+      "page": "/",
+      "source_strategy": "brand-pattern",
+      "status": "prompt-ready",
+      "model_prompt": "Seamless tileable warm linen paper texture, very subtle natural fiber grain visible, cream white color hex FAF7F2, extremely soft and understated, high-resolution macro detail of fine woven fabric or handmade paper, even lighting with no shadows or gradients, barely perceptible texture that adds warmth to a flat background, minimal and refined, no patterns or shapes, no text, 2560x1440 resolution",
+      "negative_prompt": "visible repeating pattern, heavy grain, dark spots, wrinkles, creases, colored tints, yellow, blue, obvious texture, distracting, low resolution",
+      "recommended_aspect_ratio": "16:9",
+      "usage_context": "Hero section background — tiled or stretched behind headshot and copy. Must not compete with text.",
+      "approval_notes": "Should be almost invisible — just adds warmth vs. flat #FAF7F2. If it's noticeable at a glance, it's too strong. Test by placing white text over it — text should be perfectly readable."
+    },
+
+    {
+      "asset_id": "home-services-icons",
+      "section_id": "services_overview",
+      "page": "/",
+      "source_strategy": "icon-set",
+      "status": "implemented-in-code",
+      "notes": "Using Lucide React icons (Home, DollarSign, TrendingUp) at 40x40px, 1.5px stroke, color #C17B5D. Already coded — no generation needed.",
+      "approval_notes": "Verify icons render correctly at all breakpoints and maintain consistent size/stroke weight."
+    },
+
+    {
+      "asset_id": "home-about-headshot-reuse",
+      "section_id": "about_snippet",
+      "page": "/",
+      "source_strategy": "re-use-existing-site-asset",
+      "status": "client-asset-no-prompt-needed",
+      "source_file": "public/headshot.jpg",
+      "alt_text": "Kristina Bullock",
+      "approval_notes": "Same headshot as hero, displayed smaller in 1:1 square crop. Verify face is well-centered in the square format."
+    },
+
+    {
+      "asset_id": "home-neighborhood-portland",
+      "section_id": "neighborhoods",
+      "page": "/",
+      "source_strategy": "stock-photo",
+      "status": "prompt-ready",
+      "model_prompt": "Editorial cityscape photography of Portland Oregon at golden hour, elevated viewpoint showing the Hawthorne Bridge crossing the Willamette River, Mt. Hood snow-capped peak visible in the distance through light atmospheric haze, residential neighborhoods with mature trees in the foreground, Pacific Northwest Douglas fir and deciduous trees framing the edges, warm amber and soft gold sunlight, slightly desaturated earth tones with deep greens, a local lived-in perspective rather than tourist postcard angle, shallow atmospheric perspective creating depth layers of bridge then city then mountain, no people visible, no text, no watermarks, no logos, photorealistic editorial photography, 16:9 aspect ratio",
+      "negative_prompt": "oversaturated HDR, tourist postcard, fisheye lens, drone selfie, heavy vignette, text overlay, watermark, oversharpened, neon colors, stock photo generic feel, composite image, night time, rain, dark and moody",
+      "recommended_aspect_ratio": "16:9",
+      "usage_context": "Neighborhood card image for Portland — displayed at ~580x326px on desktop, full-width on mobile",
+      "approval_notes": "Does it feel like a local's view of Portland? Is Mt. Hood visible but not cartoonishly prominent? Are the colors warm but not oversaturated? Would it work cropped slightly without losing the bridge or mountain?"
+    },
+
+    {
+      "asset_id": "home-neighborhood-beaverton",
+      "section_id": "neighborhoods",
+      "page": "/",
+      "source_strategy": "stock-photo",
+      "status": "prompt-ready",
+      "model_prompt": "Editorial suburban residential photography of a tree-lined street in the Pacific Northwest, well-maintained single-family homes with craftsman and ranch architectural styles, mature deciduous trees creating a canopy over the street, manicured green lawns, a concrete sidewalk curving gently, soft overcast Pacific Northwest light creating even illumination with no harsh shadows, warm green and earth tone color palette, a feeling of established family neighborhood comfort, cars parked in driveways but not the focus, no people prominently visible, no identifiable house numbers or street signs, no text, no watermarks, photorealistic, 16:9 aspect ratio",
+      "negative_prompt": "luxury mansion, new construction, urban, commercial, night time, rain, dark moody, oversaturated, fisheye, stock photo generic, interior shot, aerial drone",
+      "recommended_aspect_ratio": "16:9",
+      "usage_context": "Neighborhood card image for Beaverton",
+      "approval_notes": "Feels family-friendly and established? Trees and greenery prominent? Could believably be a Beaverton, OR street? No identifiable addresses visible?"
+    },
+
+    {
+      "asset_id": "home-neighborhood-lake-oswego",
+      "section_id": "neighborhoods",
+      "page": "/",
+      "source_strategy": "stock-photo",
+      "status": "prompt-ready",
+      "model_prompt": "Editorial lakeside photography in the Pacific Northwest, calm lake water reflecting surrounding evergreen and deciduous trees, upscale waterfront homes visible across the water at medium distance, a small wooden dock or boat slip in the foreground, late afternoon golden sunlight filtering through Douglas fir trees, deep green water with subtle reflections, an atmosphere of serene upscale suburban living, muted warm color palette with rich greens and soft golds, no people, no boats actively in use, no text, no watermarks, photorealistic, 16:9 aspect ratio",
+      "negative_prompt": "ocean, beach, tropical, urban waterfront, commercial marina, party boat, dark and moody, night, rain, oversaturated, aerial drone, stock photo generic",
+      "recommended_aspect_ratio": "16:9",
+      "usage_context": "Neighborhood card image for Lake Oswego",
+      "approval_notes": "Feels premium and serene without being cold? Water is calm and reflective? Could this be a Pacific Northwest lake (not a mountain lake or tropical)? Homes visible but not the primary subject?"
+    },
+
+    {
+      "asset_id": "home-neighborhood-tigard",
+      "section_id": "neighborhoods",
+      "page": "/",
+      "source_strategy": "stock-photo",
+      "status": "prompt-ready",
+      "model_prompt": "Editorial suburban park photography in the Pacific Northwest, a paved walking path winding through a well-maintained community park, mature deciduous trees with green canopy, trimmed grass on both sides, a park bench visible along the path, soft natural daylight with gentle cloud cover typical of Oregon, warm green and earth tones, a couple or small family visible in the far distance walking away from camera as small anonymous figures, feeling of comfortable suburban outdoor lifestyle, no commercial buildings, no text, no watermarks, photorealistic, 16:9 aspect ratio",
+      "negative_prompt": "urban, concrete, playground equipment prominent, parking lot, night, rain, dark, oversaturated, posed people facing camera, stock photo generic, aerial",
+      "recommended_aspect_ratio": "16:9",
+      "usage_context": "Neighborhood card image for Tigard",
+      "approval_notes": "Feels like a casual Saturday walk in a suburban park? People (if visible) are distant and anonymous? Greenery is dominant? Oregon-appropriate vegetation?"
+    },
+
+    {
+      "asset_id": "home-neighborhood-gresham",
+      "section_id": "neighborhoods",
+      "page": "/",
+      "source_strategy": "stock-photo",
+      "status": "prompt-ready",
+      "model_prompt": "Editorial residential photography of newer Pacific Northwest suburban homes, clean contemporary ranch and two-story designs with fiber cement siding, fresh young landscaping with small trees and new shrubs, wide residential street with clean curbs, blue-gray and warm white exterior colors typical of Oregon new construction, natural daylight with partial blue sky and white clouds, feeling of a growing affordable neighborhood with room to spread out, no luxury finishes, no identifiable house numbers or addresses, no people, no text, no watermarks, photorealistic, 16:9 aspect ratio",
+      "negative_prompt": "luxury home, mansion, old dilapidated, urban, commercial, night, dark moody, aerial drone, interior, construction site, heavy equipment",
+      "recommended_aspect_ratio": "16:9",
+      "usage_context": "Neighborhood card image for Gresham",
+      "approval_notes": "Feels affordable and modern without being cheap? Newer construction that's realistic for Gresham? No luxury signals (no stone facades, no three-car garages)? Oregon-appropriate architecture?"
+    },
+
+    {
+      "asset_id": "home-neighborhood-hillsboro",
+      "section_id": "neighborhoods",
+      "page": "/",
+      "source_strategy": "stock-photo",
+      "status": "prompt-ready",
+      "model_prompt": "Editorial urban-suburban streetscape photography of a modern Pacific Northwest downtown area, contemporary mixed-use buildings with ground-floor retail and upper-floor residential, clean wide sidewalks with street trees, a coffee shop or small restaurant with outdoor seating visible, possibly a light rail station or transit stop in the background, modern street lamps, natural daylight with blue sky, feeling of a tech-driven growing city center, clean and progressive, cool-neutral color palette with warm accents, no identifiable brand signage, no people prominently visible, no text, no watermarks, photorealistic, 16:9 aspect ratio",
+      "negative_prompt": "old downtown, run-down, industrial, rural, night, dark, rain, oversaturated, big box retail, parking lot dominant, aerial drone, generic stock",
+      "recommended_aspect_ratio": "16:9",
+      "usage_context": "Neighborhood card image for Hillsboro",
+      "approval_notes": "Feels modern and progressive? Could this be a PNW tech suburb downtown? Clean and contemporary without being sterile? Transit or walkability signals present?"
+    },
+
+    {
+      "asset_id": "home-cta-bg-texture",
+      "section_id": "final_cta",
+      "page": "/",
+      "source_strategy": "brand-pattern",
+      "status": "prompt-ready",
+      "model_prompt": "Seamless tileable dark green paper texture, deep forest green color hex 2D4A3E, very subtle natural fiber grain visible, rich and deep without being black, high-resolution macro detail of fine handmade paper or linen weave, even lighting with no gradients or hotspots, adds organic warmth to a dark solid background, minimal and refined, no patterns or shapes, no text, 2560x1440 resolution",
+      "negative_prompt": "bright green, neon, heavy pattern, obvious repeating tile, scratches, stains, gradient, light spots, glossy, plastic",
+      "recommended_aspect_ratio": "16:9",
+      "usage_context": "CTA banner background texture — overlaid with white/cream text. Must maintain high contrast.",
+      "approval_notes": "Barely perceptible at normal viewing distance? White text remains perfectly readable over it? Adds warmth vs. flat #2D4A3E without being distracting?"
+    },
+
+    {
+      "asset_id": "invest-market-chart",
+      "section_id": "why_portland",
+      "page": "/investing",
+      "source_strategy": "data-viz",
+      "status": "build-as-component",
+      "implementation": "Build as a Recharts LineChart component or SVG illustration. NOT an AI-generated image.",
+      "chart_spec": {
+        "chart_type": "line-with-forecast-zone",
+        "x_axis": "Time labels: '2020', '2021', '2022', '2023', '2024', '2025', '2026 (Forecast)'",
+        "y_axis": "Label: 'Median Home Value' — NO dollar amounts on axis. Use implied scale.",
+        "line_color": "#2D4A3E (forest green)",
+        "forecast_zone": "#C17B5D at 15% opacity for the 2026 segment",
+        "background": "#FAF7F2 (cream)",
+        "typography": "DM Sans, 12px labels, #6B7280 muted color",
+        "grid_lines": "None — clean minimal style. Subtle x-axis tick marks only.",
+        "data_shape": "Steep rise 2020-2022, plateau 2023-2024, slight dip 2025, modest uptick into forecast zone 2026",
+        "annotation": "Small label 'Stabilizing Market' near the 2024-2025 plateau area"
+      },
+      "story": "Portland home values appreciated rapidly during 2020-2022, stabilized in 2023-2025, and are forecast for modest 2-4% growth. Conveys market maturity and opportunity.",
+      "alt_text": "Line chart showing Portland Oregon median home value trend from 2020 to 2026 forecast with stabilizing growth pattern",
+      "approval_notes": "This should be built as a React component (Recharts), not generated as an image. No specific dollar amounts — the shape of the line tells the story. Verify the 'Stabilizing Market' annotation doesn't look like a hard claim."
+    },
+
+    {
+      "asset_id": "invest-rental-demand-chart",
+      "section_id": "why_portland",
+      "page": "/investing",
+      "source_strategy": "data-viz",
+      "status": "build-as-component",
+      "implementation": "Build as a Recharts BarChart component or SVG illustration.",
+      "chart_spec": {
+        "chart_type": "horizontal-bar-comparison",
+        "bars": [
+          { "label": "Portland Metro", "relative_length": "100%", "color": "#C17B5D" },
+          { "label": "Oregon Average", "relative_length": "75%", "color": "#2D4A3E" },
+          { "label": "National Average", "relative_length": "65%", "color": "#6B7280" }
+        ],
+        "background": "#FAF7F2",
+        "typography": "DM Sans, 13px labels",
+        "grid_lines": "None",
+        "value_labels": "None — no percentages or numbers. Visual comparison only."
+      },
+      "story": "Portland's rental demand exceeds both state and national averages, making it attractive for buy-and-hold investors.",
+      "alt_text": "Horizontal bar chart comparing rental demand in Portland Metro, Oregon, and nationally, showing Portland leading",
+      "approval_notes": "Build as component. No specific numbers — the relative bar lengths tell the story. Portland bar should clearly be the longest. Colors match the design profile."
+    },
+
+    {
+      "asset_id": "senior-transition-timeline",
+      "section_id": "story",
+      "page": "/about",
+      "source_strategy": "data-viz",
+      "status": "build-as-component",
+      "implementation": "Build as a custom React component with CSS/SVG. Horizontal on desktop, vertical on mobile.",
+      "chart_spec": {
+        "chart_type": "horizontal-timeline-process",
+        "steps": [
+          { "label": "Initial Consultation", "icon": "Heart", "description": "Understanding your family's needs and timeline" },
+          { "label": "Home Evaluation", "icon": "ClipboardCheck", "description": "Honest assessment of value and market position" },
+          { "label": "Prep & Simplify", "icon": "Package", "description": "Coordinating decluttering, repairs, and staging" },
+          { "label": "List & Market", "icon": "Megaphone", "description": "Strategic pricing and targeted buyer outreach" },
+          { "label": "Close & Transition", "icon": "Home", "description": "Managing every detail through closing and move" }
+        ],
+        "connector": "2px line in #2D4A3E at 20% opacity",
+        "step_markers": "#C17B5D circles with white Lucide icons inside",
+        "background": "#FAF7F2",
+        "typography": "DM Sans for labels, Cormorant Garamond for step titles"
+      },
+      "story": "Selling a longtime family home is emotional. This visual shows Kristina's clear, compassionate process — making an overwhelming transition feel manageable and supported.",
+      "alt_text": "Five-step timeline showing the senior home transition process from consultation through closing",
+      "approval_notes": "Build as component. Should feel warm and approachable, not clinical or corporate. Icons should be Lucide React. Horizontal on desktop, stacked vertical on mobile. Terracotta markers + forest green connector."
+    },
+
+    {
+      "asset_id": "portland-lifestyle-hero-buying",
+      "section_id": "hero",
+      "page": "/buying",
+      "source_strategy": "stock-photo",
+      "status": "prompt-ready",
+      "model_prompt": "Editorial real estate photography of a charming Pacific Northwest Craftsman-style home exterior at dusk, covered front porch with two Adirondack chairs, warm amber light glowing from inside through divided-light windows, mature hydrangea bushes and ferns in the front garden, a brick or stone pathway leading to the porch, the last warm light of sunset in the sky, rich warm earth tones with deep greens from Pacific Northwest vegetation, feeling of arriving home after a long day, welcoming and cozy, no identifiable house number or street address visible, no people, no text, no watermarks, photorealistic editorial photography, 16:9 aspect ratio",
+      "negative_prompt": "modern minimalist, luxury mansion, commercial, apartment building, daytime harsh light, rain, dark and scary, oversaturated, real estate listing photo with wide-angle distortion, stock photo generic, interior only",
+      "recommended_aspect_ratio": "16:9",
+      "usage_context": "Buying page hero background or supporting image — displayed large",
+      "approval_notes": "Feels like home? Warm and inviting without being luxury? Craftsman style is appropriate for Portland? Dusk lighting adds warmth? No identifiable addresses?"
+    },
+
+    {
+      "asset_id": "portland-lifestyle-hero-selling",
+      "section_id": "hero",
+      "page": "/selling",
+      "source_strategy": "stock-photo",
+      "status": "prompt-ready",
+      "model_prompt": "Editorial interior photography of a bright staged living room, natural sunlight streaming through large windows, Pacific Northwest evergreen trees visible outside, clean and decluttered open-plan space, neutral warm palette with cream walls and natural wood floors, a linen sofa and simple wood coffee table, a few tasteful decorative objects, the feeling of a well-prepared home ready for its next owner, airy and spacious with high ceilings, warm natural color grade, no people, no personal items or family photos visible, no text, no watermarks, photorealistic editorial interior photography, 16:9 aspect ratio",
+      "negative_prompt": "dark, cluttered, outdated, messy, small room, artificial lighting, heavy staging with props, luxury over-the-top, before photo, construction, renovation in progress",
+      "recommended_aspect_ratio": "16:9",
+      "usage_context": "Selling page hero or supporting image",
+      "approval_notes": "Feels like a well-staged listing? Bright and airy? Neutral enough to appeal broadly? PNW vegetation visible outside the windows? Mid-market feel (not luxury, not starter)?"
+    },
+
+    {
+      "asset_id": "portland-lifestyle-investing",
+      "section_id": "hero",
+      "page": "/investing",
+      "source_strategy": "stock-photo",
+      "status": "prompt-ready",
+      "model_prompt": "Editorial real estate photography of a well-maintained Pacific Northwest duplex or small multi-family property, two-story with separate entrances, clean exterior with fresh paint in muted blue-gray and white trim, simple landscaping with low-maintenance shrubs, a shared driveway, residential street setting with mature trees, natural daylight with soft overcast sky, practical and solid rather than flashy, represents a smart investment property, no identifiable house numbers or addresses, no people, no text, no watermarks, photorealistic, 16:9 aspect ratio",
+      "negative_prompt": "luxury condo, high-rise, commercial, run-down, condemned, night, dark, heavy renovation, construction materials visible, aerial drone, interior only",
+      "recommended_aspect_ratio": "16:9",
+      "usage_context": "Investing page hero or supporting image",
+      "approval_notes": "Looks like a realistic Portland investment property? Well-maintained but not luxury? Could imagine an investor evaluating this as a rental or flip? PNW architectural style?"
+    },
+
+    {
+      "asset_id": "og-image",
+      "section_id": "meta",
+      "page": "global",
+      "source_strategy": "custom-illustration",
+      "status": "prompt-ready",
+      "model_prompt": "Professional social media sharing card design, split layout: left 40% shows a warm portrait photo against soft green background, right 60% has deep forest green background hex 2D4A3E with elegant serif typography reading 'Kristina Bullock Real Estate' in cream white and 'Portland, Oregon' below in smaller sans-serif, a thin horizontal terracotta accent line hex C17B5D separating the two text lines, clean minimal professional design suitable for Open Graph social cards, no busy patterns, highly legible at small thumbnail sizes, 1200x630 pixels",
+      "negative_prompt": "busy background, multiple photos, clip art, generic template, low contrast text, illegible at small size, neon colors, gradients",
+      "recommended_aspect_ratio": "1200:630",
+      "usage_context": "Open Graph meta image — shown when site is shared on social media, Google, etc.",
+      "approval_notes": "Readable at tiny sizes (Facebook thumbnail, iMessage preview)? Brand colors correct? Professional and clean? Could alternatively be built in Figma/Canva for pixel-perfect control."
+    }
+  ]
+}
