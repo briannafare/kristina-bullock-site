@@ -1,0 +1,855 @@
+{
+  "meta": {
+    "client_slug": "kristina-bullock-real-estate",
+    "copy_version": "1.0",
+    "tone": "Warm, knowledgeable, direct. Conversational but professional. Portland-rooted. Never salesy.",
+    "stats_sources": {
+      "median_home_price": "Zillow January 2026 — Portland median ~$519,612",
+      "market_forecast": "Houzeo/JVM Lending 2026 — Portland home prices forecast to rise 2-4%",
+      "days_on_market": "Redfin January 2026 — ~54 days average",
+      "oregon_gdp": "JVM Lending 2025 — Oregon GDP surpassed $320 billion"
+    }
+  },
+
+  "pages": [
+    {
+      "slug": "/",
+      "name": "Home",
+      "seo": {
+        "meta_title": "Portland Oregon Real Estate Agent | Kristina Bullock",
+        "meta_description": "Kristina Bullock is a Portland, OR real estate broker helping buyers, sellers, and investors. 10+ years experience. Schedule a free consultation today.",
+        "h1": "Portland Real Estate Agent — Kristina Bullock",
+        "canonical_slug": "/"
+      },
+      "schema": {
+        "types": ["LocalBusiness", "RealEstateAgent", "FAQPage"],
+        "notes": "LocalBusiness with name, phone, email, service areas. RealEstateAgent type. FAQ schema for homepage FAQ section."
+      },
+      "sections": [
+        {
+          "section_id": "hero",
+          "section_type": "hero_primary",
+          "copy": {
+            "overline": "Portland, Oregon Real Estate",
+            "headline": "Buy, Sell, or Invest in Portland — With an Agent Who Actually Shows Up",
+            "subheadline": "Over a decade of helping Portland families find their next home, sell for top dollar, and build wealth through smart real estate investment. No fluff, no pressure — just honest guidance from someone who knows this market inside and out.",
+            "cta_primary": "Schedule a Free Consultation",
+            "cta_secondary": "Call 503-382-7798",
+            "supporting_copy": "Kristina Bullock | eXp Realty, LLC | Oregon License #200812019",
+            "trust_badges": "5.0 Google Rating • 10+ Years Experience • Five Star Agent Award Winner"
+          }
+        },
+        {
+          "section_id": "trust_strip",
+          "section_type": "social_proof_strip",
+          "copy": {
+            "stat_1": { "number": "5.0", "label": "Google Rating" },
+            "stat_2": { "number": "10+", "label": "Years Experience" },
+            "stat_3": { "label": "Five Star Agent Award Winner" },
+            "stat_4": { "label": "eXp Realty, LLC" }
+          }
+        },
+        {
+          "section_id": "services_overview",
+          "section_type": "services_grid",
+          "copy": {
+            "overline": "How I Help",
+            "headline": "Whether You're Buying, Selling, or Investing — I've Got You",
+            "card_1": {
+              "title": "Buying a Home",
+              "body": "First-time buyer or seasoned mover — I'll help you find the right home in the right neighborhood at the right price. No pressure, just guidance.",
+              "link_text": "Learn About Buying"
+            },
+            "card_2": {
+              "title": "Selling Your Home",
+              "body": "Strategic pricing, smart marketing, and relentless negotiation. I don't just list your home — I get it sold for what it's worth.",
+              "link_text": "Learn About Selling"
+            },
+            "card_3": {
+              "title": "Real Estate Investing",
+              "body": "Fix & flips, rental properties, 1031 exchanges — I work with investors who want to build real wealth through Portland real estate.",
+              "link_text": "Learn About Investing"
+            }
+          }
+        },
+        {
+          "section_id": "about_snippet",
+          "section_type": "about_story",
+          "copy": {
+            "overline": "Meet Kristina",
+            "headline": "Real Estate, Done Differently",
+            "body": "I got into real estate because I believe everyone deserves an agent who actually cares about the outcome — not just the commission check. After more than a decade helping Portland families buy, sell, and invest, I've built my business on one principle: show up, do the work, and tell the truth.\n\nWhether you're a first-time buyer navigating your first offer or an investor evaluating your next flip, I bring the same energy — proactive communication, sharp negotiation, and zero sugarcoating. My clients come back because I treat every transaction like it matters. Because it does.",
+            "link_text": "More About Kristina",
+            "notes": "[NOTE: Update with Kristina's own words about her story and why she does this when provided. Current copy is built from testimonial themes and social media tone.]"
+          }
+        },
+        {
+          "section_id": "testimonials",
+          "section_type": "testimonials_carousel",
+          "copy": {
+            "overline": "What Clients Say",
+            "headline": "Don't Take My Word for It",
+            "testimonial_1": {
+              "quote": "Kristina was an absolute pleasure to work with from the lender side. She's proactive, responsive, and incredibly organized — always staying ahead of deadlines, communicating clearly, and advocating for the client every step of the way. She kept the transaction moving smoothly and made coordination between all parties easy. I'd happily partner with Kristina again and highly recommend her to any buyer or seller looking for a true professional.",
+              "reviewer": "Tyler B.",
+              "context": "Lending Partner",
+              "source": "Google Review"
+            },
+            "testimonial_2": {
+              "quote_excerpt": "Kristina hit a little different. Polite, yet strong, realistic and dependable. I really can't put into words the happiness she brings. She was willing to meet us within 24 hours of initial communication. She met us 45 minutes out of the way, at night, to check a few last things — she didn't hesitate. Kristina negotiated her heart out. We secured our home, our first family home, 2 kids in tow. Kristina went from stranger to family friend. If you are looking for someone truthful and honest, friendly but strong, and pull out all the stops, she is the one.",
+              "reviewer": "K.",
+              "context": "First-Time Home Buyer",
+              "source": "Google Review",
+              "notes": "This is an excerpt of a much longer review. Key phrases selected for maximum impact. Full review available in brief.json."
+            }
+          }
+        },
+        {
+          "section_id": "neighborhoods",
+          "section_type": "location_map",
+          "copy": {
+            "overline": "Areas I Serve",
+            "headline": "Portland and Beyond — I Know These Neighborhoods",
+            "areas": [
+              { "name": "Portland", "tagline": "The city I call home" },
+              { "name": "Beaverton", "tagline": "Family-friendly with great schools" },
+              { "name": "Lake Oswego", "tagline": "Lakeside living, premium feel" },
+              { "name": "Tigard", "tagline": "Suburban comfort, easy commutes" },
+              { "name": "Gresham", "tagline": "Affordable entry to the metro" },
+              { "name": "Hillsboro", "tagline": "Tech jobs and growing fast" }
+            ],
+            "link_text": "Explore All Neighborhoods"
+          }
+        },
+        {
+          "section_id": "process",
+          "section_type": "process_steps",
+          "copy": {
+            "overline": "How It Works",
+            "headline": "Three Steps to Getting Started",
+            "step_1": {
+              "number": "01",
+              "title": "Schedule a Call",
+              "body": "Tell me what you're looking for — buying, selling, or investing. No commitment, no pressure. Just a conversation."
+            },
+            "step_2": {
+              "number": "02",
+              "title": "Build Your Plan",
+              "body": "I'll put together a personalized strategy based on your goals, timeline, and budget. You'll know exactly what to expect at every step."
+            },
+            "step_3": {
+              "number": "03",
+              "title": "Make Your Move",
+              "body": "From first showing to closing day, I handle the details, fight for your best deal, and keep you informed the whole way."
+            }
+          }
+        },
+        {
+          "section_id": "faq",
+          "section_type": "faq_accordion",
+          "copy": {
+            "overline": "Common Questions",
+            "headline": "Questions About Portland Real Estate?",
+            "items": [
+              {
+                "question": "What does it cost to work with a real estate agent in Portland?",
+                "answer": "Buyers typically pay nothing out of pocket — the seller's side covers agent commissions in most Portland transactions. For sellers, commission rates are negotiated upfront. I'll walk you through exactly what to expect during our initial consultation so there are no surprises."
+              },
+              {
+                "question": "How long does it take to buy a home in Portland, Oregon?",
+                "answer": "The typical home purchase in Portland takes 45 to 75 days from accepted offer to closing. The full process — including pre-approval, searching, and making an offer — usually takes 2 to 4 months total. I help you get pre-approved first so you're ready to move fast when the right home appears."
+              },
+              {
+                "question": "Is Portland a good market for real estate investment in 2026?",
+                "answer": "Portland remains a strong investment market. According to Zillow, the median home value is approximately $520,000 as of early 2026, with forecasts projecting 2-4% appreciation through the year. Rental demand stays strong, especially in East Portland and the suburbs. I work with investors on fix & flips, rentals, and 1031 exchanges — and I can help you evaluate specific opportunities."
+              },
+              {
+                "question": "What neighborhoods in Portland are best for first-time buyers?",
+                "answer": "Gresham and East Portland tend to offer the most affordable entry points in the metro area. Beaverton and Tigard are great for families who want suburban living with easy access to the city. The best neighborhood depends on your budget, commute, and lifestyle — which is exactly what we'll figure out together."
+              },
+              {
+                "question": "How do I get started with Kristina?",
+                "answer": "Schedule a free consultation call. We'll talk about your goals, timeline, and any questions you have. No commitment required — just a straightforward conversation to see if we're a good fit. You can call or text me directly at 503-382-7798, or use the scheduling form on this site."
+              }
+            ]
+          }
+        },
+        {
+          "section_id": "final_cta",
+          "section_type": "cta_banner",
+          "copy": {
+            "headline": "Ready to Make a Move?",
+            "body": "Whether you're buying your first home, selling for top dollar, or building an investment portfolio — let's talk. No pressure, no obligation. Just real answers from someone who knows Portland real estate.",
+            "cta_primary": "Schedule a Free Consultation",
+            "cta_secondary": "Call 503-382-7798"
+          }
+        }
+      ]
+    },
+
+    {
+      "slug": "/buying",
+      "name": "Buying a Home",
+      "seo": {
+        "meta_title": "Buy a Home in Portland OR | Kristina Bullock Real Estate",
+        "meta_description": "First-time buyer or moving up? Kristina Bullock helps Portland buyers find the right home, negotiate the best deal, and close with confidence. Schedule a call.",
+        "h1": "Buying a Home in Portland, Oregon",
+        "canonical_slug": "/buying"
+      },
+      "schema": {
+        "types": ["FAQPage", "Service"],
+        "notes": "Service schema for buyer representation. FAQ schema for buyer questions."
+      },
+      "sections": [
+        {
+          "section_id": "hero",
+          "section_type": "hero_secondary",
+          "copy": {
+            "overline": "Home Buying",
+            "headline": "Find Your Home in Portland — Without the Stress",
+            "subheadline": "Buying a home is one of the biggest decisions you'll make. You deserve an agent who listens, knows the market, and fights for the best deal — not one who disappears after the first showing.",
+            "cta_primary": "Schedule a Buyer Consultation"
+          }
+        },
+        {
+          "section_id": "buyer_value",
+          "section_type": "service_detail",
+          "copy": {
+            "headline": "What You Get When You Work With Me",
+            "body": "Kristina Bullock is a licensed real estate broker in Portland, Oregon, specializing in buyer representation across the Portland metro area — including Beaverton, Lake Oswego, Tigard, Gresham, and Hillsboro.\n\nI don't just open doors and hand you a flyer. I learn what you're actually looking for, match you with the right neighborhoods, help you understand what a home is really worth, and negotiate hard to protect your bottom line. From first showing to closing day, you'll always know where things stand.",
+            "benefits": [
+              {
+                "title": "Market Knowledge That Matters",
+                "body": "Over a decade of buying and selling in Portland means I know which neighborhoods are trending, where the hidden value is, and what to watch out for."
+              },
+              {
+                "title": "Communication You Can Count On",
+                "body": "Calls returned. Texts answered. Updates sent before you have to ask. My clients don't wonder what's happening — they always know."
+              },
+              {
+                "title": "Negotiation That Gets Results",
+                "body": "From purchase price to inspection repairs to appraisal gaps — I've handled it all and I negotiate to win for my buyers."
+              }
+            ],
+            "testimonial_pull_quote": {
+              "quote": "Kristina hit a little different. Polite, yet strong, realistic and dependable. She negotiated her heart out. We secured our home, our first family home, 2 kids in tow.",
+              "reviewer": "K. — First-Time Home Buyer, Google Review"
+            }
+          }
+        },
+        {
+          "section_id": "buying_process",
+          "section_type": "process_steps",
+          "copy": {
+            "headline": "The Home Buying Process — Step by Step",
+            "steps": [
+              { "number": "01", "title": "Free Consultation", "body": "We meet (coffee shop, phone, video — your call) and talk about what you're looking for, your budget, and your timeline." },
+              { "number": "02", "title": "Get Pre-Approved", "body": "I'll connect you with trusted lenders to get your financing locked in before we start touring. This makes your offer stronger." },
+              { "number": "03", "title": "Tour Homes", "body": "I set up showings that match your criteria. I'll give you honest feedback on each property — including things you might not notice." },
+              { "number": "04", "title": "Make an Offer", "body": "When you find the one, I write a competitive offer and negotiate the best terms. Price, contingencies, closing timeline — all of it." },
+              { "number": "05", "title": "Inspection & Negotiation", "body": "I coordinate the inspection, review the findings with you, and negotiate repairs or credits with the seller." },
+              { "number": "06", "title": "Close & Get Your Keys", "body": "I manage the closing process, handle the paperwork, and make sure everything goes smoothly through signing day." }
+            ]
+          }
+        },
+        {
+          "section_id": "faq_buyers",
+          "section_type": "faq_accordion",
+          "copy": {
+            "headline": "Buyer Questions — Portland, Oregon",
+            "items": [
+              {
+                "question": "How much do I need for a down payment to buy a home in Portland?",
+                "answer": "Many Portland buyers put down between 3% and 20% depending on the loan type. On a $520,000 home (near Portland's current median), that's $15,600 to $104,000. FHA loans allow as little as 3.5% down, and some programs offer down payment assistance for first-time Oregon buyers. I'll connect you with lenders who can walk through your specific options."
+              },
+              {
+                "question": "Is it a good time to buy a house in Portland in 2026?",
+                "answer": "Portland's market has moved into a more balanced phase after the pandemic-era frenzy. According to Zillow, the median home value in Portland is approximately $520,000 as of early 2026. Homes are forecast to appreciate 2-4% through the year, and inventory has increased — giving buyers more choices and negotiating power than in recent years. Whether it's the right time for you depends on your financial readiness. Let's talk through it."
+              },
+              {
+                "question": "What are the most affordable neighborhoods in the Portland metro area?",
+                "answer": "Gresham and East Portland generally offer the lowest price points in the metro area. Wood Village, Milwaukie, and parts of Tigard also provide more affordable options. Beaverton and Hillsboro tend to be mid-range with strong school districts. Lake Oswego commands premium pricing. I can help you find the sweet spot between your budget and your must-haves."
+              },
+              {
+                "question": "How long does the home buying process take in Portland?",
+                "answer": "From first consultation to closing, most Portland home purchases take 2 to 4 months. The offer-to-close timeline is typically 30 to 45 days. Getting pre-approved before you start searching is the single best way to speed things up and strengthen your position."
+              },
+              {
+                "question": "Do I need a buyer's agent in Portland, and what does it cost?",
+                "answer": "You don't technically need one, but going without representation means nobody is advocating for your interests in the negotiation. In most Portland transactions, buyer agent compensation is addressed during the offer process. During our consultation, I'll explain exactly how it works so there are no surprises."
+              }
+            ]
+          }
+        },
+        {
+          "section_id": "cta_buying",
+          "section_type": "cta_banner",
+          "copy": {
+            "headline": "Ready to Start Your Home Search?",
+            "body": "Let's talk about what you're looking for and figure out your next steps. No pressure — just a straightforward conversation.",
+            "cta_primary": "Schedule a Buyer Consultation",
+            "cta_secondary": "Call 503-382-7798"
+          }
+        }
+      ]
+    },
+
+    {
+      "slug": "/selling",
+      "name": "Selling Your Home",
+      "seo": {
+        "meta_title": "Sell Your Home in Portland OR | Kristina Bullock Real Estate",
+        "meta_description": "Sell your Portland home for top dollar. Strategic pricing, professional marketing, and expert negotiation. Get a free home valuation from Kristina Bullock.",
+        "h1": "Sell Your Portland Home for What It's Worth",
+        "canonical_slug": "/selling"
+      },
+      "schema": {
+        "types": ["FAQPage", "Service"],
+        "notes": "Service schema for listing services."
+      },
+      "sections": [
+        {
+          "section_id": "hero",
+          "section_type": "hero_secondary",
+          "copy": {
+            "overline": "Home Selling",
+            "headline": "Sell Your Portland Home for What It's Worth",
+            "subheadline": "The difference between a good sale and a great one comes down to pricing strategy, marketing, and negotiation. I bring all three — and I don't stop until you get the result you deserve.",
+            "cta_primary": "Get Your Free Home Valuation",
+            "cta_secondary": "Schedule a Listing Consultation"
+          }
+        },
+        {
+          "section_id": "seller_value",
+          "section_type": "service_detail",
+          "copy": {
+            "headline": "A Strategic Approach to Selling",
+            "body": "Kristina Bullock is a licensed real estate broker in Portland, Oregon, helping homeowners sell their properties across Portland, Beaverton, Lake Oswego, Tigard, Gresham, and Hillsboro.\n\nI don't just stick a sign in the yard and hope for the best. Every listing gets a custom pricing strategy based on real market data, a marketing plan that puts your home in front of the right buyers, and a negotiation approach built to protect your bottom line. My job is to get your home sold for the highest possible price in the shortest reasonable time.",
+            "benefits": [
+              {
+                "title": "Data-Driven Pricing",
+                "body": "I analyze comparable sales, market trends, and neighborhood dynamics to price your home for maximum interest and top-dollar offers."
+              },
+              {
+                "title": "Professional Marketing",
+                "body": "Professional photography, compelling listing descriptions, and strategic digital marketing put your home in front of qualified buyers — fast."
+              },
+              {
+                "title": "Expert Negotiation",
+                "body": "From offer review to inspection responses to closing terms — I negotiate every detail to protect your equity and your timeline."
+              }
+            ],
+            "testimonial_pull_quote": {
+              "quote": "She's proactive, responsive, and incredibly organized — always staying ahead of deadlines, communicating clearly, and advocating for the client every step of the way.",
+              "reviewer": "Tyler B. — Lending Partner, Google Review"
+            }
+          }
+        },
+        {
+          "section_id": "selling_process",
+          "section_type": "process_steps",
+          "copy": {
+            "headline": "The Selling Process — Simple and Strategic",
+            "steps": [
+              { "number": "01", "title": "Free Home Valuation", "body": "I review recent comparable sales and market conditions to give you an accurate picture of what your home is worth today." },
+              { "number": "02", "title": "Prep & Strategy", "body": "Together we decide on pricing strategy, any improvements worth making, and staging recommendations to maximize buyer interest." },
+              { "number": "03", "title": "List & Market", "body": "Your home goes live with professional photography, strategic online exposure, and targeted marketing to reach the right buyers." },
+              { "number": "04", "title": "Review Offers & Negotiate", "body": "I present every offer with context, advise on terms, and negotiate hard to get you the best possible deal." },
+              { "number": "05", "title": "Close & Celebrate", "body": "I manage all the moving parts through closing day — inspections, appraisals, paperwork — so you can focus on your next chapter." }
+            ]
+          }
+        },
+        {
+          "section_id": "faq_sellers",
+          "section_type": "faq_accordion",
+          "copy": {
+            "headline": "Seller Questions — Portland, Oregon",
+            "items": [
+              {
+                "question": "What is my Portland home worth right now?",
+                "answer": "Home values in Portland depend on neighborhood, condition, size, and current market conditions. As of early 2026, the median home value in Portland is approximately $520,000 according to Zillow. I provide a detailed comparative market analysis that looks at recent sales in your specific neighborhood to give you an accurate number — not just a Zillow estimate. Schedule a free valuation to get started."
+              },
+              {
+                "question": "How long does it take to sell a house in Portland?",
+                "answer": "Portland homes are currently averaging about 54 days on market according to Redfin data from early 2026. Well-priced homes in desirable neighborhoods can sell faster. Homes that are overpriced or need significant work take longer. Pricing correctly from day one is the single biggest factor in selling speed."
+              },
+              {
+                "question": "What should I do to prepare my Portland home for sale?",
+                "answer": "Focus on curb appeal, decluttering, and addressing any obvious maintenance issues. Deep cleaning, fresh paint in neutral colors, and basic landscaping go a long way. Professional staging can increase perceived value. During our listing consultation, I'll walk through your home and give you specific, prioritized recommendations — not a generic checklist."
+              },
+              {
+                "question": "How much does it cost to sell a home in Portland, Oregon?",
+                "answer": "Typical seller costs in Portland include agent commissions, title insurance, closing fees, and any negotiated buyer credits or repairs. Total costs usually run 6-8% of the sale price. I'll provide a detailed net proceeds estimate during our consultation so you know exactly what to expect in your pocket at closing."
+              },
+              {
+                "question": "Should I sell my Portland home now or wait for a better market?",
+                "answer": "Portland's market has stabilized into more balanced conditions heading into 2026. Prices are forecast to appreciate 2-4% through the year. If you're thinking about selling, the best time depends on your personal situation — not just market timing. Let's look at the numbers together and figure out what makes sense for you."
+              }
+            ]
+          }
+        },
+        {
+          "section_id": "cta_selling",
+          "section_type": "cta_banner",
+          "copy": {
+            "headline": "Curious What Your Home Could Sell For?",
+            "body": "Get a free, no-obligation home valuation. I'll show you what similar homes in your neighborhood are selling for — and what strategy would get you the best result.",
+            "cta_primary": "Get Your Free Home Valuation",
+            "cta_secondary": "Call 503-382-7798"
+          }
+        }
+      ]
+    },
+
+    {
+      "slug": "/investing",
+      "name": "Real Estate Investing",
+      "seo": {
+        "meta_title": "Portland Real Estate Investing | Fix & Flip, 1031, Rentals",
+        "meta_description": "Build wealth through Portland real estate. Kristina Bullock helps investors find fix & flips, rental properties, and navigate 1031 exchanges. Let's talk strategy.",
+        "h1": "Real Estate Investing in Portland, Oregon",
+        "canonical_slug": "/investing"
+      },
+      "schema": {
+        "types": ["FAQPage", "Service"],
+        "notes": "Service schema for investment advisory."
+      },
+      "sections": [
+        {
+          "section_id": "hero",
+          "section_type": "hero_secondary",
+          "copy": {
+            "overline": "Real Estate Investing",
+            "headline": "Build Wealth Through Portland Real Estate",
+            "subheadline": "Fix & flips, rental properties, 1031 exchanges — I work with investors who want a real strategy, not just another agent. Over a decade of investment experience in the Portland market.",
+            "cta_primary": "Schedule an Investment Strategy Call"
+          }
+        },
+        {
+          "section_id": "investment_services",
+          "section_type": "services_grid",
+          "copy": {
+            "headline": "Investment Services",
+            "card_1": {
+              "title": "Fix & Flip",
+              "body": "I help investors identify undervalued properties with strong flip potential in the Portland metro. From acquisition to resale, I've been through the full cycle — ARV analysis, rehab scope, contractor networks, and exit strategy."
+            },
+            "card_2": {
+              "title": "Rental Properties",
+              "body": "Portland's rental market remains strong with steady demand. I help investors evaluate cash flow, cap rates, and neighborhood rental trends to find properties that perform from day one."
+            },
+            "card_3": {
+              "title": "1031 Exchanges",
+              "body": "Need to defer capital gains and reinvest? I understand the timelines, identification rules, and replacement property requirements of 1031 exchanges — and I'll make sure you don't miss a deadline."
+            }
+          }
+        },
+        {
+          "section_id": "why_portland",
+          "section_type": "service_detail",
+          "copy": {
+            "headline": "Why Portland for Investment Real Estate?",
+            "body": "Portland's real estate market offers a compelling combination of stability and opportunity for investors. According to Zillow, the median home value sits around $520,000 as of early 2026, with forecasts projecting 2-4% appreciation through the year. The market has moved from the pandemic-era frenzy into a more balanced environment — which actually creates better opportunities for investors who know where to look.\n\nOregon's GDP surpassed $320 billion in 2025, supported by growth in technology, semiconductor manufacturing, and healthcare. Rental demand remains strong, particularly in East Portland, Gresham, and emerging suburban markets. For investors willing to do the work (or partner with someone who knows how), Portland continues to deliver.",
+            "key_points": [
+              "Median home value ~$520,000 with 2-4% annual appreciation forecast (Zillow/JVM Lending, 2026)",
+              "Strong rental demand across the metro, especially in affordable suburbs",
+              "Growing tech and manufacturing economy driving population and job growth",
+              "Stabilizing market means better negotiating position for investors"
+            ]
+          }
+        },
+        {
+          "section_id": "faq_investors",
+          "section_type": "faq_accordion",
+          "copy": {
+            "headline": "Investor Questions — Portland, Oregon",
+            "items": [
+              {
+                "question": "What is a 1031 exchange and how does it work in Oregon?",
+                "answer": "A 1031 exchange allows you to defer capital gains taxes by reinvesting the proceeds from a sold property into a like-kind replacement property. You have 45 days to identify replacement properties and 180 days to close. The exchange must go through a qualified intermediary. I've guided multiple investors through this process and coordinate with your QI and tax advisor to keep everything on track."
+              },
+              {
+                "question": "Is Portland a good market for fix and flip investing in 2026?",
+                "answer": "Portland still offers solid flip opportunities, especially in neighborhoods where older homes can be renovated for strong after-repair value. The stabilizing market means less competition from retail buyers, and properties are sitting longer — giving investors more room to negotiate. The key is running your numbers conservatively and having a reliable team. I can help with both."
+              },
+              {
+                "question": "How do I evaluate a rental property in Portland?",
+                "answer": "Start with the numbers: purchase price, estimated rental income, property taxes, insurance, maintenance reserves, and vacancy rate. A solid Portland rental should aim for positive cash flow after all expenses. I help investors run these calculations on specific properties and compare options across neighborhoods."
+              },
+              {
+                "question": "What areas in Portland are best for real estate investment?",
+                "answer": "Gresham and East Portland tend to offer the best price-to-rent ratios for buy-and-hold investors. Beaverton and Hillsboro attract quality tenants due to proximity to tech employers. Areas with upcoming infrastructure improvements or rezoning potential can offer appreciation upside. The right area depends on your strategy — let's discuss your specific goals."
+              },
+              {
+                "question": "Do you work with out-of-state investors looking at Portland?",
+                "answer": "Yes. I work with investors who aren't local to Portland and handle property evaluation, showings, contractor coordination, and closing logistics on their behalf. I can be your boots on the ground. We'll set up regular check-ins and I'll keep you informed with photos, video walkthroughs, and detailed market analysis."
+              }
+            ]
+          }
+        },
+        {
+          "section_id": "cta_investing",
+          "section_type": "cta_banner",
+          "copy": {
+            "headline": "Let's Build Your Portfolio",
+            "body": "Whether it's your first investment property or your fifteenth — I'll help you find the right opportunity in Portland's market. Let's talk strategy.",
+            "cta_primary": "Schedule an Investment Strategy Call",
+            "cta_secondary": "Call 503-382-7798"
+          }
+        }
+      ]
+    },
+
+    {
+      "slug": "/about",
+      "name": "About Kristina",
+      "seo": {
+        "meta_title": "About Kristina Bullock | Portland OR Real Estate Broker",
+        "meta_description": "Kristina Bullock is a Portland, Oregon real estate broker with eXp Realty and 10+ years of experience. Five Star Agent Award winner. Oregon License #200812019.",
+        "h1": "About Kristina Bullock — Portland Real Estate Broker",
+        "canonical_slug": "/about"
+      },
+      "schema": {
+        "types": ["Person", "RealEstateAgent"],
+        "notes": "Person schema with name, title, license, brokerage, service area."
+      },
+      "sections": [
+        {
+          "section_id": "hero",
+          "section_type": "hero_secondary",
+          "copy": {
+            "overline": "About",
+            "headline": "Your Portland Real Estate Partner",
+            "subheadline": "Kristina Bullock | Real Estate Broker | eXp Realty, LLC | Oregon License #200812019"
+          }
+        },
+        {
+          "section_id": "story",
+          "section_type": "about_story",
+          "copy": {
+            "headline": "Real Estate Is Personal. I Treat It That Way.",
+            "body_paragraphs": [
+              "I've been helping people buy, sell, and invest in Portland real estate for over a decade. In that time, I've worked with first-time buyers who were terrified of making a mistake, seasoned investors running the numbers on their next flip, and families who just needed someone they could trust to guide them home.",
+              "What keeps me in this business isn't the transactions — it's the relationships. My clients come back. They refer their friends. They text me years later when they're ready for their next move. That's because I don't disappear after closing day. I'm in this for the long haul.",
+              "I specialize in residential real estate across the Portland metro area — buying, selling, investing, fix & flips, 1031 exchanges, and new construction. I'm licensed in Oregon and work with eXp Realty, LLC. Whether you need someone to walk you through your first purchase or help you build a real estate portfolio, I bring the same thing to every client: honest advice, proactive communication, and relentless effort.",
+              "[CLIENT TO PROVIDE: Kristina's personal story in her own words — her Portland roots, why she got into real estate, what drives her. This section will be even stronger with her authentic voice.]"
+            ],
+            "credentials": {
+              "license": "Oregon Real Estate Broker — License #200812019",
+              "brokerage": "eXp Realty, LLC",
+              "experience": "10+ years in Portland real estate",
+              "awards": "Five Star Real Estate Agent Award Winner (2016, 2017, 2018 — Nine-Year Winner)",
+              "specialties": "Residential sales, investment properties, fix & flip, 1031 exchanges, new construction"
+            }
+          }
+        },
+        {
+          "section_id": "credentials",
+          "section_type": "stats_bar",
+          "copy": {
+            "stat_1": { "number": "10+", "label": "Years Experience" },
+            "stat_2": { "number": "5.0", "label": "Google Rating" },
+            "stat_3": { "label": "Five Star Agent Award" },
+            "stat_4": { "label": "OR License #200812019" }
+          }
+        },
+        {
+          "section_id": "testimonials_about",
+          "section_type": "testimonials_carousel",
+          "copy": {
+            "headline": "In Their Words",
+            "notes": "Display both full verbatim testimonials from brief.json social_proof section."
+          }
+        },
+        {
+          "section_id": "cta_about",
+          "section_type": "cta_banner",
+          "copy": {
+            "headline": "Ready to Work Together?",
+            "body": "Let's have a conversation. No sales pitch — just a chance to see if we're a good fit for your real estate goals.",
+            "cta_primary": "Schedule a Free Consultation",
+            "cta_secondary": "Call 503-382-7798"
+          }
+        }
+      ]
+    },
+
+    {
+      "slug": "/neighborhoods",
+      "name": "Portland Neighborhoods",
+      "seo": {
+        "meta_title": "Portland OR Neighborhoods Guide | Kristina Bullock Real Estate",
+        "meta_description": "Explore Portland, Beaverton, Lake Oswego, Tigard, Gresham, and Hillsboro real estate. Local insights from a Portland agent with 10+ years of experience.",
+        "h1": "Portland Area Neighborhoods — A Local's Guide",
+        "canonical_slug": "/neighborhoods"
+      },
+      "schema": {
+        "types": ["FAQPage"],
+        "notes": "FAQ schema for neighborhood questions."
+      },
+      "sections": [
+        {
+          "section_id": "hero",
+          "section_type": "hero_secondary",
+          "copy": {
+            "overline": "Neighborhoods",
+            "headline": "Portland Area Neighborhoods — A Local's Guide",
+            "subheadline": "Every neighborhood has a personality. I'll help you find the one that fits yours."
+          }
+        },
+        {
+          "section_id": "area_grid",
+          "section_type": "services_grid",
+          "copy": {
+            "headline": "Explore the Portland Metro",
+            "areas": [
+              {
+                "name": "Portland",
+                "body": "Portland is a city of neighborhoods — from the walkable streets of NE Alberta to the leafy boulevards of Southwest Portland. With over 90 distinct neighborhoods, there's a fit for every lifestyle. The city offers access to food, culture, parks, and transit that suburban areas can't match. Portland's median home value sits around $520,000 as of early 2026 (Zillow), with significant variation by neighborhood.",
+                "vibe": "Urban, eclectic, walkable, culturally rich"
+              },
+              {
+                "name": "Beaverton",
+                "body": "Beaverton is one of Portland's most popular suburbs, known for excellent schools, diverse dining, and proximity to tech employers like Nike and Intel. Families love the access to parks and trails. Beaverton tends to command prices at or above Portland's median, but the strong school districts and community amenities make it a solid long-term investment.",
+                "vibe": "Family-friendly, diverse, well-connected"
+              },
+              {
+                "name": "Lake Oswego",
+                "body": "Lake Oswego is Portland's premier lakeside community, known for its tree-lined streets, top-rated schools, and upscale feel. Homes here tend to be priced above the metro average, attracting buyers who want a quieter, more polished suburban experience with easy access to downtown Portland.",
+                "vibe": "Upscale, scenic, established, family-oriented"
+              },
+              {
+                "name": "Tigard",
+                "body": "Tigard offers a balanced suburban lifestyle with easy highway access to downtown Portland. It's a favorite for commuters who want more space without a long drive. Home prices tend to be moderate relative to the metro average, making Tigard a practical choice for families and first-time buyers looking for value.",
+                "vibe": "Suburban comfort, practical, commuter-friendly"
+              },
+              {
+                "name": "Gresham",
+                "body": "Gresham is the most affordable entry point into the Portland metro area. Located east of Portland, it offers larger lots, newer construction in some areas, and a growing downtown district. For investors, Gresham's lower price points and strong rental demand make it one of the most interesting markets in the metro.",
+                "vibe": "Affordable, growing, space to spread out"
+              },
+              {
+                "name": "Hillsboro",
+                "body": "Hillsboro is booming thanks to its position as Oregon's tech hub. Intel's major presence drives employment and attracts a skilled workforce. The city has invested in downtown revitalization, parks, and transit. Home prices are competitive, and the area offers newer construction and modern amenities that appeal to both families and young professionals.",
+                "vibe": "Tech-driven, modern, fast-growing"
+              }
+            ]
+          }
+        },
+        {
+          "section_id": "faq_neighborhoods",
+          "section_type": "faq_accordion",
+          "copy": {
+            "headline": "Portland Neighborhood Questions",
+            "items": [
+              {
+                "question": "What are the best neighborhoods in Portland for families in 2026?",
+                "answer": "For families, Beaverton and Lake Oswego consistently rank at the top for school quality and safety. Within Portland, neighborhoods like Sellwood-Moreland, Alameda, and Hillsdale offer a family-friendly urban feel. Tigard is great if you want suburban space with an easy commute. The best choice depends on your budget, school priorities, and lifestyle preferences."
+              },
+              {
+                "question": "Where are the most affordable areas to buy a home near Portland?",
+                "answer": "Gresham is generally the most affordable city in the Portland metro area. Parts of East Portland, Milwaukie, and Wood Village also offer lower price points. Hillsboro and Tigard are mid-range with good value relative to amenities. I can help you find the best options in your specific price range."
+              },
+              {
+                "question": "Is Lake Oswego worth the premium over Portland?",
+                "answer": "Lake Oswego offers top-rated schools, lake access, a strong sense of community, and consistently high property values. If school quality and a quieter suburban feel are priorities, many families find the premium worthwhile. The trade-off is less walkability and less cultural diversity compared to inner Portland."
+              },
+              {
+                "question": "What's happening in Hillsboro's real estate market?",
+                "answer": "Hillsboro continues to grow, driven by Intel and the broader tech sector. The city has invested heavily in downtown development and transit. New construction is more available here than in older Portland neighborhoods. It's an attractive option for buyers who want modern homes with good commute access."
+              },
+              {
+                "question": "How do I decide which Portland neighborhood is right for me?",
+                "answer": "Start with your non-negotiables: commute time, school district, budget, and lifestyle preferences (urban walkability vs. suburban space). From there, I'll match you with neighborhoods that fit and set up tours so you can feel the vibe in person. Every neighborhood has a personality — let's find the one that matches yours."
+              }
+            ]
+          }
+        },
+        {
+          "section_id": "cta_neighborhoods",
+          "section_type": "cta_banner",
+          "copy": {
+            "headline": "Find Your Perfect Portland Neighborhood",
+            "body": "Tell me what you're looking for and I'll match you with the areas that fit your lifestyle, budget, and goals.",
+            "cta_primary": "Schedule a Free Consultation",
+            "cta_secondary": "Call 503-382-7798"
+          }
+        }
+      ]
+    },
+
+    {
+      "slug": "/contact",
+      "name": "Contact",
+      "seo": {
+        "meta_title": "Contact Kristina Bullock | Portland OR Real Estate Agent",
+        "meta_description": "Get in touch with Kristina Bullock, Portland real estate broker. Call 503-382-7798 or schedule a free consultation online. eXp Realty, LLC.",
+        "h1": "Let's Talk Real Estate",
+        "canonical_slug": "/contact"
+      },
+      "schema": {
+        "types": ["LocalBusiness", "ContactPage"],
+        "notes": "LocalBusiness with phone, email, hours."
+      },
+      "sections": [
+        {
+          "section_id": "hero",
+          "section_type": "hero_secondary",
+          "copy": {
+            "overline": "Get In Touch",
+            "headline": "Let's Talk Real Estate",
+            "subheadline": "Whether you have a quick question or you're ready to dive in — I'd love to hear from you. No sales pitch, no pressure. Just a real conversation."
+          }
+        },
+        {
+          "section_id": "contact_split",
+          "section_type": "contact_form",
+          "copy": {
+            "form_heading": "Send Me a Message",
+            "fields": ["first_name", "last_name", "email", "phone", "service_type (Buying / Selling / Investing / Other)", "message"],
+            "hidden_field": "source=website-contact",
+            "submit_cta": "Schedule My Consultation",
+            "privacy_note": "Your information is private and never shared with third parties.",
+            "contact_info": {
+              "phone": "503-382-7798",
+              "phone_note": "Call or text anytime",
+              "email": "kristina@prosperinrealestate.com",
+              "hours": "Monday - Friday: 9:00 AM - 5:00 PM | Saturday - Sunday: By Appointment",
+              "brokerage": "eXp Realty, LLC | Oregon License #200812019"
+            }
+          }
+        },
+        {
+          "section_id": "trust_footer",
+          "section_type": "social_proof_strip",
+          "copy": {
+            "items": ["eXp Realty, LLC", "Oregon License #200812019", "Equal Housing Opportunity", "Five Star Agent Award Winner"]
+          }
+        }
+      ]
+    },
+
+    {
+      "slug": "/faq",
+      "name": "FAQ",
+      "seo": {
+        "meta_title": "Portland Real Estate FAQ | Kristina Bullock",
+        "meta_description": "Answers to common questions about buying, selling, and investing in Portland, Oregon real estate. Get expert guidance from Kristina Bullock, licensed broker.",
+        "h1": "Portland Real Estate — Frequently Asked Questions",
+        "canonical_slug": "/faq"
+      },
+      "schema": {
+        "types": ["FAQPage"],
+        "notes": "Comprehensive FAQ schema covering all categories."
+      },
+      "sections": [
+        {
+          "section_id": "hero",
+          "section_type": "hero_secondary",
+          "copy": {
+            "overline": "FAQ",
+            "headline": "Portland Real Estate — Frequently Asked Questions",
+            "subheadline": "Straight answers to the questions I hear most. If yours isn't here, just reach out."
+          }
+        },
+        {
+          "section_id": "faq_buying",
+          "section_type": "faq_accordion",
+          "copy": {
+            "headline": "Buying a Home in Portland",
+            "items": [
+              {
+                "question": "How much house can I afford in Portland?",
+                "answer": "A common guideline is that your monthly housing payment (mortgage, taxes, insurance) shouldn't exceed 28-30% of your gross monthly income. With Portland's median home price around $520,000, most buyers need a household income of $100,000+ to comfortably afford a home here. I'll connect you with lenders who can give you exact pre-approval numbers based on your situation."
+              },
+              {
+                "question": "What credit score do I need to buy a home in Oregon?",
+                "answer": "Most conventional loans require a minimum credit score of 620. FHA loans may accept scores as low as 580 with a 3.5% down payment. A higher credit score gets you better interest rates, which significantly impacts your monthly payment. If your credit needs work, I can recommend resources to help you get mortgage-ready."
+              },
+              {
+                "question": "Should I buy a condo or a house in Portland?",
+                "answer": "It depends on your budget, lifestyle, and maintenance preferences. Condos in Portland typically start around $300,000-$350,000 and offer lower maintenance, but come with HOA fees. Single-family homes offer more space and no HOA, but start higher and require more upkeep. Condos can also be good starter investment properties. We can look at both options during your search."
+              },
+              {
+                "question": "What are closing costs for buyers in Portland, Oregon?",
+                "answer": "Buyer closing costs in Portland typically range from 2-4% of the purchase price. On a $520,000 home, that's roughly $10,000-$21,000. This includes lender fees, title insurance, escrow fees, prepaid taxes and insurance, and other transaction costs. Some of these can be negotiated. I'll help you understand what to expect and where there's room to save."
+              },
+              {
+                "question": "Can I buy a home in Portland with no down payment?",
+                "answer": "VA loans (for qualifying veterans) offer true zero-down financing. USDA loans may work in some outer suburban areas of the metro. Some Oregon first-time buyer programs offer down payment assistance. For most buyers, planning for at least 3-5% down is realistic. I can connect you with lenders who specialize in low-down-payment options."
+              }
+            ]
+          }
+        },
+        {
+          "section_id": "faq_selling",
+          "section_type": "faq_accordion",
+          "copy": {
+            "headline": "Selling Your Portland Home",
+            "items": [
+              {
+                "question": "When is the best time to sell a house in Portland?",
+                "answer": "Spring (March-May) is traditionally the strongest selling season in Portland. Longer days and better weather bring more buyers to the market. However, well-priced homes sell year-round. If your situation calls for selling in fall or winter, there's less competition from other sellers — which can work in your favor."
+              },
+              {
+                "question": "Do I need to make repairs before selling my Portland home?",
+                "answer": "Not always, but strategic repairs and updates can increase your sale price. Focus on anything that would come up in a home inspection — roof issues, plumbing leaks, electrical problems, and structural concerns. Cosmetic updates like fresh paint and landscaping offer strong return on investment. I'll walk through your home and give you specific recommendations based on what buyers in your price range expect."
+              },
+              {
+                "question": "How do I price my Portland home correctly?",
+                "answer": "Pricing starts with a comparative market analysis (CMA) that looks at recently sold homes similar to yours in location, size, condition, and features. I also factor in current market conditions, inventory levels, and buyer demand in your specific neighborhood. Overpricing is the most common mistake sellers make — it leads to longer time on market and ultimately a lower sale price."
+              },
+              {
+                "question": "What happens if my Portland home doesn't sell?",
+                "answer": "If your home isn't getting offers, it's usually a pricing issue. We'll review market feedback, showing activity, and comparable data to determine if a price adjustment is needed. Sometimes small improvements to staging or photography can also make a difference. I stay proactive and adjust strategy quickly — I don't just wait and hope."
+              },
+              {
+                "question": "Can I sell my Portland home as-is?",
+                "answer": "Yes, you can sell as-is in Oregon. This means you're not committing to make repairs, though you still need to disclose known defects. As-is sales typically attract investors and cash buyers. The trade-off is a lower sale price compared to a move-in ready listing. I can help you weigh whether as-is or light renovation will net you more money."
+              }
+            ]
+          }
+        },
+        {
+          "section_id": "faq_investing",
+          "section_type": "faq_accordion",
+          "copy": {
+            "headline": "Real Estate Investing in Portland",
+            "items": [
+              {
+                "question": "How much money do I need to start investing in Portland real estate?",
+                "answer": "For a conventional investment property loan, expect to put down 20-25% of the purchase price. On a $400,000 rental property, that's $80,000-$100,000 plus closing costs and cash reserves. Some investors start with house-hacking — living in one unit of a duplex and renting the other — which allows for lower down payment options. I'll help you map out a strategy that matches your capital."
+              },
+              {
+                "question": "What is the 1% rule and does it apply in Portland?",
+                "answer": "The 1% rule suggests that monthly rent should equal at least 1% of the purchase price. On a $400,000 property, that's $4,000/month in rent. In Portland's current market, hitting the 1% rule is challenging — most properties land in the 0.6-0.8% range. That's common in appreciating urban markets. The trade-off is strong long-term equity growth. I help investors evaluate the full picture: cash flow, appreciation, tax benefits, and equity buildup."
+              },
+              {
+                "question": "Should I invest in Portland or the suburbs?",
+                "answer": "It depends on your strategy. Portland proper offers stronger appreciation and rental demand but higher purchase prices. Suburban markets like Gresham and Hillsboro offer better cash flow entry points. For fix & flip, you want neighborhoods where the renovated value significantly exceeds the purchase-plus-rehab cost. I analyze both city and suburban opportunities for my investor clients."
+              },
+              {
+                "question": "How do property taxes work for investment properties in Oregon?",
+                "answer": "Oregon property taxes are based on assessed value, which is often lower than market value due to Measure 50 limitations. Tax rates vary by county and district. In Multnomah County (Portland), expect around 1.0-1.2% of assessed value annually. Property taxes are deductible on your investment property tax return. I recommend working with a CPA who specializes in real estate investment for detailed tax planning."
+              },
+              {
+                "question": "What should I know about being a landlord in Portland?",
+                "answer": "Portland has tenant-friendly regulations, including rent increase notice requirements, relocation assistance rules, and specific grounds for eviction. Oregon's statewide rent control caps annual increases at 7% plus CPI. It's essential to understand these rules before buying a rental property. I help investors understand the landlord landscape so they go in with eyes open."
+              }
+            ]
+          }
+        },
+        {
+          "section_id": "cta_faq",
+          "section_type": "cta_banner",
+          "copy": {
+            "headline": "Still Have Questions?",
+            "body": "I'm always happy to talk through your specific situation. Reach out anytime — no obligation, no pressure.",
+            "cta_primary": "Schedule a Free Consultation",
+            "cta_secondary": "Call 503-382-7798"
+          }
+        }
+      ]
+    }
+  ]
+}
