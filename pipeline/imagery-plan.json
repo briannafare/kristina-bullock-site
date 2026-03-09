@@ -1,0 +1,295 @@
+{
+  "meta": {
+    "client_slug": "kristina-bullock-real-estate",
+    "imagery_plan_version": "1.0",
+    "style_profiles_used": ["clean-minimal", "warm-community"],
+    "total_assets_planned": 18,
+    "assets_requiring_client_input": 1,
+    "notes": "Plan covers homepage in full, plus reusable cross-site assets (neighborhood photos, data-viz, backgrounds). Headshot is the only confirmed client asset. All other photos sourced via stock or AI generation."
+  },
+
+  "assets": [
+    {
+      "asset_id": "home-hero-headshot",
+      "page": "/",
+      "section_id": "hero",
+      "section_label": "Homepage Hero — Agent Portrait",
+      "role": "hero",
+      "asset_type": "headshot",
+      "description": "Kristina Bullock professional portrait. Close-up, warm natural lighting, soft-focus green/outdoor background. Confident, approachable expression. Already provided as a high-quality JPEG (2047x2048).",
+      "style_notes": "Clean-minimal profile: natural light, warm tones, minimal editing. Display in 3:4 contained portrait card with rounded-2xl corners, object-position: top center. Never stretch to full-bleed banner.",
+      "source_strategy": "use-client-asset",
+      "source_file": "public/headshot.jpg",
+      "recommended_aspect_ratio": "3:4",
+      "alt_text_direction": "Kristina Bullock, Portland Oregon real estate broker",
+      "priority": "critical"
+    },
+
+    {
+      "asset_id": "home-hero-bg-texture",
+      "page": "/",
+      "section_id": "hero",
+      "section_label": "Homepage Hero — Background Texture",
+      "role": "background",
+      "asset_type": "abstract-background",
+      "description": "Subtle warm linen/paper texture for the hero section background. Very light cream (#FAF7F2) with barely visible grain. Adds depth to the flat cream background without competing with the headshot or typography.",
+      "style_notes": "Clean-minimal profile: understated, textured, not flat. Think high-quality stationery paper. Tile-friendly or large enough for full-bleed (2560px wide minimum).",
+      "source_strategy": "brand-pattern",
+      "recommended_aspect_ratio": "16:9",
+      "alt_text_direction": null,
+      "priority": "medium"
+    },
+
+    {
+      "asset_id": "home-services-icons",
+      "page": "/",
+      "section_id": "services_overview",
+      "section_label": "How I Help — Service Card Icons",
+      "role": "icon-row",
+      "asset_type": "icon-set",
+      "description": "Three Lucide React icons at 40x40px, stroke 1.5px, in terracotta accent (#C17B5D): Home (buying), DollarSign (selling), TrendingUp (investing).",
+      "style_notes": "Clean-minimal profile: thin-line icons, 1.5px stroke weight. Consistent sizing. Already implemented in code via lucide-react.",
+      "source_strategy": "icon-set",
+      "recommended_aspect_ratio": "1:1",
+      "alt_text_direction": null,
+      "priority": "low",
+      "notes": "Already coded — no generation needed. Documented for completeness."
+    },
+
+    {
+      "asset_id": "home-about-headshot-reuse",
+      "page": "/",
+      "section_id": "about_snippet",
+      "section_label": "Meet Kristina — About Snippet Photo",
+      "role": "supporting",
+      "asset_type": "headshot",
+      "description": "Same client headshot as hero, displayed in a square crop (1:1) at smaller size (260-320px wide) with rounded-2xl corners and subtle shadow.",
+      "style_notes": "Reuse hero headshot. Square crop centered on face. Object-position: top center.",
+      "source_strategy": "re-use-existing-site-asset",
+      "source_file": "public/headshot.jpg",
+      "recommended_aspect_ratio": "1:1",
+      "alt_text_direction": "Kristina Bullock",
+      "priority": "high"
+    },
+
+    {
+      "asset_id": "home-neighborhood-portland",
+      "page": "/",
+      "section_id": "neighborhoods",
+      "section_label": "Areas I Serve — Portland Card",
+      "role": "supporting",
+      "asset_type": "neighborhood-photo",
+      "description": "Elevated view of Portland's east side with the Hawthorne Bridge and Willamette River, Mt. Hood visible in the distance. Golden hour warm light, residential feel with trees visible. Not a tourist postcard — a local's perspective.",
+      "style_notes": "Clean-minimal: natural warm light, slightly desaturated, editorial. Earth tones matching cream/green palette.",
+      "source_strategy": "stock-photo",
+      "recommended_aspect_ratio": "16:9",
+      "alt_text_direction": "Portland Oregon skyline with Mt. Hood and Hawthorne Bridge at golden hour",
+      "priority": "high"
+    },
+
+    {
+      "asset_id": "home-neighborhood-beaverton",
+      "page": "/",
+      "section_id": "neighborhoods",
+      "section_label": "Areas I Serve — Beaverton Card",
+      "role": "supporting",
+      "asset_type": "neighborhood-photo",
+      "description": "Suburban residential street in the Pacific Northwest — well-maintained single-family homes, mature trees, manicured lawns, a sidewalk, and soft overcast PNW light. Feels like a neighborhood you'd want to live in. No identifiable addresses.",
+      "style_notes": "Warm-community energy: inviting, lived-in, family-friendly. Natural light, green landscaping prominent. Slightly warm color grade.",
+      "source_strategy": "stock-photo",
+      "recommended_aspect_ratio": "16:9",
+      "alt_text_direction": "Tree-lined suburban street with family homes in Beaverton Oregon",
+      "priority": "high"
+    },
+
+    {
+      "asset_id": "home-neighborhood-lake-oswego",
+      "page": "/",
+      "section_id": "neighborhoods",
+      "section_label": "Areas I Serve — Lake Oswego Card",
+      "role": "supporting",
+      "asset_type": "neighborhood-photo",
+      "description": "Lakeside scene — calm water reflecting trees, upscale waterfront homes visible across the lake, dock or small boat in foreground. Pacific Northwest vegetation (Douglas fir, deciduous hardwoods). Late afternoon light.",
+      "style_notes": "Clean-minimal with luxury undertones: serene, refined, aspirational. Natural warm light, deep greens and water blues. No people.",
+      "source_strategy": "stock-photo",
+      "recommended_aspect_ratio": "16:9",
+      "alt_text_direction": "Lakeside view with waterfront homes in Lake Oswego Oregon",
+      "priority": "high"
+    },
+
+    {
+      "asset_id": "home-neighborhood-tigard",
+      "page": "/",
+      "section_id": "neighborhoods",
+      "section_label": "Areas I Serve — Tigard Card",
+      "role": "supporting",
+      "asset_type": "neighborhood-photo",
+      "description": "Suburban park scene — walking path through a green park with mature trees, a family visible in the far distance (small, anonymous, not the focus). Pacific Northwest vegetation, soft daylight. Feels like a Saturday afternoon walk.",
+      "style_notes": "Warm-community: inviting outdoor lifestyle. Green and warm tones. Relaxed, comfortable.",
+      "source_strategy": "stock-photo",
+      "recommended_aspect_ratio": "16:9",
+      "alt_text_direction": "Walking path through suburban park in Tigard Oregon",
+      "priority": "high"
+    },
+
+    {
+      "asset_id": "home-neighborhood-gresham",
+      "page": "/",
+      "section_id": "neighborhoods",
+      "section_label": "Areas I Serve — Gresham Card",
+      "role": "supporting",
+      "asset_type": "neighborhood-photo",
+      "description": "Newer residential development — clean modern single-family homes, fresh landscaping, wide streets, Pacific Northwest sky with some clouds. Feels affordable and growing, not luxury. No identifiable addresses.",
+      "style_notes": "Clean, bright, optimistic. Natural daylight. Less editorial than Portland shot — more straightforward and approachable.",
+      "source_strategy": "stock-photo",
+      "recommended_aspect_ratio": "16:9",
+      "alt_text_direction": "Modern residential homes in Gresham Oregon neighborhood",
+      "priority": "high"
+    },
+
+    {
+      "asset_id": "home-neighborhood-hillsboro",
+      "page": "/",
+      "section_id": "neighborhoods",
+      "section_label": "Areas I Serve — Hillsboro Card",
+      "role": "supporting",
+      "asset_type": "neighborhood-photo",
+      "description": "Modern mixed-use streetscape — clean contemporary architecture, a coffee shop or retail storefront, well-designed sidewalks, possibly a light rail station visible. Pacific Northwest urban-suburban hybrid feel. Represents Hillsboro's tech-driven growth.",
+      "style_notes": "Clean-minimal: modern, fresh, progressive. Brighter and more contemporary than other neighborhood shots. Cool undertones allowed here.",
+      "source_strategy": "stock-photo",
+      "recommended_aspect_ratio": "16:9",
+      "alt_text_direction": "Modern downtown streetscape in Hillsboro Oregon",
+      "priority": "high"
+    },
+
+    {
+      "asset_id": "home-cta-bg-texture",
+      "page": "/",
+      "section_id": "final_cta",
+      "section_label": "Final CTA Banner — Background Texture",
+      "role": "background",
+      "asset_type": "abstract-background",
+      "description": "Subtle dark forest green (#2D4A3E) texture with very faint grain or noise. Adds depth to the solid-color CTA section. Not distracting — barely perceptible at normal viewing distance.",
+      "style_notes": "Clean-minimal dark variant. Faint paper grain or linen weave texture on deep green. Maintain high text contrast with white/cream overlaid.",
+      "source_strategy": "brand-pattern",
+      "recommended_aspect_ratio": "16:9",
+      "alt_text_direction": null,
+      "priority": "low"
+    },
+
+    {
+      "asset_id": "invest-market-chart",
+      "page": "/investing",
+      "section_id": "why_portland",
+      "section_label": "Investing Page — Portland Market Overview",
+      "role": "data-viz",
+      "asset_type": "chart",
+      "description": "Clean line chart showing Portland home value trend over time. X-axis: years (structural labels like '5 Years Ago' → 'Today' → 'Forecast'). Y-axis: 'Median Home Value' (no specific dollar amounts rendered). Line shows general upward trend with recent stabilization. A subtle shaded area for the forecast zone.",
+      "style_notes": "Clean-minimal data-viz: forest green (#2D4A3E) line, terracotta (#C17B5D) for forecast zone, cream background, DM Sans labels. Thin 1.5px line weight. No grid lines — minimal axis ticks only.",
+      "source_strategy": "data-viz",
+      "chart_type": "line-with-forecast-zone",
+      "example_metrics": "Median Home Value trend — structural labels only. No fake dollar amounts.",
+      "story": "Portland home values have appreciated steadily over the long term, with a recent stabilization period and modest growth expected ahead. Conveys stability and opportunity to investors.",
+      "recommended_aspect_ratio": "16:9",
+      "alt_text_direction": "Chart showing Portland Oregon median home value trend with stabilizing growth",
+      "priority": "medium"
+    },
+
+    {
+      "asset_id": "invest-rental-demand-chart",
+      "page": "/investing",
+      "section_id": "why_portland",
+      "section_label": "Investing Page — Rental Demand Indicator",
+      "role": "data-viz",
+      "asset_type": "chart",
+      "description": "Simple horizontal bar comparison chart. Three bars: 'Portland Metro', 'National Average', 'Oregon'. Bars show relative rental demand strength. No specific percentages — visual comparison only. Portland bar is longest.",
+      "style_notes": "Forest green bars on cream background. Terracotta accent on Portland bar to highlight it. DM Sans labels. Clean, minimal, no unnecessary decoration.",
+      "source_strategy": "data-viz",
+      "chart_type": "horizontal-bar-comparison",
+      "example_metrics": "Rental demand index — relative comparison only. No specific numbers.",
+      "story": "Portland's rental demand exceeds both the state and national average, making it an attractive market for rental property investors.",
+      "recommended_aspect_ratio": "4:3",
+      "alt_text_direction": "Bar chart comparing Portland rental demand to state and national averages",
+      "priority": "medium"
+    },
+
+    {
+      "asset_id": "senior-transition-timeline",
+      "page": "/about",
+      "section_id": "story",
+      "section_label": "About Page — Senior Transition Process Visual",
+      "role": "data-viz",
+      "asset_type": "chart",
+      "description": "Horizontal timeline infographic showing the senior home transition process. 4-5 steps: 'Initial Consultation' → 'Home Evaluation' → 'Prep & Simplify' → 'List & Market' → 'Close & Transition'. Each step has a small icon and one-line description. Not a chart with numbers — a process visualization.",
+      "style_notes": "Warm-community style: rounded shapes, terracotta step markers, forest green connecting line, cream background. Friendly and non-intimidating. DM Sans typography.",
+      "source_strategy": "data-viz",
+      "chart_type": "horizontal-timeline-process",
+      "example_metrics": "Senior transition process steps — structural/process labels only.",
+      "story": "Selling a longtime family home doesn't have to be overwhelming. This visual shows the clear, compassionate step-by-step process Kristina uses to guide families through the transition.",
+      "recommended_aspect_ratio": "21:9",
+      "alt_text_direction": "Step-by-step timeline of the senior home transition process",
+      "priority": "medium"
+    },
+
+    {
+      "asset_id": "portland-lifestyle-hero-buying",
+      "page": "/buying",
+      "section_id": "hero",
+      "section_label": "Buying Page — Supporting Lifestyle Image",
+      "role": "supporting",
+      "asset_type": "lifestyle-photo",
+      "description": "Cozy Portland Craftsman-style home exterior — covered front porch with Adirondack chairs, mature landscaping, warm interior light glowing through windows at dusk. Feels like home. No identifiable address or house number visible.",
+      "style_notes": "Clean-minimal: warm dusk lighting, natural tones, editorial framing. Inviting and aspirational without being luxury. Mid-market feel matching Kristina's positioning.",
+      "source_strategy": "stock-photo",
+      "recommended_aspect_ratio": "16:9",
+      "alt_text_direction": "Craftsman-style Portland home exterior with warm porch light at dusk",
+      "priority": "medium"
+    },
+
+    {
+      "asset_id": "portland-lifestyle-hero-selling",
+      "page": "/selling",
+      "section_id": "hero",
+      "section_label": "Selling Page — Supporting Lifestyle Image",
+      "role": "supporting",
+      "asset_type": "lifestyle-photo",
+      "description": "Bright, staged living room interior — clean and decluttered, natural light streaming through large windows, Pacific Northwest greenery visible outside. Neutral modern-warm palette (cream walls, wood floors, linen furniture). Feels like a well-prepared listing.",
+      "style_notes": "Clean-minimal: airy, bright, editorial interior photography. Warm natural light. No heavy staging — tasteful and understated. Slightly warm color grade.",
+      "source_strategy": "stock-photo",
+      "recommended_aspect_ratio": "16:9",
+      "alt_text_direction": "Bright staged living room with natural light and modern warm decor",
+      "priority": "medium"
+    },
+
+    {
+      "asset_id": "portland-lifestyle-investing",
+      "page": "/investing",
+      "section_id": "hero",
+      "section_label": "Investing Page — Supporting Image",
+      "role": "supporting",
+      "asset_type": "lifestyle-photo",
+      "description": "Exterior of a Portland duplex or small multi-family property — well-maintained, modest but solid, green landscaping, Portland-style architecture (mix of older and updated). Represents a practical investment property. No identifiable address.",
+      "style_notes": "Clean, straightforward, practical. Natural daylight. Less aspirational than buying page — more analytical, investor-minded. Neutral warm tones.",
+      "source_strategy": "stock-photo",
+      "recommended_aspect_ratio": "16:9",
+      "alt_text_direction": "Well-maintained duplex investment property in Portland Oregon",
+      "priority": "medium"
+    },
+
+    {
+      "asset_id": "og-image",
+      "page": "global",
+      "section_id": "meta",
+      "section_label": "Open Graph / Social Sharing Image",
+      "role": "supporting",
+      "asset_type": "brand-composite",
+      "description": "Social sharing preview image. Left half: Kristina's headshot (cropped from existing). Right half: forest green background with 'Kristina Bullock Real Estate' in Cormorant Garamond, 'Portland, Oregon' below in DM Sans, terracotta accent line between. Clean, professional, instantly readable at small sizes.",
+      "style_notes": "Must work at 1200x630 (OG standard) and be legible at thumbnail size. Forest green + cream + terracotta palette. No busy backgrounds.",
+      "source_strategy": "custom-illustration",
+      "recommended_aspect_ratio": "1200:630",
+      "alt_text_direction": "Kristina Bullock Real Estate — Portland Oregon",
+      "priority": "medium",
+      "notes": "[CLIENT TO PROVIDE: Logo if available. Otherwise build from typography only.]"
+    }
+  ]
+}
