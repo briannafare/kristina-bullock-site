@@ -3,6 +3,7 @@ import { InnerHero } from "@/components/hero/InnerHero";
 import { ServiceDetail } from "@/components/services/ServiceDetail";
 import { FAQAccordion } from "@/components/faq/FAQAccordion";
 import { CTABanner } from "@/components/cta/CTABanner";
+import { MarketChart } from "@/components/charts/MarketChart";
 import { Section, Overline, SectionHeading } from "@/components/ui/Section";
 import { Hammer, Building2, ArrowRightLeft } from "lucide-react";
 
@@ -63,6 +64,7 @@ export default function InvestingPage() {
         bg="cream"
       />
 
+      <MarketChart />
       <FAQAccordion headline="Investor Questions \u2014 Portland, Oregon" items={investorFaqs} background="white" />
       <CTABanner headline="Let\u2019s Build Your Portfolio" body="Whether it\u2019s your first investment property or your fifteenth \u2014 I\u2019ll help you find the right opportunity." primaryCta="Schedule an Investment Strategy Call" secondaryCta="Call 503-382-7798" />
     </>

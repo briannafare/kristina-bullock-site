@@ -15,6 +15,7 @@ import {
 } from "lucide-react";
 import { Section, Overline, SectionHeading } from "@/components/ui/Section";
 import { TrustStrip } from "@/components/social-proof/TrustStrip";
+import { AnimatedStats } from "@/components/stats/AnimatedStats";
 import { TestimonialSection } from "@/components/testimonials/TestimonialSection";
 import { FAQAccordion } from "@/components/faq/FAQAccordion";
 import { CTABanner } from "@/components/cta/CTABanner";
@@ -379,6 +380,7 @@ export default function HomePage() {
     <>
       <HeroSection />
       <TrustStrip />
+      <AnimatedStats />
       <ServicesSection />
       <AboutSnippet />
       <TestimonialSection />

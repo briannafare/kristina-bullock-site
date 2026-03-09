@@ -4,6 +4,7 @@ import { ServiceDetail } from "@/components/services/ServiceDetail";
 import { ProcessTimeline } from "@/components/process/ProcessTimeline";
 import { FAQAccordion } from "@/components/faq/FAQAccordion";
 import { CTABanner } from "@/components/cta/CTABanner";
+import { HomeValueVisual } from "@/components/selling/HomeValueVisual";
 
 export const metadata: Metadata = {
   title: "Sell Your Home in Portland OR",
@@ -38,6 +39,7 @@ export default function SellingPage() {
         secondaryHref="/contact"
         backgroundImage="/images/selling-hero.jpg"
       />
+      <HomeValueVisual />
       <ServiceDetail
         headline="A Strategic Approach to Selling"
         body={"Kristina Bullock is a licensed real estate broker in Portland, Oregon, helping homeowners sell across Portland, Beaverton, Lake Oswego, Tigard, Gresham, and Hillsboro.\n\nI don\u2019t just stick a sign in the yard and hope for the best. Every listing gets a custom pricing strategy based on real market data, a marketing plan that puts your home in front of the right buyers, and a negotiation approach built to protect your bottom line.\n\nMy background in construction and rehabs means I can also advise on which improvements will increase your sale price \u2014 and which ones aren\u2019t worth the investment."}
