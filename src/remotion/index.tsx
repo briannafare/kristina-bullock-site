@@ -9,6 +9,9 @@ import type {
   StatHighlightProps,
 } from "./types";
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+type AnyComponent = React.FC<any>;
+
 const brandColors = {
   primaryColor: "#2D4A3E",
   accentColor: "#C17B5D",
@@ -83,7 +86,7 @@ export const RemotionRoot: React.FC = () => {
       {/* Brand Hero — landscape 16:9 */}
       <Composition
         id="BrandHero"
-        component={BrandHero}
+        component={BrandHero as AnyComponent}
         durationInFrames={HERO_DURATION}
         fps={30}
         width={1920}
@@ -93,7 +96,7 @@ export const RemotionRoot: React.FC = () => {
       {/* Brand Hero — portrait 9:16 (Stories/Reels) */}
       <Composition
         id="BrandHeroPortrait"
-        component={BrandHero}
+        component={BrandHero as AnyComponent}
         durationInFrames={HERO_DURATION}
         fps={30}
         width={1080}
@@ -103,7 +106,7 @@ export const RemotionRoot: React.FC = () => {
       {/* Brand Hero — square 1:1 (Social) */}
       <Composition
         id="BrandHeroSquare"
-        component={BrandHero}
+        component={BrandHero as AnyComponent}
         durationInFrames={HERO_DURATION}
         fps={30}
         width={1080}
@@ -113,7 +116,7 @@ export const RemotionRoot: React.FC = () => {
       {/* Testimonial Reel — landscape */}
       <Composition
         id="TestimonialReel"
-        component={TestimonialReel}
+        component={TestimonialReel as AnyComponent}
         durationInFrames={TESTIMONIAL_DURATION}
         fps={30}
         width={1920}
@@ -123,7 +126,7 @@ export const RemotionRoot: React.FC = () => {
       {/* Testimonial Reel — portrait */}
       <Composition
         id="TestimonialReelPortrait"
-        component={TestimonialReel}
+        component={TestimonialReel as AnyComponent}
         durationInFrames={TESTIMONIAL_DURATION}
         fps={30}
         width={1080}
@@ -133,7 +136,7 @@ export const RemotionRoot: React.FC = () => {
       {/* Stat Highlight — landscape */}
       <Composition
         id="StatHighlight"
-        component={StatHighlight}
+        component={StatHighlight as AnyComponent}
         durationInFrames={STAT_DURATION}
         fps={30}
         width={1920}
