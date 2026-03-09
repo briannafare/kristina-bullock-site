@@ -221,16 +221,21 @@ function AboutSnippet() {
               More About Kristina <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
-          {/* Tightly cropped circular headshot — different treatment from hero */}
+          {/* Small circular headshot on accent background — visually distinct from hero 3:4 */}
           <div className="flex justify-center lg:justify-end">
-            <div className="relative w-[260px] md:w-[300px] aspect-square rounded-full overflow-hidden shadow-lg ring-4 ring-[var(--color-accent)]/20">
-              <Image
-                src="/headshot.jpg"
-                alt="Kristina Bullock"
-                fill
-                className="object-cover object-top scale-125"
-                sizes="300px"
-              />
+            <div className="relative w-[280px] md:w-[320px] aspect-square flex items-center justify-center">
+              {/* Accent background shape */}
+              <div className="absolute inset-0 rounded-3xl bg-[var(--color-accent)]/10 -rotate-3" />
+              {/* Circular crop — tight face/shoulders */}
+              <div className="relative w-[200px] md:w-[240px] aspect-square rounded-full overflow-hidden shadow-xl ring-[5px] ring-white">
+                <Image
+                  src="/headshot.jpg"
+                  alt="Kristina Bullock"
+                  fill
+                  className="object-cover object-[center_15%] scale-[1.6]"
+                  sizes="240px"
+                />
+              </div>
             </div>
           </div>
         </div>

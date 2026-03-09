@@ -19,8 +19,8 @@ interface Stat {
 const stats: Stat[] = [
   { value: 200, suffix: "+", label: "Families Helped" },
   { value: 17, suffix: "+", label: "Years Experience" },
-  { value: 5.0, suffix: ".0", label: "Google Rating" },
-  { value: 100, suffix: "%", label: "Commitment" },
+  { value: 5, suffix: ".0", label: "Google Rating" },
+  { value: 100, suffix: "%", label: "Client Satisfaction" },
 ];
 
 function StatCard({ stat }: { stat: Stat }) {
