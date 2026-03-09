@@ -1,0 +1,194 @@
+{
+  "meta": {
+    "client_slug": "kristina-bullock-real-estate",
+    "primary_profile": "clean-minimal",
+    "secondary_profile": "warm-community",
+    "customizations": "Base is clean-minimal for editorial sophistication. Warmed with community profile accents for approachability. Color palette is custom: deep forest green + warm cream + terracotta copper — Pacific Northwest-inspired, avoids generic navy/gold real estate cliché. Typography pairs an editorial serif (Cormorant Garamond) with a clean modern sans (DM Sans). Rounded but not bubbly border radii. Subtle scroll animations keep it feeling premium, not flashy.",
+    "inspiration_references": [
+      "stewartco-realty — warm cream background, uppercase tracked headings, generous whitespace",
+      "letusibiza — split hero with photo grid, google review badge, monochromatic color approach",
+      "villaskamezi-wellness — overline + italic serif headline technique, floating contact buttons"
+    ]
+  },
+
+  "style_summary": "Refined Pacific Northwest warmth. Editorial serif headlines on warm cream backgrounds create a sense of sophistication without corporate coldness. Deep forest green anchors trust while terracotta copper accents inject personality and warmth. Generous whitespace, natural photography, and subtle scroll reveals make the site feel intentional and premium — like a well-designed home, not a template.",
+
+  "color_tokens": {
+    "primary": "#2D4A3E",
+    "secondary": "#FAF7F2",
+    "accent": "#C17B5D",
+    "accent_alt": "#A66545",
+    "text_primary": "#1C1C1C",
+    "text_secondary": "#6B7280",
+    "surface": "#FFFFFF",
+    "surface_alt": "#FAF7F2",
+    "border": "#E5E2DC",
+    "overlay": "rgba(45,74,62,0.85)",
+    "gradient_hero": "linear-gradient(180deg, #FAF7F2 0%, #F0EDE6 100%)",
+    "note": "Primary green evokes PNW forests and trust. Cream/linen surface feels warmer than pure white. Terracotta accent is warm, distinctive, and high-contrast for CTAs. If Kristina provides brand colors later, override primary and accent tokens — keep cream surface and text colors."
+  },
+
+  "typography_tokens": {
+    "font_heading": "'Cormorant Garamond', 'Playfair Display', Georgia, serif",
+    "font_heading_url": "https://fonts.google.com/specimen/Cormorant+Garamond",
+    "font_body": "'DM Sans', 'Inter', system-ui, sans-serif",
+    "font_body_url": "https://fonts.google.com/specimen/DM+Sans",
+    "font_accent": "'Cormorant Garamond', serif",
+    "font_mono": "'JetBrains Mono', monospace",
+    "heading_weight": "600",
+    "body_weight": "400",
+    "heading_scale": {
+      "hero": "clamp(48px, 6.5vw, 88px)",
+      "h1": "clamp(40px, 5.5vw, 72px)",
+      "h2": "clamp(28px, 3.5vw, 48px)",
+      "h3": "clamp(20px, 2.5vw, 28px)",
+      "h4": "20px"
+    },
+    "body_size": "16px",
+    "body_lg": "18px",
+    "body_sm": "14px",
+    "caption": "12px",
+    "line_height": {
+      "display": 1.1,
+      "heading": 1.25,
+      "body": 1.7
+    },
+    "letter_spacing": {
+      "tight": "-0.02em",
+      "normal": "0em",
+      "wide": "0.06em",
+      "wider": "0.12em"
+    },
+    "heading_style_notes": "Use italic Cormorant Garamond for accent words within headlines (mix upright + italic for visual rhythm — per villaskamezi pattern). Overline labels in small all-caps DM Sans with wide tracking."
+  },
+
+  "layout_tokens": {
+    "max_width": "1200px",
+    "section_padding_y": "py-20 md:py-28",
+    "container_padding_x": "px-5 md:px-8 lg:px-16",
+    "section_gap": "space-y-0",
+    "card_border_radius": "rounded-xl",
+    "button_border_radius": "rounded-lg",
+    "hero_min_height": "min-h-[85vh]",
+    "grid_columns": 12,
+    "gutter": "32px",
+    "border_radius": {
+      "none": "0px",
+      "sm": "4px",
+      "md": "8px",
+      "lg": "12px",
+      "xl": "16px",
+      "full": "9999px"
+    }
+  },
+
+  "component_tokens": {
+    "button_primary": {
+      "bg": "#C17B5D",
+      "text": "#FFFFFF",
+      "border": "none",
+      "border_radius": "8px",
+      "padding": "14px 32px",
+      "font": "'DM Sans', sans-serif",
+      "font_size": "14px",
+      "font_weight": "600",
+      "letter_spacing": "0.02em",
+      "text_transform": "none",
+      "hover_bg": "#A66545",
+      "shadow": "0 4px 14px rgba(193,123,93,0.25)",
+      "hover_shadow": "0 6px 20px rgba(193,123,93,0.35)",
+      "transition": "all 0.3s ease"
+    },
+    "button_secondary": {
+      "bg": "transparent",
+      "text": "#2D4A3E",
+      "border": "1.5px solid #2D4A3E",
+      "border_radius": "8px",
+      "padding": "14px 32px",
+      "hover_bg": "#2D4A3E",
+      "hover_text": "#FFFFFF",
+      "transition": "all 0.3s ease"
+    },
+    "card": {
+      "bg": "#FFFFFF",
+      "border": "1px solid #E5E2DC",
+      "border_radius": "12px",
+      "padding": "32px",
+      "shadow": "0 2px 12px rgba(0,0,0,0.04)",
+      "hover_shadow": "0 8px 32px rgba(0,0,0,0.08)",
+      "hover_transform": "translateY(-3px)",
+      "transition": "all 0.35s ease"
+    },
+    "nav": {
+      "bg": "rgba(255,255,255,0.92)",
+      "backdrop_filter": "blur(12px)",
+      "border_bottom": "1px solid #E5E2DC",
+      "height": "72px",
+      "link_style": "normal",
+      "link_weight": 500,
+      "link_tracking": "0.01em",
+      "sticky": true,
+      "cta_in_nav": true,
+      "phone_in_nav": true
+    },
+    "hero": {
+      "min_height": "85vh",
+      "layout": "split-text-image",
+      "text_position": "left",
+      "overlay": false,
+      "bg_treatment": "warm-cream-gradient",
+      "headshot_treatment": "contained-portrait-card — 3:4 ratio, rounded-xl, object-position: top center. NEVER full-bleed banner."
+    },
+    "testimonial_style": "large-quote-with-attribution",
+    "section_divider": "thin-1px-rule-or-none",
+    "image_treatment": "natural-warm-editorial",
+    "icon_style": "thin-stroke-1.5px-lucide",
+    "overline": {
+      "font": "'DM Sans', sans-serif",
+      "font_size": "12px",
+      "letter_spacing": "0.12em",
+      "text_transform": "uppercase",
+      "color": "#C17B5D",
+      "font_weight": 600
+    }
+  },
+
+  "interaction_tokens": {
+    "transition_default": "all 0.35s cubic-bezier(0.4, 0, 0.2, 1)",
+    "transition_slow": "all 0.7s cubic-bezier(0.4, 0, 0.2, 1)",
+    "hover_scale": "scale(1.02)",
+    "scroll_animation": "fade-up-soft",
+    "scroll_animation_duration": "0.6s",
+    "scroll_animation_delay_step": "0.12s",
+    "hero_entrance": "staggered-fade-up",
+    "hero_entrance_duration": "0.7s",
+    "page_transition": "fade",
+    "cursor": "default",
+    "magnetic_buttons": false,
+    "parallax_images": true,
+    "number_counter_animation": true,
+    "nav_scroll_behavior": "Adds backdrop-blur and slight shadow on scroll"
+  },
+
+  "media_tokens": {
+    "image_style": "warm-natural-editorial — Portland lifestyle, real neighborhoods, candid not stock. Green trees, craftsman homes, coffee shops, bridges.",
+    "image_overlay": "none-or-subtle-warm-tint",
+    "icon_style": "thin-line-lucide",
+    "icon_stroke": "1.5px",
+    "illustration_style": "none (photography-forward)",
+    "preferred_image_ratio": "3:4 portrait for headshots, 16:9 landscape for neighborhood/property shots",
+    "headshot_rules": "ALWAYS in split-section or contained portrait card. NEVER full-bleed banner. object-position: top center. Max width: 50% of section on desktop."
+  },
+
+  "copywriting_tokens": {
+    "voice": "Warm, knowledgeable, direct. Like a trusted friend who also happens to be a real estate expert. Never salesy or corporate.",
+    "avoid": "Hollow marketing phrases ('world-class service', 'your dream home awaits'), passive voice in CTAs, generic 'we're committed to excellence' language, fake urgency",
+    "use": "You-first language, specific Portland neighborhoods, real proof points from testimonials, active verbs (Book, Schedule, Get, Start), conversational warmth",
+    "headline_pattern": "OUTCOME FOR THE PERSON or WARM INVITATION WITH LOCAL ANCHOR",
+    "headline_examples": [
+      "Your Next Chapter in Portland Starts Here.",
+      "Buy, Sell, or Invest — With Someone Who Actually Cares.",
+      "Portland Real Estate, Done Right."
+    ]
+  }
+}
