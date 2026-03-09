@@ -3,7 +3,7 @@ import { InnerHero } from "@/components/hero/InnerHero";
 import { ServiceDetail } from "@/components/services/ServiceDetail";
 import { FAQAccordion } from "@/components/faq/FAQAccordion";
 import { CTABanner } from "@/components/cta/CTABanner";
-import { MarketChart } from "@/components/charts/MarketChart";
+import { AnimatedBarChart } from "@/components/charts/AnimatedBarChart";
 import { Section, Overline, SectionHeading } from "@/components/ui/Section";
 import { Hammer, Building2, ArrowRightLeft } from "lucide-react";
 import { RemotionStatSection } from "@/components/remotion/RemotionStatSection";
@@ -44,7 +44,7 @@ export default function InvestingPage() {
           <SectionHeading className="mb-12">Three Ways I Help Investors</SectionHeading>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {investmentCards.map((card) => (
-              <div key={card.title} className="border border-[var(--color-border)] rounded-xl p-8 bg-white hover:shadow-lg hover:-translate-y-1 transition-all duration-300 hover:border-[var(--color-accent)]/30">
+              <div key={card.title} className="border border-[var(--color-border)] rounded-xl p-8 bg-white hover:shadow-lg hover:-translate-y-1 transition-all duration-300 hover:border-[var(--color-accent)]/30 hover:border-l-4 hover:border-l-[#2E7D52]">
                 <card.icon className="w-10 h-10 text-[var(--color-accent)] stroke-[1.5px] mb-5" />
                 <h3 className="font-[family-name:var(--font-heading)] text-2xl font-semibold text-[var(--color-foreground)] mb-3">{card.title}</h3>
                 <p className="text-[var(--color-muted)] text-[15px] leading-relaxed">{card.body}</p>
@@ -65,10 +65,27 @@ export default function InvestingPage() {
         bg="cream"
       />
 
-      {/* Remotion animated stat highlight */}
+      {/* Animated stat highlight */}
       <RemotionStatSection />
 
-      <MarketChart />
+      {/* Animated bar chart */}
+      <Section className="bg-[var(--color-surface-alt)] py-20 px-6 md:px-12 lg:px-20">
+        <div className="max-w-4xl mx-auto">
+          <Overline>Market Data</Overline>
+          <SectionHeading className="mb-3">
+            Portland Home Value Trends
+          </SectionHeading>
+          <p className="text-sm text-[var(--color-muted)] mb-8 max-w-xl">
+            Portland Metro Median Home Value 2020–2026
+          </p>
+          <AnimatedBarChart />
+          <p className="mt-4 text-xs text-[var(--color-primary)] opacity-40 leading-relaxed">
+            Source: Zillow Home Value Index. Data represents median home values for
+            Portland, OR metro area.
+          </p>
+        </div>
+      </Section>
+
       <FAQAccordion headline="Investor Questions — Portland, Oregon" items={investorFaqs} background="white" />
       <CTABanner headline="Let's Build Your Portfolio" body="Whether it's your first investment property or your fifteenth — I'll help you find the right opportunity." primaryCta="Schedule an Investment Strategy Call" secondaryCta="Call 503-382-7798" />
     </>

@@ -40,3 +40,25 @@ body {
     transform: translateX(0);
   }
 }
+
+/* Leaflet map overrides */
+.leaflet-container {
+  z-index: 1;
+}
+.map-tooltip {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  font-weight: 700;
+  font-size: 12px;
+  color: #1a1a1a;
+}
+.map-tooltip::before {
+  display: none;
+}
+
+/* Section divider gradient */
+.section-divider {
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #C4704F 30%, #C4704F 70%, transparent);
+}

@@ -1,107 +1,61 @@
 "use client";
 
-import React, { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 
-interface StatProps {
-  primaryColor: string;
-  accentColor: string;
-  secondaryColor: string;
-  headingFont: string;
-  bodyFont: string;
-  businessName: string;
-  stats: { value: number; suffix: string; label: string }[];
+const STATS = [
+  { value: 200, suffix: "+", label: "Families Helped" },
+  { value: 17, suffix: "+", label: "Years Experience" },
+  { value: 5, suffix: ".0", label: "Google Rating" },
+];
+
+const DURATION = 1200;
+const INTERVAL = 30;
+const STEPS = Math.ceil(DURATION / INTERVAL);
+
+function easeOut(t: number) {
+  return 1 - Math.pow(1 - t, 3);
 }
 
-const statProps: StatProps = {
-  primaryColor: "#2D4A3E",
-  accentColor: "#C17B5D",
-  secondaryColor: "#FAF7F2",
-  headingFont: "Cormorant Garamond, serif",
-  bodyFont: "DM Sans, sans-serif",
-  businessName: "Kristina Bullock Real Estate",
-  stats: [
-    { value: 200, suffix: "+", label: "Families Helped" },
-    { value: 17, suffix: "+", label: "Years Experience" },
-    { value: 5, suffix: ".0", label: "Google Rating" },
-  ],
-};
-
-function useCountUp(target: number, duration: number, started: boolean) {
-  const [current, setCurrent] = useState(0);
-  const rafRef = useRef<number>(0);
-  const startTimeRef = useRef<number>(0);
+function StatCard({ stat, started }: { stat: typeof STATS[number]; started: boolean }) {
+  const [count, setCount] = useState(stat.value);
 
   useEffect(() => {
-    if (!started) return;
-    startTimeRef.current = performance.now();
-
-    function tick(now: number) {
-      const elapsed = now - startTimeRef.current;
-      const progress = Math.min(elapsed / duration, 1);
-      // ease out cubic
-      const eased = 1 - Math.pow(1 - progress, 3);
-      setCurrent(Math.round(eased * target));
-      if (progress < 1) {
-        rafRef.current = requestAnimationFrame(tick);
-      }
+    if (!started) {
+      setCount(0);
+      return;
     }
-
-    rafRef.current = requestAnimationFrame(tick);
-    return () => cancelAnimationFrame(rafRef.current);
-  }, [target, duration, started]);
-
-  return current;
-}
-
-function AnimatedStatCard({
-  stat,
-  index,
-  started,
-}: {
-  stat: StatProps["stats"][number];
-  index: number;
-  started: boolean;
-}) {
-  const [visible, setVisible] = useState(false);
-
-  useEffect(() => {
-    if (!started) return;
-    const timer = setTimeout(() => setVisible(true), index * 200);
-    return () => clearTimeout(timer);
-  }, [started, index]);
-
-  const count = useCountUp(stat.value, 1500, visible);
+    let step = 0;
+    const timer = setInterval(() => {
+      step++;
+      const progress = Math.min(step / STEPS, 1);
+      setCount(Math.round(easeOut(progress) * stat.value));
+      if (step >= STEPS) {
+        clearInterval(timer);
+        setCount(stat.value);
+      }
+    }, INTERVAL);
+    return () => clearInterval(timer);
+  }, [started, stat.value]);
 
   return (
-    <div
-      style={{
-        opacity: visible ? 1 : 0,
-        transform: visible ? "translateY(0)" : "translateY(20px)",
-        transition: "opacity 0.5s ease, transform 0.5s ease",
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        flex: 1,
-      }}
-    >
+    <div style={{ display: "flex", flexDirection: "column", alignItems: "center", flex: 1 }}>
       <div
         style={{
-          fontFamily: statProps.headingFont,
+          fontFamily: "Cormorant Garamond, serif",
           fontSize: "clamp(36px, 5vw, 56px)",
           fontWeight: 700,
-          color: statProps.accentColor,
+          color: "#C17B5D",
           lineHeight: 1,
           letterSpacing: "-0.02em",
         }}
       >
-        {count}
-        {stat.suffix}
+        {count}{stat.suffix}
       </div>
       <div
         style={{
-          width: visible ? 60 : 0,
+          width: started ? 60 : 0,
           height: 3,
-          backgroundColor: statProps.accentColor,
+          backgroundColor: "#C17B5D",
           borderRadius: 2,
           marginTop: 12,
           marginBottom: 12,
@@ -110,9 +64,9 @@ function AnimatedStatCard({
       />
       <div
         style={{
-          fontFamily: statProps.bodyFont,
+          fontFamily: "DM Sans, sans-serif",
           fontSize: "clamp(10px, 1.2vw, 14px)",
-          color: statProps.primaryColor,
+          color: "#2D4A3E",
           opacity: 0.8,
           textAlign: "center",
           textTransform: "uppercase",
@@ -128,10 +82,10 @@ function AnimatedStatCard({
 
 export function RemotionStatPlayer() {
   const [started, setStarted] = useState(false);
-  const containerRef = useRef<HTMLDivElement>(null);
+  const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const el = containerRef.current;
+    const el = ref.current;
     if (!el) return;
 
     const observer = new IntersectionObserver(
@@ -141,55 +95,36 @@ export function RemotionStatPlayer() {
           observer.disconnect();
         }
       },
-      { threshold: 0.3 }
+      { threshold: 0.2 }
     );
     observer.observe(el);
-    return () => observer.disconnect();
+
+    // Fallback
+    const t = setTimeout(() => setStarted(true), 600);
+    return () => { observer.disconnect(); clearTimeout(t); };
   }, []);
 
   return (
     <div
-      ref={containerRef}
-      className="w-full rounded-xl overflow-hidden"
+      ref={ref}
       style={{
-        backgroundColor: statProps.secondaryColor,
+        backgroundColor: "#FAF7F2",
         padding: "clamp(32px, 5vw, 64px) clamp(16px, 4vw, 48px)",
+        borderRadius: 12,
         position: "relative",
+        overflow: "hidden",
       }}
     >
       {/* Decorative corners */}
-      <div
-        style={{
-          position: "absolute",
-          top: 16,
-          left: 16,
-          width: 40,
-          height: 40,
-          borderTop: `3px solid ${statProps.accentColor}`,
-          borderLeft: `3px solid ${statProps.accentColor}`,
-          opacity: 0.15,
-        }}
-      />
-      <div
-        style={{
-          position: "absolute",
-          bottom: 16,
-          right: 16,
-          width: 40,
-          height: 40,
-          borderBottom: `3px solid ${statProps.accentColor}`,
-          borderRight: `3px solid ${statProps.accentColor}`,
-          opacity: 0.15,
-        }}
-      />
+      <div style={{ position: "absolute", top: 16, left: 16, width: 40, height: 40, borderTop: "3px solid #C17B5D", borderLeft: "3px solid #C17B5D", opacity: 0.15 }} />
+      <div style={{ position: "absolute", bottom: 16, right: 16, width: 40, height: 40, borderBottom: "3px solid #C17B5D", borderRight: "3px solid #C17B5D", opacity: 0.15 }} />
 
-      {/* Title */}
       <div
         style={{
-          fontFamily: statProps.headingFont,
+          fontFamily: "Cormorant Garamond, serif",
           fontSize: "clamp(18px, 2.5vw, 28px)",
           fontWeight: 600,
-          color: statProps.primaryColor,
+          color: "#2D4A3E",
           textAlign: "center",
           marginBottom: "clamp(24px, 3vw, 40px)",
           opacity: started ? 1 : 0,
@@ -200,36 +135,26 @@ export function RemotionStatPlayer() {
         Trusted Results, Year After Year
       </div>
 
-      {/* Stats row */}
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "flex-start",
-          gap: "clamp(16px, 3vw, 40px)",
-          width: "100%",
-        }}
-      >
-        {statProps.stats.map((stat, i) => (
-          <AnimatedStatCard key={stat.label} stat={stat} index={i} started={started} />
+      <div style={{ display: "flex", justifyContent: "center", alignItems: "flex-start", gap: "clamp(16px, 3vw, 40px)", width: "100%" }}>
+        {STATS.map((stat) => (
+          <StatCard key={stat.label} stat={stat} started={started} />
         ))}
       </div>
 
-      {/* Brand */}
       <div
         style={{
           textAlign: "center",
           marginTop: "clamp(24px, 3vw, 36px)",
-          fontFamily: statProps.bodyFont,
+          fontFamily: "DM Sans, sans-serif",
           fontSize: 10,
-          color: statProps.primaryColor,
+          color: "#2D4A3E",
           opacity: started ? 0.4 : 0,
           transition: "opacity 0.6s ease 1s",
           letterSpacing: "0.08em",
           textTransform: "uppercase",
         }}
       >
-        {statProps.businessName}
+        Kristina Bullock Real Estate
       </div>
     </div>
   );

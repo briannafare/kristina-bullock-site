@@ -4,7 +4,7 @@ import { InnerHero } from "@/components/hero/InnerHero";
 import { FAQAccordion } from "@/components/faq/FAQAccordion";
 import { CTABanner } from "@/components/cta/CTABanner";
 import { Section, Overline, SectionHeading } from "@/components/ui/Section";
-import { PortlandMetroMap } from "@/components/map/PortlandMetroMap";
+import { ServiceAreaMap } from "@/components/map/ServiceAreaMap";
 import { ComparisonTable } from "@/components/neighborhoods/ComparisonTable";
 import { MapPin } from "lucide-react";
 
@@ -45,7 +45,7 @@ export default function NeighborhoodsPage() {
         <div className="mx-auto max-w-[1200px] px-5 md:px-8 text-center">
           <Overline>Service Area</Overline>
           <SectionHeading className="mb-10">Where I Work</SectionHeading>
-          <PortlandMetroMap />
+          <ServiceAreaMap />
         </div>
       </Section>
 

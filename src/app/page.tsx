@@ -108,7 +108,8 @@ function HeroSection() {
                 src="/headshot.jpg"
                 alt="Kristina Bullock — Portland Oregon Real Estate Broker"
                 fill
-                className="object-cover object-[center_20%]"
+                className="object-cover"
+                style={{ objectPosition: "center 15%" }}
                 priority
                 sizes="(max-width: 768px) 280px, 380px"
               />
@@ -162,7 +163,7 @@ function ServicesSection() {
               transition={{ delay: i * 0.15, duration: 0.5 }}
             >
               <Link href={s.href} className="group block h-full">
-                <div className="h-full border border-[var(--color-border)] rounded-xl p-8 transition-all duration-300 group-hover:shadow-lg group-hover:-translate-y-1 bg-white group-hover:border-[var(--color-accent)]/30">
+                <div className="h-full border border-[var(--color-border)] rounded-xl p-8 transition-all duration-300 group-hover:shadow-lg group-hover:-translate-y-1 bg-white group-hover:border-l-4 group-hover:border-l-[#2E7D52] group-hover:border-[var(--color-accent)]/30">
                   <s.icon className="w-10 h-10 text-[var(--color-accent)] stroke-[1.5px] mb-5" />
                   <h3 className="font-[family-name:var(--font-heading)] text-2xl font-semibold text-[var(--color-foreground)] mb-3">
                     {s.title}
