@@ -108,7 +108,7 @@ function HeroSection() {
                 src="/headshot.jpg"
                 alt="Kristina Bullock — Portland Oregon Real Estate Broker"
                 fill
-                className="object-cover object-top"
+                className="object-cover object-[center_20%]"
                 priority
                 sizes="(max-width: 768px) 280px, 380px"
               />
