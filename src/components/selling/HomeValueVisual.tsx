@@ -9,7 +9,7 @@ const factors = [
     name: "Location",
     percentage: "40%",
     description:
-      "Neighborhood, school district, and proximity to amenities have the biggest impact on your home\u2019s value.",
+      "Neighborhood, school district, and proximity to amenities have the biggest impact on your home's value.",
     icon: (
       <svg
         width="64"
@@ -164,7 +164,7 @@ export function HomeValueVisual() {
       <div className="max-w-6xl mx-auto text-center">
         <Overline>Home Value</Overline>
         <SectionHeading className="mb-12 md:mb-16">
-          What Determines Your Home&rsquo;s Worth?
+          What Determines Your Home&apos;s Worth?
         </SectionHeading>
 
         <motion.div

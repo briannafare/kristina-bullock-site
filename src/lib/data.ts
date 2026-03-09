@@ -25,14 +25,14 @@ export const siteData = {
   testimonials: [
     {
       quote:
-        "Kristina was an absolute pleasure to work with from the lender side. She\u2019s proactive, responsive, and incredibly organized\u2014always staying ahead of deadlines, communicating clearly, and advocating for the client every step of the way. She kept the transaction moving smoothly and made coordination between all parties easy. I\u2019d happily partner with Kristina again and highly recommend her to any buyer or seller looking for a true professional.",
+        "Kristina was an absolute pleasure to work with from the lender side. She's proactive, responsive, and incredibly organized — always staying ahead of deadlines, communicating clearly, and advocating for the client every step of the way. She kept the transaction moving smoothly and made coordination between all parties easy. I'd happily partner with Kristina again and highly recommend her to any buyer or seller looking for a true professional.",
       reviewer: "Tyler B.",
       context: "Lending Partner",
       source: "Google Review",
     },
     {
       quote:
-        "Kristina hit a little different. Polite, yet strong, realistic and dependable. I really can\u2019t put into words the happiness she brings. She was willing to meet us within 24 hours of initial communication. She met us 45 minutes out of the way, at night, to check a few last things\u2014she didn\u2019t hesitate. Kristina negotiated her heart out. We secured our home, our first family home, 2 kids in tow. Kristina went from stranger to family friend. If you are looking for someone truthful and honest, friendly but strong, and pull out all the stops, she is the one.",
+        "Kristina hit a little different. Polite, yet strong, realistic and dependable. I really can't put into words the happiness she brings. She was willing to meet us within 24 hours of initial communication. She met us 45 minutes out of the way, at night, to check a few last things — she didn't hesitate. Kristina negotiated her heart out. We secured our home, our first family home, 2 kids in tow. Kristina went from stranger to family friend. If you are looking for someone truthful and honest, friendly but strong, and pull out all the stops, she is the one.",
       reviewer: "K.",
       context: "First-Time Home Buyer",
       source: "Google Review",

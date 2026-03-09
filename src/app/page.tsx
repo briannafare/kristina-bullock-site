@@ -96,7 +96,7 @@ function HeroSection() {
             </div>
           </motion.div>
 
-          {/* Right — Headshot */}
+          {/* Right — Headshot (full 3:4 portrait) */}
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -108,7 +108,8 @@ function HeroSection() {
                 src="/headshot.jpg"
                 alt="Kristina Bullock — Portland Oregon Real Estate Broker"
                 fill
-                className="object-cover object-top"
+                className="object-cover"
+                style={{ objectPosition: "center 15%" }}
                 priority
                 sizes="(max-width: 768px) 280px, 380px"
               />
@@ -125,13 +126,13 @@ const services = [
   {
     icon: Home,
     title: "Buying a Home",
-    body: "First-time buyer or seasoned mover — I\u2019ll help you find the right home in the right neighborhood at the right price. No pressure, just guidance.",
+    body: "First-time buyer or seasoned mover — I'll help you find the right home in the right neighborhood at the right price. No pressure, just guidance.",
     href: "/buying",
   },
   {
     icon: DollarSign,
     title: "Selling Your Home",
-    body: "Strategic pricing, smart marketing, and relentless negotiation. I don\u2019t just list your home — I get it sold for what it\u2019s worth.",
+    body: "Strategic pricing, smart marketing, and relentless negotiation. I don't just list your home — I get it sold for what it's worth.",
     href: "/selling",
   },
   {
@@ -162,7 +163,7 @@ function ServicesSection() {
               transition={{ delay: i * 0.15, duration: 0.5 }}
             >
               <Link href={s.href} className="group block h-full">
-                <div className="h-full border border-[var(--color-border)] rounded-xl p-8 transition-all duration-300 group-hover:shadow-lg group-hover:-translate-y-1 bg-white">
+                <div className="h-full border border-[var(--color-border)] rounded-xl p-8 transition-all duration-300 group-hover:shadow-lg group-hover:-translate-y-1 bg-white group-hover:border-l-4 group-hover:border-l-[#2E7D52] group-hover:border-[var(--color-accent)]/30">
                   <s.icon className="w-10 h-10 text-[var(--color-accent)] stroke-[1.5px] mb-5" />
                   <h3 className="font-[family-name:var(--font-heading)] text-2xl font-semibold text-[var(--color-foreground)] mb-3">
                     {s.title}
@@ -221,15 +222,21 @@ function AboutSnippet() {
               More About Kristina <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
+          {/* Small circular headshot on accent background — visually distinct from hero 3:4 */}
           <div className="flex justify-center lg:justify-end">
-            <div className="relative w-[260px] md:w-[320px] aspect-square rounded-2xl overflow-hidden shadow-lg ring-1 ring-black/5">
-              <Image
-                src="/headshot.jpg"
-                alt="Kristina Bullock"
-                fill
-                className="object-cover object-top"
-                sizes="320px"
-              />
+            <div className="relative w-[280px] md:w-[320px] aspect-square flex items-center justify-center">
+              {/* Accent background shape */}
+              <div className="absolute inset-0 rounded-3xl bg-[var(--color-accent)]/10 -rotate-3" />
+              {/* Circular crop — tight face/shoulders */}
+              <div className="relative w-[200px] md:w-[240px] aspect-square rounded-full overflow-hidden shadow-xl ring-[5px] ring-white">
+                <Image
+                  src="/headshot.jpg"
+                  alt="Kristina Bullock"
+                  fill
+                  className="object-cover object-[center_15%] scale-[1.6]"
+                  sizes="240px"
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -259,7 +266,7 @@ function NeighborhoodsGrid() {
               transition={{ delay: i * 0.08, duration: 0.4 }}
             >
               <Link href="/neighborhoods" className="group block">
-                <div className="bg-white border border-[var(--color-border)] rounded-xl p-5 md:p-6 transition-all duration-300 group-hover:shadow-md group-hover:-translate-y-0.5">
+                <div className="bg-white border border-[var(--color-border)] rounded-xl p-5 md:p-6 transition-all duration-300 group-hover:shadow-md group-hover:-translate-y-0.5 group-hover:border-[var(--color-accent)]/30">
                   <div className="flex items-center gap-2 mb-2">
                     <MapPin className="w-4 h-4 text-[var(--color-accent)]" />
                     <h3 className="font-semibold text-[var(--color-foreground)]">
@@ -290,12 +297,12 @@ const steps = [
   {
     num: "01",
     title: "Schedule a Call",
-    body: "Tell me what you\u2019re looking for — buying, selling, or investing. No commitment, no pressure. Just a conversation.",
+    body: "Tell me what you're looking for — buying, selling, or investing. No commitment, no pressure. Just a conversation.",
   },
   {
     num: "02",
     title: "Build Your Plan",
-    body: "I\u2019ll put together a personalized strategy based on your goals, timeline, and budget. You\u2019ll know exactly what to expect.",
+    body: "I'll put together a personalized strategy based on your goals, timeline, and budget. You'll know exactly what to expect.",
   },
   {
     num: "03",
@@ -349,28 +356,28 @@ const homeFaqs = [
   {
     question: "What does it cost to work with a real estate agent in Portland?",
     answer:
-      "Buyers typically pay nothing out of pocket \u2014 the seller\u2019s side covers agent commissions in most Portland transactions. For sellers, commission rates are negotiated upfront. I\u2019ll walk you through exactly what to expect during our initial consultation so there are no surprises.",
+      "Buyers typically pay nothing out of pocket — the seller's side covers agent commissions in most Portland transactions. For sellers, commission rates are negotiated upfront. I'll walk you through exactly what to expect during our initial consultation so there are no surprises.",
   },
   {
     question: "How long does it take to buy a home in Portland, Oregon?",
     answer:
-      "The typical home purchase in Portland takes 45 to 75 days from accepted offer to closing. The full process \u2014 including pre-approval, searching, and making an offer \u2014 usually takes 2 to 4 months total. I help you get pre-approved first so you\u2019re ready to move fast when the right home appears.",
+      "The typical home purchase in Portland takes 45 to 75 days from accepted offer to closing. The full process — including pre-approval, searching, and making an offer — usually takes 2 to 4 months total. I help you get pre-approved first so you're ready to move fast when the right home appears.",
   },
   {
     question: "Is Portland a good market for real estate investment in 2026?",
     answer:
-      "Portland remains a strong investment market. According to Zillow, the median home value is approximately $520,000 as of early 2026, with forecasts projecting 2\u20134% appreciation through the year. Rental demand stays strong, especially in East Portland and the suburbs. I work with investors on fix & flips, rentals, and 1031 exchanges.",
+      "Portland remains a strong investment market. According to Zillow, the median home value is approximately $520,000 as of early 2026, with forecasts projecting 2–4% appreciation through the year. Rental demand stays strong, especially in East Portland and the suburbs. I work with investors on fix & flips, rentals, and 1031 exchanges.",
   },
   {
     question:
       "What neighborhoods in Portland are best for first-time buyers?",
     answer:
-      "Gresham and East Portland tend to offer the most affordable entry points in the metro area. Beaverton and Tigard are great for families who want suburban living with easy access to the city. The best neighborhood depends on your budget, commute, and lifestyle \u2014 which is exactly what we\u2019ll figure out together.",
+      "Gresham and East Portland tend to offer the most affordable entry points in the metro area. Beaverton and Tigard are great for families who want suburban living with easy access to the city. The best neighborhood depends on your budget, commute, and lifestyle — which is exactly what we'll figure out together.",
   },
   {
     question: "How do I get started with Kristina?",
     answer:
-      "Schedule a free consultation call. We\u2019ll talk about your goals, timeline, and any questions you have. No commitment required \u2014 just a straightforward conversation to see if we\u2019re a good fit. You can call or text me directly at 503-382-7798, or use the scheduling form on this site.",
+      "Schedule a free consultation call. We'll talk about your goals, timeline, and any questions you have. No commitment required — just a straightforward conversation to see if we're a good fit. You can call or text me directly at 503-382-7798, or use the scheduling form on this site.",
   },
 ];
 
@@ -393,7 +400,7 @@ export default function HomePage() {
       />
       <CTABanner
         headline="Ready to Make a Move?"
-        body="Whether you\u2019re buying your first home, selling for top dollar, or building an investment portfolio \u2014 let\u2019s talk."
+        body="Whether you're buying your first home, selling for top dollar, or building an investment portfolio — let's talk."
         primaryCta="Schedule a Free Consultation"
         secondaryCta={`Call ${siteData.business.phone}`}
       />
