@@ -1,0 +1,64 @@
+{
+  "client": {
+    "slug": "kristina-bullock-real-estate",
+    "brand": {
+      "primary_color": "#2D4A3E",
+      "secondary_color": "#FAF7F2",
+      "accent_color": "#C17B5D",
+      "heading_font": "Cormorant Garamond",
+      "body_font": "DM Sans",
+      "business_name": "Kristina Bullock Real Estate"
+    }
+  },
+  "compositions": [
+    {
+      "composition_id": "hero-intro",
+      "template": "hero-3-slide-offer",
+      "duration_seconds": 5,
+      "fps": 30,
+      "props": {
+        "headline_copy": "Your Portland Home Journey Starts Here",
+        "subheadline_copy": "Expert guidance for buying, selling, and investing in Portland real estate",
+        "cta_text": "Let's Connect",
+        "background_image": "assets/generated/hero-bg.jpg"
+      },
+      "output_formats": [
+        { "name": "hero-16x9", "width": 1920, "height": 1080 },
+        { "name": "hero-9x16", "width": 1080, "height": 1920 },
+        { "name": "hero-1x1", "width": 1080, "height": 1080 }
+      ]
+    },
+    {
+      "composition_id": "testimonial-reel",
+      "template": "testimonial-single",
+      "duration_seconds": 8,
+      "fps": 30,
+      "props": {
+        "quote": "Kristina made the entire process seamless. Her knowledge of the Portland market is unmatched.",
+        "author": "Tyler Booth",
+        "role": "Home Buyer",
+        "background_color": "#2D4A3E"
+      },
+      "output_formats": [
+        { "name": "testimonial-16x9", "width": 1920, "height": 1080 }
+      ]
+    },
+    {
+      "composition_id": "stat-highlight",
+      "template": "stat-counter",
+      "duration_seconds": 4,
+      "fps": 30,
+      "props": {
+        "stat_value": "17+",
+        "stat_label": "Years of Experience",
+        "subtitle": "Serving Portland & Surrounding Communities",
+        "background_color": "#FAF7F2",
+        "text_color": "#2D4A3E",
+        "accent_color": "#C17B5D"
+      },
+      "output_formats": [
+        { "name": "stat-16x9", "width": 1920, "height": 1080 }
+      ]
+    }
+  ]
+}

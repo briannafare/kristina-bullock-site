@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { InnerHero } from "@/components/hero/InnerHero";
 import { FAQAccordion } from "@/components/faq/FAQAccordion";
 import { CTABanner } from "@/components/cta/CTABanner";
@@ -11,9 +12,9 @@ export const metadata: Metadata = {
 };
 
 const areas = [
-  { name: "Portland", vibe: "Urban, eclectic, walkable", body: "Portland is a city of neighborhoods \u2014 from the walkable streets of NE Alberta to the leafy boulevards of Southwest Portland. With over 90 distinct neighborhoods, there\u2019s a fit for every lifestyle. The city offers food, culture, parks, and transit that suburban areas can\u2019t match. Portland\u2019s median home value sits around $520,000 as of early 2026 (Zillow), with significant variation by neighborhood." },
-  { name: "Beaverton", vibe: "Family-friendly, diverse", body: "Beaverton is one of Portland\u2019s most popular suburbs, known for excellent schools, diverse dining, and proximity to tech employers like Nike and Intel. Families love the access to parks and trails. Prices tend to be at or above Portland\u2019s median, but strong school districts make it a solid long-term investment." },
-  { name: "Lake Oswego", vibe: "Upscale, scenic, established", body: "Lake Oswego is Portland\u2019s premier lakeside community, known for tree-lined streets, top-rated schools, and an upscale feel. Homes here tend to be priced above the metro average, attracting buyers who want a quieter, more polished suburban experience." },
+  { name: "Portland", vibe: "Urban, eclectic, walkable", image: "/images/neighborhoods-cityscape.jpg", body: "Portland is a city of neighborhoods \u2014 from the walkable streets of NE Alberta to the leafy boulevards of Southwest Portland. With over 90 distinct neighborhoods, there\u2019s a fit for every lifestyle. The city offers food, culture, parks, and transit that suburban areas can\u2019t match. Portland\u2019s median home value sits around $520,000 as of early 2026 (Zillow), with significant variation by neighborhood." },
+  { name: "Beaverton", vibe: "Family-friendly, diverse", image: "/images/neighborhood-beaverton.jpg", body: "Beaverton is one of Portland\u2019s most popular suburbs, known for excellent schools, diverse dining, and proximity to tech employers like Nike and Intel. Families love the access to parks and trails. Prices tend to be at or above Portland\u2019s median, but strong school districts make it a solid long-term investment." },
+  { name: "Lake Oswego", vibe: "Upscale, scenic, established", image: "/images/neighborhood-lake-oswego.jpg", body: "Lake Oswego is Portland\u2019s premier lakeside community, known for tree-lined streets, top-rated schools, and an upscale feel. Homes here tend to be priced above the metro average, attracting buyers who want a quieter, more polished suburban experience." },
   { name: "Tigard", vibe: "Suburban comfort, commuter-friendly", body: "Tigard offers a balanced suburban lifestyle with easy highway access to downtown Portland. It\u2019s a favorite for commuters who want more space without a long drive. Home prices tend to be moderate, making Tigard a practical choice for families and first-time buyers." },
   { name: "Gresham", vibe: "Affordable, growing", body: "Gresham is the most affordable entry point into the Portland metro area. Located east of Portland, it offers larger lots, newer construction in some areas, and a growing downtown district. For investors, Gresham\u2019s lower price points and strong rental demand make it one of the most interesting markets in the metro." },
   { name: "Hillsboro", vibe: "Tech hub, modern, fast-growing", body: "Hillsboro is booming thanks to its position as Oregon\u2019s tech hub. Intel\u2019s major presence drives employment and attracts a skilled workforce. The city has invested in downtown revitalization, parks, and transit. Newer construction and modern amenities appeal to families and young professionals." },
@@ -35,6 +36,7 @@ export default function NeighborhoodsPage() {
         headline="Portland Area Neighborhoods — A Local's Guide"
         subheadline="Every neighborhood has a personality. I\u2019ll help you find the one that fits yours."
         primaryCta="Schedule a Free Consultation"
+        backgroundImage="/images/neighborhoods-cityscape.jpg"
       />
 
       <Section className="bg-white py-20 md:py-28">
@@ -44,10 +46,18 @@ export default function NeighborhoodsPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {areas.map((area) => (
               <div key={area.name} className="border border-[var(--color-border)] rounded-xl overflow-hidden bg-white hover:shadow-lg transition-all duration-300">
-                <div className="bg-[var(--color-surface-alt)] h-40 flex items-center justify-center">
-                  <div className="text-center">
-                    <MapPin className="w-8 h-8 text-[var(--color-accent)] mx-auto mb-2" />
-                    <span className="font-[family-name:var(--font-heading)] text-2xl font-semibold text-[var(--color-foreground)]">{area.name}</span>
+                <div className="relative h-40 bg-[var(--color-surface-alt)]">
+                  {area.image ? (
+                    <>
+                      <Image src={area.image} alt={`${area.name} neighborhood`} fill className="object-cover" sizes="(max-width: 768px) 100vw, 50vw" />
+                      <div className="absolute inset-0 bg-[var(--color-primary)]/50" />
+                    </>
+                  ) : null}
+                  <div className="relative z-10 flex items-center justify-center h-full text-center">
+                    <div>
+                      <MapPin className={`w-8 h-8 mx-auto mb-2 ${area.image ? "text-white" : "text-[var(--color-accent)]"}`} />
+                      <span className={`font-[family-name:var(--font-heading)] text-2xl font-semibold ${area.image ? "text-white" : "text-[var(--color-foreground)]"}`}>{area.name}</span>
+                    </div>
                   </div>
                 </div>
                 <div className="p-6">

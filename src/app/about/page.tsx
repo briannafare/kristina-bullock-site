@@ -14,11 +14,19 @@ export default function AboutPage() {
   return (
     <>
       {/* Hero — split with headshot */}
-      <section className="bg-[var(--color-surface-alt)] py-20 md:py-28">
-        <div className="mx-auto max-w-[1200px] px-5 md:px-8">
+      <section className="bg-[var(--color-surface-alt)] py-20 md:py-28 relative overflow-hidden">
+        <Image
+          src="/images/about-consultation.jpg"
+          alt=""
+          fill
+          className="object-cover"
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-[var(--color-primary)]/65" />
+        <div className="mx-auto max-w-[1200px] px-5 md:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-[0.8fr_1fr] gap-12 items-center">
             <div className="flex justify-center lg:justify-start order-first">
-              <div className="relative w-[280px] md:w-[350px] aspect-[3/4] rounded-2xl overflow-hidden shadow-xl ring-1 ring-black/5">
+              <div className="relative w-[280px] md:w-[350px] aspect-[3/4] rounded-2xl overflow-hidden shadow-xl ring-1 ring-white/20">
                 <Image
                   src="/headshot.jpg"
                   alt="Kristina Bullock — Portland Oregon Real Estate Broker"
@@ -31,10 +39,10 @@ export default function AboutPage() {
             </div>
             <div>
               <Overline>About</Overline>
-              <h1 className="font-[family-name:var(--font-heading)] text-[clamp(36px,5vw,64px)] font-semibold text-[var(--color-foreground)] leading-[1.1] tracking-tight">
+              <h1 className="font-[family-name:var(--font-heading)] text-[clamp(36px,5vw,64px)] font-semibold text-white leading-[1.1] tracking-tight">
                 Your Portland Real Estate Partner
               </h1>
-              <p className="text-[var(--color-muted)] text-sm mt-4">
+              <p className="text-white/70 text-sm mt-4">
                 Kristina Bullock &middot; Real Estate Broker &middot; eXp Realty, LLC &middot; Oregon License #200812019
               </p>
             </div>

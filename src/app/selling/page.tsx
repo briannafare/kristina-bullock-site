@@ -36,6 +36,7 @@ export default function SellingPage() {
         primaryCta="Get Your Free Home Valuation"
         secondaryCta="Schedule a Listing Consultation"
         secondaryHref="/contact"
+        backgroundImage="/images/selling-hero.jpg"
       />
       <ServiceDetail
         headline="A Strategic Approach to Selling"

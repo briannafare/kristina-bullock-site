@@ -1,0 +1,58 @@
+[
+  {
+    "asset_id": "hero-bg",
+    "status": "success",
+    "model": "flux-schnell",
+    "path": "public/images/hero-bg.jpg",
+    "size": 196512
+  },
+  {
+    "asset_id": "buying-hero",
+    "status": "success",
+    "model": "flux-schnell",
+    "path": "public/images/buying-hero.jpg",
+    "size": 259812
+  },
+  {
+    "asset_id": "selling-hero",
+    "status": "success",
+    "model": "flux-schnell",
+    "path": "public/images/selling-hero.jpg",
+    "size": 251326
+  },
+  {
+    "asset_id": "investing-hero",
+    "status": "success",
+    "model": "flux-schnell",
+    "path": "public/images/investing-hero.jpg",
+    "size": 356359
+  },
+  {
+    "asset_id": "neighborhoods-cityscape",
+    "status": "success",
+    "model": "flux-schnell",
+    "path": "public/images/neighborhoods-cityscape.jpg",
+    "size": 258990
+  },
+  {
+    "asset_id": "neighborhood-beaverton",
+    "status": "success",
+    "model": "flux-schnell",
+    "path": "public/images/neighborhood-beaverton.jpg",
+    "size": 322296
+  },
+  {
+    "asset_id": "neighborhood-lake-oswego",
+    "status": "success",
+    "model": "flux-schnell",
+    "path": "public/images/neighborhood-lake-oswego.jpg",
+    "size": 241510
+  },
+  {
+    "asset_id": "about-consultation",
+    "status": "success",
+    "model": "flux-schnell",
+    "path": "public/images/about-consultation.jpg",
+    "size": 154454
+  }
+]
